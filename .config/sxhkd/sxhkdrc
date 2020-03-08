@@ -1,0 +1,3 @@
+# Media Keys
+XF86Audio{Play,Stop,Prev,Next}
+	playerctl {play-pause,stop,previous,next}
