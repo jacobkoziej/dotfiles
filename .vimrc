@@ -1,7 +1,15 @@
 " vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'arcticicestudio/nord-vim'
+Plug 'takac/vim-hardtime'
 call plug#end()
+
+"---
+
+" plugin settings
+
+" Hardtime
+let g:hardtime_default_on = 1 " run by default
 
 "---
 
