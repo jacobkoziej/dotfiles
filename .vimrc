@@ -2,6 +2,8 @@
 call plug#begin('~/.vim/plugged')
 Plug 'arcticicestudio/nord-vim'
 Plug 'takac/vim-hardtime'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 "---
@@ -11,10 +13,18 @@ call plug#end()
 " Hardtime
 let g:hardtime_default_on = 1 " run by default
 
+" vim-airline
+let g:airline#extensions#tabline#enabled = 1 " displays all buffers when there's only one tab open
+let g:airline_powerline_fonts = 1 " enable powerline fonts
+let g:airline_theme='nord' " set status bar theme to nord
+
 "---
 
 " disable vi compatibility
 set nocompatible
+
+" disable mode information
+set noshowmode
 
 " enable syntax highlighting
 syntax on
