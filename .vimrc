@@ -1,6 +1,7 @@
 " vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'arcticicestudio/nord-vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'takac/vim-hardtime'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
