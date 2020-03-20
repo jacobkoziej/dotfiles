@@ -1,2 +1,2 @@
 # .dotfiles
-> Its often the small things in life that matter most
+> Koziej's collection of configuration files
