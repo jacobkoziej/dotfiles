@@ -4,5 +4,5 @@
 sxhkd &
 
 ### MONITORS ###
-bspc monitor DisplayPort-4 1 2 3 4 5
-bspc monitor DVI-D-0 6 7 8 9 0
+bspc monitor DP-4 -d 1 2 3 4 5
+bspc monitor DVI-D-0 -d 6 7 8 9 0
