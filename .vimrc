@@ -11,6 +11,9 @@ call plug#end()
 
 " plugin settings
 
+" nord-vim
+let g:nord_cursor_line_number_background = 1
+
 " Hardtime
 let g:hardtime_default_on = 1 " run by default
 
