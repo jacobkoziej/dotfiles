@@ -30,6 +30,9 @@ set noshowmode
 " enable syntax highlighting
 syntax on
 
+" enable highlighting of the current line
+set cursorline
+
 " detect file type
 filetype plugin indent on
 
