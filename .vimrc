@@ -28,6 +28,9 @@ let g:airline_theme='nord' " set status bar theme to nord
 " disable vi compatibility
 set nocompatible
 
+" enable command line completion
+set wildmenu
+
 " disable mode information
 set noshowmode
 
