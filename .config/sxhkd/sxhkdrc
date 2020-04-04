@@ -1,3 +1,21 @@
 ### MEDIA KEYS ###
 XF86Audio{Play,Stop,Prev,Next}
 	playerctl {play-pause,stop,previous,next}
+
+### BSPWM SPECIFIC ###
+
+# quit/restart
+super + shift + {q,r}
+	bspc {quit,wm -r}
+
+# close
+super + shift + c
+	bspc node -c
+
+# move to/from workspace
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
