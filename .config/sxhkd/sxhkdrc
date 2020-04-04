@@ -2,7 +2,9 @@
 XF86Audio{Play,Stop,Prev,Next}
 	playerctl {play-pause,stop,previous,next}
 
+######################
 ### BSPWM SPECIFIC ###
+######################
 
 # quit/restart
 super + shift + {q,r}
