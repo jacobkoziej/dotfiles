@@ -22,6 +22,6 @@ dotfiles config --local status.showUntrackedFiles no
 ```
 Add the remote repository and pull.
 ```sh
-dotfiles add origin git@github.com:jacobkoziej/.dotfiles.git
+dotfiles remote add origin git@github.com:jacobkoziej/.dotfiles.git
 dotfiles pull origin
 ```
