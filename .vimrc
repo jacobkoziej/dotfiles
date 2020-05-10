@@ -2,7 +2,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'arcticicestudio/nord-vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
-Plug 'takac/vim-hardtime'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
@@ -14,9 +13,6 @@ call plug#end()
 
 " nord-vim
 let g:nord_cursor_line_number_background = 1
-
-" Hardtime
-let g:hardtime_default_on = 1 " run by default
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1 " displays all buffers when there's only one tab open
