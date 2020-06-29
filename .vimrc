@@ -2,6 +2,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'arcticicestudio/nord-vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'junegunn/goyo.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
