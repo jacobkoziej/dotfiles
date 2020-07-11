@@ -1,3 +1,19 @@
+"      ________ ++     ________
+"     /VVVVVVVV\++++  /VVVVVVVV\
+"     \VVVVVVVV/++++++\VVVVVVVV/
+"      |VVVVVV|++++++++/VVVVV/'
+"      |VVVVVV|++++++/VVVVV/'
+"     +|VVVVVV|++++/VVVVV/'+
+"   +++|VVVVVV|++/VVVVV/'+++++
+" +++++|VVVVVV|/VVVVV/'+++++++++
+"   +++|VVVVVVVVVVV/'+++++++++
+"     +|VVVVVVVVV/'+++++++++
+"      |VVVVVVV/'+++++++++
+"      |VVVVV/'+++++++++
+"      |VVV/'+++++++++
+"      'V/'   ++++++
+"               ++
+
 " vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'arcticicestudio/nord-vim'
