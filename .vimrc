@@ -69,3 +69,10 @@ let g:airline_theme='nord' " set bar theme to nord
 """"""""""""""""
 let g:undotree_WindowLayout = 2 " open in layout 2
 let g:undotree_SetFocusWhenToggle = 1 " focus window upon opening
+
+" Keybinds
+""""""""""""""""""""""""""""""""
+" Leader Key
+""""""""""""""""
+noremap <space> <nop>
+let mapleader = " "
