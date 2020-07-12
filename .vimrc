@@ -83,3 +83,7 @@ nnoremap <silent> <leader>h :wincmd h<CR>
 nnoremap <silent> <leader>j :wincmd j<CR>
 nnoremap <silent> <leader>k :wincmd k<CR>
 nnoremap <silent> <leader>l :wincmd l<CR>
+
+" Undotree Toggle
+""""""""""""""""
+nnoremap <silent> <leader>u :UndotreeToggle<CR>
