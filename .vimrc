@@ -87,3 +87,7 @@ nnoremap <silent> <leader>l :wincmd l<CR>
 " Undotree Toggle
 """"""""""""""""
 nnoremap <silent> <leader>u :UndotreeToggle<CR>
+
+" Search Highlight Toggle
+""""""""""""""""
+nnoremap <silent> <leader>/ :set invhlsearch<CR>
