@@ -76,3 +76,10 @@ let g:undotree_SetFocusWhenToggle = 1 " focus window upon opening
 """"""""""""""""
 noremap <space> <nop>
 let mapleader = " "
+
+" Split Movement
+""""""""""""""""
+nnoremap <silent> <leader>h :wincmd h<CR>
+nnoremap <silent> <leader>j :wincmd j<CR>
+nnoremap <silent> <leader>k :wincmd k<CR>
+nnoremap <silent> <leader>l :wincmd l<CR>
