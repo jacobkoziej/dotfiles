@@ -15,17 +15,26 @@
 "               ++
 """"""""""""""""""""""""""""""""
 
-" vim-plug
+" Plugins
+""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
-Plug 'arcticicestudio/nord-vim'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
-Plug 'junegunn/goyo.vim'
-Plug 'mbbill/undotree'
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'ryanoasis/vim-devicons'
+" Enhancements
+""""""""""""""""
+Plug 'mbbill/undotree' " history visualizer
+Plug 'sheerun/vim-polyglot' " language packs
+Plug 'tpope/vim-fugitive' " git wrapper
+
+" Writing
+""""""""""""""""
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } } " markdown preview
+Plug 'junegunn/goyo.vim' " distraction free writing
+
+" Eye Candy
+""""""""""""""""
+Plug 'arcticicestudio/nord-vim' " nord theme
+Plug 'vim-airline/vim-airline' " custom status/tabline
+Plug 'vim-airline/vim-airline-themes' " themes for airline
+Plug 'ryanoasis/vim-devicons' " filetype glyphs
 call plug#end()
 
 "---
