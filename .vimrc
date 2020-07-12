@@ -37,46 +37,35 @@ Plug 'vim-airline/vim-airline-themes' " themes for airline
 Plug 'ryanoasis/vim-devicons' " filetype glyphs
 call plug#end()
 
-"---
+" General Settings
+""""""""""""""""""""""""""""""""
+set encoding=utf-8 " set utf-8 encoding
+set ignorecase " disable case sensitive search
+set incsearch " real time search
+set nocompatible " disable vi compatibility
+set noerrorbells " disable error bell
+set nowrap " disable line wrapping
+set number relativenumber " enable relative line numbers
+set smartcase " case sensitive search on uppercase
+set smartindent " enable smart indentation
+set wildmenu " enable command completion
+syntax on " enable syntax
 
-" plugin settings
+" Theme Related
+""""""""""""""""
+colorscheme nord " set editor theme to nord
+set cursorline " highlight current line
+let g:nord_cursor_line_number_background = 1 " color current line correctly
 
-" nord-vim
-let g:nord_cursor_line_number_background = 1
-
-" vim-airline
-let g:airline#extensions#tabline#enabled = 1 " displays all buffers when there's only one tab open
+" Status/Tabline
+""""""""""""""""
+set noshowmode " disable default mode indicator
 let g:airline_powerline_fonts = 1 " enable powerline fonts
-let g:airline_theme='nord' " set status bar theme to nord
+let g:airline_theme='nord' " set bar theme to nord
 
-"---
-
-" disable vi compatibility
-set nocompatible
-
-" enable command line completion
-set wildmenu
-
-" disable mode information
-set noshowmode
-
-" enable syntax highlighting
-syntax on
-
-" enable highlighting of the current line
-set cursorline
-
-" detect file type
-filetype plugin indent on
-
-" relative line numbers
-set number relativenumber
-
-" show file position
-set ruler
-
-" set encoding
-set encoding=utf-8
-
-" color scheme
-colorscheme nord
+" Plugin Settings
+""""""""""""""""""""""""""""""""
+" Undotree
+""""""""""""""""
+let g:undotree_WindowLayout = 2 " open in layout 2
+let g:undotree_SetFocusWhenToggle = 1 " focus window upon opening
