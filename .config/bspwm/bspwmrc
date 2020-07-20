@@ -18,7 +18,7 @@ bspc config presel_feedback_color "#ECEFF4"
 ### GLOBAL ###
 bspc config global_ratio 0.5
 xsetroot -cursor_name left_ptr #  set default cursor to left_ptr
-bspc config pointer_follows_focus true
+bspc config pointer_follows_focus false
 bspc config focus_follows_pointer true
 bspc config window_gap 4
 bspc config border_width 2
