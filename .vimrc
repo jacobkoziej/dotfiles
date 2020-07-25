@@ -25,9 +25,7 @@ source $HOME/.vim/general/settings.vim
 
 " Theme Related
 """"""""""""""""
-colorscheme nord " set editor theme to nord
-set cursorline " highlight current line
-let g:nord_cursor_line_number_background = 1 " color current line correctly
+source $HOME/.vim/themes/nord.vim
 
 " Status/Tabline
 """"""""""""""""
