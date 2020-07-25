@@ -32,6 +32,10 @@ source $HOME/.vim/themes/nord.vim
 set noshowmode " disable default mode indicator
 let g:airline_powerline_fonts = 1 " enable powerline fonts
 let g:airline_theme='nord' " set bar theme to nord
+let g:airline_left_sep = '' " no left separator
+let g:airline_left_alt_sep = '|'
+let g:airline_right_sep = '' " no right separator
+let g:airline_right_alt_sep = '|'
 
 " Plugin Settings
 """"""""""""""""""""""""""""""""
