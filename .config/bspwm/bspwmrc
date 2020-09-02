@@ -2,8 +2,10 @@
 
 ### AUTOSTART ###
 $HOME/.scripts/xrandr/dual.sh &
-$HOME/.config/polybar/launch.sh &
-killall sxhkd & sxhkd &
+pgrep -x sxhkd > /dev/null || sxhkd &
+unclutter &
+nitrogen --restore &
+pgrep -x picom > /dev/null || picom &
 
 ### MONITORS ###
 bspc monitor DP-4 -d 1 2 3 4 5
