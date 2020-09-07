@@ -1,27 +1,28 @@
-# .dotfiles
-> Koziej's collection of configuration files
+# dotfiles
 
-## Overview
-Dotfiles are user-specific configuration files that get their name from traditionally starting with a dot.
-Users can spend hours configuring software to their liking, and losing these files often means losing countless hours of work.
-To solve this issue, many users have chosen to track their configuration files using version control software like Git.
-To track my configuration files, I use a method popularized by a [Hacker News comment](https://news.ycombinator.com/item?id=11070797), which involves creating a git bare repository in the user's home directory.
+This is a personal repository for my configuration files found under `$HOME`
 
-## Setup
-Initiate a git bare repository in the user's home folder.
-```sh
-git init --bare $HOME/.dotfiles
-```
-Create a shell alias to make tracking files easy.
-```sh
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-```
-Tell Git to ignore files that aren't tracked explicitly.
-```sh
-dotfiles config --local status.showUntrackedFiles no
-```
-Add the remote repository and pull.
-```sh
-dotfiles remote add origin git@github.com:jacobkoziej/.dotfiles.git
-dotfiles pull origin
-```
+I use my own [dotfile-manager] to manage/deploy my dotfiles.
+
+Configuration is included for:
+
+* [Alacritty] - cross-platform, GPU-accelerated terminal emulator
+* [bspwm] - tiling window manager based on binary space partitioning
+* [makepkg] - script to automate the building of pacman packages
+* [Neofetch] - command-line system information tool
+* [Polybar] - fast and easy-to-use status bar
+* [sxhkd] - simple X hotkey daemon
+* [tmux] - terminal multiplexer
+* [Vim] - the ubiquitous text editor
+* [Zsh] - Z shell
+
+[dotfile-manager]: https://git.jacobkoziej.xyz/dotfile-manager/
+[Alacritty]: https://github.com/alacritty/alacritty
+[bspwm]: https://github.com/baskerville/bspwm
+[makepkg]: https://git.archlinux.org/pacman.git/tree/scripts/makepkg.sh.in
+[Neofetch]: https://github.com/dylanaraps/neofetch
+[Polybar]: https://polybar.github.io/
+[sxhkd]: https://github.com/baskerville/sxhkd
+[tmux]: https://tmux.github.io/
+[Vim]: https://www.vim.org/
+[Zsh]: https://www.zsh.org/
