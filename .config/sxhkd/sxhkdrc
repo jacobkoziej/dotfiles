@@ -21,3 +21,7 @@ super + {_,shift + }{1-9,0}
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
+
+# change view modes
+super + {t,f,shift + f}
+	bspc node -t {tiled,fullscreen,floating}
