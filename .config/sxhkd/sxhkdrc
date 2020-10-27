@@ -53,6 +53,9 @@ XF86AudioMicMute
 XF86MonBrightness{Down,Up}
 	xbacklight {-10,+10}
 
+XF86Display
+	arandr
+
 ######################
 ### BSPWM SPECIFIC ###
 ######################
