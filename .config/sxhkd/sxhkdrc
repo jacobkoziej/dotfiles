@@ -34,9 +34,21 @@ super + F1
 super + Escape
 	pkill -USR1 -x sxhkd
 
-### MEDIA KEYS ###
+#################
+### XF86 KEYS ###
+#################
+
 XF86Audio{Play,Stop,Prev,Next}
 	playerctl {play-pause,stop,previous,next}
+
+XF86AudioMute
+	pactl set-sink-mute 0 toggle
+
+XF86Audio{LowerVolume,RaiseVolume}
+	pactl set-sink-volume 0 {-2%,+2%}
+
+XF86MonBrightness{Down,Up}
+	xbacklight {-10,+10}
 
 ######################
 ### BSPWM SPECIFIC ###
