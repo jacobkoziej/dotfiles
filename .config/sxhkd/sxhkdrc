@@ -1,3 +1,39 @@
+####################
+### APPLICATIONS ###
+####################
+
+# Terminal
+super + Return
+	$TERMINAL
+
+# Dmenu
+super + shift + Return
+	dmenu_run -i -m 0
+
+# Browser
+super + alt + w
+	$BROWSER
+
+# Discord
+super + alt + d
+	discord
+
+# Music Player
+super + alt + m
+	$TERMINAL -e cmus
+
+# Pass
+super + p
+	passmenu -i
+
+# Screen Lock
+super + F1
+	slock
+
+# Reload sxhkd ###
+super + Escape
+	pkill -USR1 -x sxhkd
+
 ### MEDIA KEYS ###
 XF86Audio{Play,Stop,Prev,Next}
 	playerctl {play-pause,stop,previous,next}
