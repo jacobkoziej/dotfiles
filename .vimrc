@@ -39,6 +39,10 @@ let g:airline_right_alt_sep = '|'
 
 " Plugin Settings
 """"""""""""""""""""""""""""""""
+" Pencil
+""""""""""""""""
+source $HOME/.vim/plug-config/vim-pencil.vim
+
 " Undotree
 """"""""""""""""
 let g:undotree_WindowLayout = 2 " open in layout 2
