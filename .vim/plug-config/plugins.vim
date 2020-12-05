@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 " Enhancements
 """"""""""""""""
 Plug 'mbbill/undotree' " history visualizer
+Plug 'preservim/nerdtree' " filetree
 Plug 'sheerun/vim-polyglot' " language packs
 Plug 'tpope/vim-fugitive' " git wrapper
 
