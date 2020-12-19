@@ -43,6 +43,9 @@ let g:airline_section_x = '%{PencilMode()}' " show pencil mode
 " Pencil
 """"""""""""""""
 source $HOME/.vim/plug-config/vim-pencil.vim
+" NERDTree
+""""""""""""""""
+source $HOME/.vim/plug-config/nerdtree.vim
 
 " Undotree
 """"""""""""""""
