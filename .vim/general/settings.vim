@@ -1,6 +1,7 @@
 " General Settings
 """"""""""""""""""""""""""""""""
 set encoding=utf-8 " set utf-8 encoding
+set hidden " allow for buffer hopping without saving
 set ignorecase " disable case sensitive search
 set incsearch " real time search
 set nocompatible " disable vi compatibility
