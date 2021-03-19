@@ -1,5 +1,6 @@
 " General Settings
 """"""""""""""""""""""""""""""""
+set colorcolumn=80 " draw a column at 80 characters
 set encoding=utf-8 " set utf-8 encoding
 set hidden " allow for buffer hopping without saving
 set ignorecase " disable case sensitive search
