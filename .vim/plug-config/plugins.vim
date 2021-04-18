@@ -7,6 +7,7 @@ Plug 'mbbill/undotree' " history visualizer
 Plug 'preservim/nerdtree' " filetree
 Plug 'sheerun/vim-polyglot' " language packs
 Plug 'tpope/vim-fugitive' " git wrapper
+Plug 'junegunn/fzf.vim' " fuzzy search
 
 " Writing
 """"""""""""""""
