@@ -3,6 +3,7 @@
 call plug#begin('~/.vim/plugged')
 " Enhancements
 """"""""""""""""
+Plug 'editorconfig/editorconfig-vim' " consistent coding styles
 Plug 'mbbill/undotree' " history visualizer
 Plug 'preservim/nerdtree' " filetree
 Plug 'sheerun/vim-polyglot' " language packs
