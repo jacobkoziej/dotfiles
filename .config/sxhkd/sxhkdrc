@@ -46,13 +46,13 @@ XF86Audio{Play,Stop,Prev,Next}
 	playerctl {play-pause,stop,previous,next}
 
 XF86AudioMute
-	pactl set-sink-mute 0 toggle
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 XF86Audio{LowerVolume,RaiseVolume}
-	pactl set-sink-volume 0 {-2%,+2%}
+	pactl set-sink-volume @DEFAULT_SINK@ {-2%,+2%}
 
 XF86AudioMicMute
-	pactl set-source-mute 1 toggle
+	pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 XF86MonBrightness{Down,Up}
 	xbacklight {-10,+10}
