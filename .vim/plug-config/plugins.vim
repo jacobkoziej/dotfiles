@@ -1,6 +1,8 @@
 " Plugins
 """"""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
+
+
 " Enhancements
 """"""""""""""""
 Plug 'editorconfig/editorconfig-vim' " consistent coding styles
@@ -23,4 +25,6 @@ Plug 'mhinz/vim-startify' " custom start screen
 Plug 'vim-airline/vim-airline' " custom status/tabline
 Plug 'vim-airline/vim-airline-themes' " themes for airline
 Plug 'ryanoasis/vim-devicons' " filetype glyphs
+
+
 call plug#end()
