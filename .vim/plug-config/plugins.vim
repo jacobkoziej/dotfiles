@@ -14,6 +14,7 @@ Plug 'junegunn/fzf.vim' " fuzzy search
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } } " markdown preview
 Plug 'junegunn/goyo.vim' " distraction free writing
 Plug 'reedes/vim-pencil' " writing tool for Vim
+Plug 'tpope/vim-markdown' " markdown runtime files
 
 " Eye Candy
 """"""""""""""""
