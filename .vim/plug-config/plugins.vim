@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 " Enhancements
 """"""""""""""""
+Plug 'airblade/vim-gitgutter' " git diff markers
 Plug 'editorconfig/editorconfig-vim' " consistent coding styles
 Plug 'mbbill/undotree' " history visualizer
 Plug 'preservim/nerdtree' " filetree
