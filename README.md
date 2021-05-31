@@ -8,6 +8,7 @@ Configuration is included for:
 
 * [Alacritty] - cross-platform, GPU-accelerated terminal emulator
 * [bat] - a cat(1) clone with wings
+* [browsh] - a fully-modern text-based browser, rendering to TTY and browsers
 * [bspwm] - tiling window manager based on binary space partitioning
 * [makepkg] - script to automate the building of pacman packages
 * [Neofetch] - command-line system information tool
@@ -20,6 +21,7 @@ Configuration is included for:
 [dotfile-manager]: https://git.jacobkoziej.xyz/dotfile-manager/
 [Alacritty]: https://github.com/alacritty/alacritty
 [bat]: https://github.com/sharkdp/bat
+[browsh]: https://www.brow.sh/
 [bspwm]: https://github.com/baskerville/bspwm
 [makepkg]: https://git.archlinux.org/pacman.git/tree/scripts/makepkg.sh.in
 [Neofetch]: https://github.com/dylanaraps/neofetch
