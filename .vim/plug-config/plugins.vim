@@ -7,10 +7,10 @@ call plug#begin('~/.vim/plugged')
 """"""""""""""""
 Plug 'airblade/vim-gitgutter' " git diff markers
 Plug 'editorconfig/editorconfig-vim' " consistent coding styles
+Plug 'junegunn/fzf.vim' " fuzzy search
 Plug 'mbbill/undotree' " history visualizer
 Plug 'preservim/nerdtree' " filetree
 Plug 'tpope/vim-fugitive' " git wrapper
-Plug 'junegunn/fzf.vim' " fuzzy search
 Plug 'wellle/targets.vim' " additional text objects
 
 " Writing
