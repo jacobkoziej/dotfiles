@@ -11,6 +11,7 @@ Plug 'mbbill/undotree' " history visualizer
 Plug 'preservim/nerdtree' " filetree
 Plug 'tpope/vim-fugitive' " git wrapper
 Plug 'junegunn/fzf.vim' " fuzzy search
+Plug 'wellle/targets.vim' " additional text objects
 
 " Writing
 """"""""""""""""
