@@ -9,6 +9,9 @@
 [commit]
 	gpgsign = true
 
+[merge]
+	ff = false
+
 [pull]
 	rebase = false
 
