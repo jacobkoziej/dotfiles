@@ -1,0 +1,25 @@
+[user]
+	name       = Jacob Koziej
+	email      = jacobkoziej@gmail.com
+	signingkey = 4C133A84E6469228
+
+[core]
+	editor = vim
+
+[commit]
+	gpgsign = true
+
+[pull]
+	rebase = false
+
+[color]
+	ui = auto
+
+[init]
+	defaultBranch = master
+
+[filter "lfs"]
+	clean    = git-lfs clean  -- %f
+	smudge   = git-lfs smudge -- %f
+	process  = git-lfs filter-process
+	required = true
