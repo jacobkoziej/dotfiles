@@ -1,0 +1,1 @@
+bind b set status
