@@ -13,6 +13,7 @@
 	ff = false
 
 [pull]
+	ff     = true
 	rebase = false
 
 [color]
