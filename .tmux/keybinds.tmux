@@ -5,7 +5,7 @@ bind c neww -n ""
 
 
 unbind %
-unbind "
+unbind \"
 
 bind _ splitw -v
 bind | splitw -h
