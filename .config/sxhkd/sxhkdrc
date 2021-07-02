@@ -16,7 +16,7 @@ super + alt + w
 
 # Discord
 super + alt + d
-	discord
+	$BROWSER --profile-directory="Default" --app="https://discord.com/app"
 
 # Music Player
 super + alt + m
