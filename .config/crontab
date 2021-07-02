@@ -1,0 +1,1 @@
+@reboot syncthing -no-browser &>> ${HOME}/.local/var/log/syncthing/syncthing.log
