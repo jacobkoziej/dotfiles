@@ -19,6 +19,11 @@ Configuration is included for:
 * [Vim] - the ubiquitous text editor
 * [Zsh] - Z shell
 
+Copyright (C) 2020-2021  Jacob Koziej <jacobkoziej@gmail.com>
+
+Distributed under the [GPLv3].
+
+
 [dotfile-manager]: https://git.jacobkoziej.xyz/dotfile-manager/
 [Alacritty]: https://github.com/alacritty/alacritty
 [bat]: https://github.com/sharkdp/bat
@@ -32,3 +37,5 @@ Configuration is included for:
 [tmux]: https://tmux.github.io/
 [Vim]: https://www.vim.org/
 [Zsh]: https://www.zsh.org/
+
+[GPLv3]: LICENSE.md
