@@ -19,6 +19,18 @@ IFS=$'\n\t'
 
 
 PROGRAMS=(
+	"alacritty"
+	"bat"
+	"browsh"
+	"bspwm"
+	"git"
+	"makepkg"
+	"neofetch"
+	"polybar"
+	"sxhkd"
+	"tmux"
+	"vim"
+	"zsh"
 )
 
 
