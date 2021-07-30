@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Inspired by:
+# https://kevinlocke.name/bits/2019/07/31/prefer-terminal-for-gpg-pinentry/
+
+case "${PINENTRY_USER_DATA-}" in
+*USE_CURSES=1*)
+	exec pinentry-curses "$@"
+	;;
+esac
+
+exec pinentry "$@"
