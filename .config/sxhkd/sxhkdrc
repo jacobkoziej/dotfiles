@@ -28,7 +28,7 @@ super + p
 
 # Screen Lock
 super + F1
-	slock
+	xsecurelock
 
 # Reload sxhkd ###
 super + Escape
