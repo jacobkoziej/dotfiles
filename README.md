@@ -21,7 +21,7 @@ Configuration is included for:
 
 Copyright (C) 2020-2021  Jacob Koziej <jacobkoziej@gmail.com>
 
-Distributed under the [GPLv3].
+Distributed under the [GPLv3] or later.
 
 
 [dotfile-manager]: https://git.jacobkoziej.xyz/dotfile-manager/
