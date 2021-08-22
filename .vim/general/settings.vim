@@ -12,5 +12,6 @@ set number relativenumber " enable relative line numbers
 set smartcase " case sensitive search on uppercase
 set smartindent " enable smart indentation
 set tabstop=8 " set indents to 8 columns
+set updatetime=100 " write to swap file after 100ms of inactivity
 set wildmenu " enable command completion
 syntax on " enable syntax
