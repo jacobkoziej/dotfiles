@@ -6,6 +6,9 @@
 [core]
 	editor = vim
 
+[checkout]
+	workers = 8
+
 [commit]
 	gpgsign = true
 
