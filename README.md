@@ -10,6 +10,7 @@ Configuration is included for:
 * [bat] - a cat(1) clone with wings
 * [browsh] - a fully-modern text-based browser, rendering to TTY and browsers
 * [bspwm] - tiling window manager based on binary space partitioning
+* [GDB] - The GNU Project Debugger
 * [Git] - fast, scalable, distributed revision control system
 * [makepkg] - script to automate the building of pacman packages
 * [Neofetch] - command-line system information tool
@@ -29,6 +30,7 @@ Distributed under the [GPLv3] or later.
 [bat]: https://github.com/sharkdp/bat
 [browsh]: https://www.brow.sh/
 [bspwm]: https://github.com/baskerville/bspwm
+[GDB]: https://www.gnu.org/software/gdb/
 [Git]: https://git-scm.com/
 [makepkg]: https://git.archlinux.org/pacman.git/tree/scripts/makepkg.sh.in
 [Neofetch]: https://github.com/dylanaraps/neofetch
