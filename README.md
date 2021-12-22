@@ -20,7 +20,7 @@ Configuration is included for:
 * [Vim] - the ubiquitous text editor
 * [Zsh] - Z shell
 
-Copyright (C) 2020-2021  Jacob Koziej <jacobkoziej@gmail.com>
+Copyright (C) 2020-2021  Jacob Koziej [`<jacobkoziej@gmail.com>`]
 
 Distributed under the [GPLv3] or later.
 
@@ -40,4 +40,5 @@ Distributed under the [GPLv3] or later.
 [Vim]: https://www.vim.org/
 [Zsh]: https://www.zsh.org/
 
+[`<jacobkoziej@gmail.com>`]: mailto:jacobkoziej@gmail.com
 [GPLv3]: LICENSE.md
