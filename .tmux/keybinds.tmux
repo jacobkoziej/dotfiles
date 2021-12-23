@@ -1,6 +1,7 @@
 # match prefix to leader key
 unbind 'C-b'
 set -g prefix 'C-Space'
+bind 'C-Space' send-prefix
 
 # intuitive window splitting
 unbind '%'
