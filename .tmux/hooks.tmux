@@ -1,1 +1,1 @@
-set-hook -g session-created "renamew ''"
+set-hook -g session-created 'renamew ""'
