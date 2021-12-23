@@ -7,8 +7,11 @@ bind b set status
 bind c neww -n ""
 
 
-unbind %
-unbind \"
-
-bind _ splitw -v
-bind | splitw -h
+# intuitive window splitting
+unbind '%'
+unbind '"'
+unbind '-'
+bind '-' splitw -v
+bind '\' splitw -h
+bind '_' splitw -vb
+bind '|' splitw -hb
