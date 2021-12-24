@@ -6,3 +6,6 @@ set -o AUTO_LIST
 set -o AUTO_PARAM_KEYS
 set +o AUTO_REMOVE_SLASH
 set -o GLOB_COMPLETE
+
+# expansion and globbing
+set -o GLOB_DOTS
