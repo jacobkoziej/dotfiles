@@ -9,3 +9,6 @@ set -o GLOB_COMPLETE
 
 # expansion and globbing
 set -o GLOB_DOTS
+
+# history
+set -o EXTENDED_HISTORY
