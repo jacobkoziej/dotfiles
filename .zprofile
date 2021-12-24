@@ -10,3 +10,5 @@ export PATH="${HOME}/.local/bin:${PATH}"
 
 gpgconf --kill gpg-agent &&
 gpg-agent --daemon --pinentry-program $HOME/.local/bin/pinentry-auto
+
+export SSH_AUTH_SOCK="$HOME/.ssh/ssh_auth_sock"
