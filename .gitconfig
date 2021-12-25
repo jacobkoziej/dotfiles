@@ -5,6 +5,7 @@
 
 [alias]
 	c = commit
+	p = push
 
 [core]
 	editor = vim
