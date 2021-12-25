@@ -26,6 +26,7 @@ set +o GLOB_ASSIGN
 set -o GLOB_DOTS
 set +o GLOB_SUBST
 set +o KSH_GLOB
+set -o NOMATCH
 
 # history
 set -o EXTENDED_HISTORY
