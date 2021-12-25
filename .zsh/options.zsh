@@ -24,6 +24,7 @@ set +o EQUALS
 set -o GLOB
 set +o GLOB_ASSIGN
 set -o GLOB_DOTS
+set +o GLOB_SUBST
 
 # history
 set -o EXTENDED_HISTORY
