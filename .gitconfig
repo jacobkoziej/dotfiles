@@ -3,6 +3,9 @@
 	email      = jacobkoziej@gmail.com
 	signingkey = 4C133A84E6469228
 
+[alias]
+	c = commit
+
 [core]
 	editor = vim
 
