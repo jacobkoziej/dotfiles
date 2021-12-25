@@ -22,6 +22,7 @@ set -o CASE_MATCH
 set +o CSH_NULL_GLOB
 set +o EQUALS
 set -o GLOB
+set +o GLOB_ASSIGN
 set -o GLOB_DOTS
 
 # history
