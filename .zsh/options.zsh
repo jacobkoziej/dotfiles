@@ -34,3 +34,4 @@ set -o UNSET
 set -o APPEND_HISTORY
 set -o BANG_HIST
 set -o EXTENDED_HISTORY
+set +o HIST_BEEP
