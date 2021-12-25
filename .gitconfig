@@ -4,6 +4,7 @@
 	signingkey = 4C133A84E6469228
 
 [alias]
+	a = add
 	c = commit
 	p = push
 
