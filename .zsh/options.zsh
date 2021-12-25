@@ -28,6 +28,7 @@ set +o GLOB_SUBST
 set +o KSH_GLOB
 set -o NOMATCH
 set +o SH_GLOB
+set -o UNSET
 
 # history
 set -o EXTENDED_HISTORY
