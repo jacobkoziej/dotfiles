@@ -15,6 +15,7 @@
 
 [commit]
 	gpgsign = true
+	verbose = true
 
 [merge]
 	ff = false
