@@ -12,6 +12,7 @@ set -o GLOB_COMPLETE
 set -o HASH_LIST_ALL
 set -o LIST_AMBIGUOUS
 set +o LIST_BEEP
+set -o LIST_TYPES
 
 # expansion and globbing
 set -o GLOB_DOTS
