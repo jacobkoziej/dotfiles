@@ -31,4 +31,5 @@ set +o SH_GLOB
 set -o UNSET
 
 # history
+set -o APPEND_HISTORY
 set -o EXTENDED_HISTORY
