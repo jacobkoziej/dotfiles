@@ -15,6 +15,7 @@ set +o LIST_BEEP
 set -o LIST_TYPES
 
 # expansion and globbing
+set -o BAD_PATTERN
 set -o GLOB_DOTS
 
 # history
