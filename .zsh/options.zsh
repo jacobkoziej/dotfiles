@@ -10,6 +10,7 @@ set -o AUTO_PARAM_SLASH
 set +o AUTO_REMOVE_SLASH
 set -o GLOB_COMPLETE
 set -o HASH_LIST_ALL
+set -o LIST_AMBIGUOUS
 
 # expansion and globbing
 set -o GLOB_DOTS
