@@ -32,4 +32,5 @@ set -o UNSET
 
 # history
 set -o APPEND_HISTORY
+set -o BANG_HIST
 set -o EXTENDED_HISTORY
