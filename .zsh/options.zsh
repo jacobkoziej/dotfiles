@@ -11,6 +11,7 @@ set +o AUTO_REMOVE_SLASH
 set -o GLOB_COMPLETE
 set -o HASH_LIST_ALL
 set -o LIST_AMBIGUOUS
+set +o LIST_BEEP
 
 # expansion and globbing
 set -o GLOB_DOTS
