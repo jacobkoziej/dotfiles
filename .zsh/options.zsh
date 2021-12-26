@@ -49,3 +49,4 @@ set -o ALIASES
 set -o CLOBBER
 set +o FLOW_CONTROL
 set -o INTERACTIVE_COMMENTS
+set -o HASH_CMDS
