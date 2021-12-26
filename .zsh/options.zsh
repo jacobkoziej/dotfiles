@@ -54,3 +54,6 @@ set -o HASH_DIRS
 set +o PATH_SCRIPT
 set +o RM_STAR_SILENT
 set -o SHORT_LOOPS
+
+# job control
+set -o BG_NICE
