@@ -46,3 +46,4 @@ set -o SHARE_HISTORY
 
 # input/output
 set -o ALIASES
+set -o CLOBBER
