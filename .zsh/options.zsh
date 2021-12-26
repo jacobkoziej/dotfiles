@@ -43,3 +43,6 @@ set -o HIST_REDUCE_BLANKS
 set -o HIST_SAVE_BY_COPY
 set -o HIST_VERIFY
 set -o SHARE_HISTORY
+
+# input/output
+set -o ALIASES
