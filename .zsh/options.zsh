@@ -58,3 +58,4 @@ set -o SHORT_LOOPS
 # job control
 set -o BG_NICE
 set -o CHECK_JOBS
+set -o CHECK_RUNNING_JOBS
