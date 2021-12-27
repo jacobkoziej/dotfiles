@@ -11,6 +11,8 @@ export SSH_AUTH_SOCK="$HOME/.ssh/ssh_auth_sock"
 export GOPATH="$HOME/.local/go"
 export GOPRIVATE="git.jacobkoziej.xyz/*"
 
+export PYTHONSTARTUP="$HOME/.pythonrc.py"
+
 export BROWSER="chromium"
 export EDITOR="vim"
 export TERMINAL="alacritty"
