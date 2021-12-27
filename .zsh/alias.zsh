@@ -7,3 +7,5 @@ alias l='exa \
 	--group-directories-first \
 	--long \
 	--time-style long-iso'
+
+alias py='python'
