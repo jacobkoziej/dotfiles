@@ -61,3 +61,4 @@ set -o CHECK_JOBS
 set -o CHECK_RUNNING_JOBS
 set -o HUP
 set -o LONG_LIST_JOBS
+set -o NOTIFY
