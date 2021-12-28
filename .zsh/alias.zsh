@@ -8,4 +8,4 @@ alias l='exa \
 	--long \
 	--time-style long-iso'
 
-alias py='python'
+alias py='python3'
