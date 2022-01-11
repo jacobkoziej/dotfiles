@@ -1,6 +1,7 @@
 local options = {
 	colorcolumn    = "80",
 	errorbells     = false,
+	guicursor      = "",
 	hidden         = true,
 	incsearch      = true,
 	number         = true,
