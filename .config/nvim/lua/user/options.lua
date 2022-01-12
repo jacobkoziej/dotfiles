@@ -5,6 +5,7 @@ local options = {
 	relativenumber = true,
 	scrolloff      = 4,
 	smartcase      = true,
+	termguicolors  = true,
 	updatetime     = 100,
 	wrap           = false,
 }
