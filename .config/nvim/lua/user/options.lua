@@ -1,17 +1,11 @@
 local options = {
 	colorcolumn    = "80",
-	errorbells     = false,
 	guicursor      = "",
-	hidden         = true,
-	incsearch      = true,
 	number         = true,
 	relativenumber = true,
 	scrolloff      = 4,
 	smartcase      = true,
-	tabstop        = 8,
 	updatetime     = 100,
-	wildmenu       = true,
-	wildmode       = "full",
 	wrap           = false,
 }
 
