@@ -4,6 +4,7 @@ return packer.startup(
 function(use)
 	use "arcticicestudio/nord-vim"
 	use "editorconfig/editorconfig-vim"
+	use "kyazdani42/nvim-web-devicons"
 	use {
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
