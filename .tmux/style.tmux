@@ -4,7 +4,7 @@ set -g status-position top
 set -g status-style "none"
 
 set -g status-left-length '32'
-set -g status-left "#[fg=black,bg=blue,bold] #S "
+set -g status-left "#[fg=black,bg=blue,bold] #S #[bg=default] "
 
 set -g status-right-length '64'
 set -g status-right  "#[fg=black,bold]"
