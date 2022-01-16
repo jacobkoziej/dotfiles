@@ -18,3 +18,7 @@ bind 'c' neww -n ''
 
 # toggle status line
 bind 'b' set status
+
+# consistency with vi
+unbind 'p'
+bind 'N' prev
