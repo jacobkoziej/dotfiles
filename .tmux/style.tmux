@@ -1,7 +1,7 @@
 set -g status-interval '1'
 set -g status-position top
 
-set -g status-style "none"
+set -g status-style "bg=default"
 
 set -g status-left-length '32'
 set -g status-left-style "fg=black,bold"
