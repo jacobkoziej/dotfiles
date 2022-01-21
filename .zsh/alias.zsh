@@ -9,3 +9,5 @@ alias l='exa \
 	--time-style long-iso'
 
 alias py='python3'
+
+alias shfmt='shfmt -fn -sr'
