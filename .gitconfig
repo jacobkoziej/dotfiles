@@ -9,7 +9,7 @@
 	p = push
 
 [core]
-	editor = vim
+	editor = nvim
 
 [checkout]
 	workers = 8
