@@ -1,3 +1,5 @@
+alias g='git'
+
 alias l='exa \
 	--all \
 	--binary \
