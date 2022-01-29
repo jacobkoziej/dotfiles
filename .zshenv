@@ -14,6 +14,6 @@ export GOPRIVATE="git.jacobkoziej.xyz/*"
 export PYTHONSTARTUP="$HOME/.pythonrc.py"
 
 export BROWSER="chromium"
-export EDITOR="vim"
+export EDITOR="nvim"
 export TERMINAL="alacritty"
 export THEME="Nord"
