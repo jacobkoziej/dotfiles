@@ -1,0 +1,10 @@
+[Unit]
+Description=ssh-agent - OpenSSH authentication agent
+Documentation=man:ssh-agent(1)
+
+[Service]
+ExecStart=ssh-agent -a %t/ssh_auth_sock -D
+SuccessExitStatus=INVALIDARGUMENT
+
+[Install]
+WantedBy=default.target
