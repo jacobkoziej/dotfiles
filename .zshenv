@@ -12,6 +12,7 @@ export GOPATH="$HOME/.local/go"
 export GOPRIVATE="git.jacobkoziej.xyz/*"
 
 export PYTHONSTARTUP="$HOME/.pythonrc.py"
+export PYTHONVENV="$HOME/.local/python/venv"
 
 export BROWSER="chromium"
 export EDITOR="nvim"
