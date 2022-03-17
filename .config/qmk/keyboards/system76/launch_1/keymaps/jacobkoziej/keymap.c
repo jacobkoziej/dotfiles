@@ -42,6 +42,14 @@
 #include QMK_KEYBOARD_H
 
 
+#define TMUX_PREFIX_STRING SS_LCTL(" ")
+#define TMUX_NEWW_STRING "c"
+
+
+enum custom_keycodes {
+	TMXNEWW = SAFE_RANGE,
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[0] = LAYOUT(
 	KC_CAPS, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_DEL,  KC_PGUP,
@@ -57,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
-	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
+	_______, _______, _______, TMXNEWW, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
 	_______, _______, _______, _______,          _______, _______,          _______, _______, _______,          _______, _______, _______
 	),
 
@@ -79,3 +87,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	_______, _______, _______, _______,          _______, _______,          _______, _______, _______,          KC_HOME, KC_PGDN, KC_END
 	),
 };
+
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record)
+{
+	switch (keycode) {
+		case TMXNEWW:
+			if (record->event.pressed) {
+				SEND_STRING(TMUX_PREFIX_STRING);
+				SEND_STRING(TMUX_NEWW_STRING);
+			}
+			break;
+	}
+
+	return true;
+}
