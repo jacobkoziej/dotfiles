@@ -45,11 +45,13 @@
 #define TMUX_PREFIX_STRING SS_LCTL(" ")
 #define TMUX_NEWW_STRING "c"
 #define TMUX_NEXT_STRING "n"
+#define TMUX_ZOOM_STRING "z"
 
 
 enum custom_keycodes {
 	TMXNEWW = SAFE_RANGE,
 	TMXNEXT,
+	TMXZOOM,
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -67,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
-	_______, _______, _______, TMXNEWW, _______, _______, TMXNEXT, _______, _______, _______, _______, _______,          _______,
+	_______, TMXZOOM, _______, TMXNEWW, _______, _______, TMXNEXT, _______, _______, _______, _______, _______,          _______,
 	_______, _______, _______, _______,          _______, _______,          _______, _______, _______,          _______, _______, _______
 	),
 
@@ -98,6 +100,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
 			if (record->event.pressed) {
 				SEND_STRING(TMUX_PREFIX_STRING);
 				SEND_STRING(TMUX_NEWW_STRING);
+			}
+			break;
+
+		case TMXZOOM:
+			if (record->event.pressed) {
+				SEND_STRING(TMUX_PREFIX_STRING);
+				SEND_STRING(TMUX_ZOOM_STRING);
 			}
 			break;
 
