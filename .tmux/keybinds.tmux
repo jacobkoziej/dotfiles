@@ -22,3 +22,13 @@ bind 'b' set status
 # consistency with vi
 unbind 'p'
 bind 'N' prev
+
+# vi pane movement
+unbind 'Left'
+unbind 'Down'
+unbind 'Up'
+unbind 'Right'
+bind 'h' selectp -L
+bind 'j' selectp -D
+bind 'k' selectp -U
+bind 'l' selectp -R
