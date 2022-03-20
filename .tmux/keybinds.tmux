@@ -20,8 +20,9 @@ bind 'c' neww -n ''
 bind 'b' set status
 
 # consistency with vi
-unbind 'p'
 bind 'N' prev
+bind 'n' next
+bind 'p' last
 
 # vi pane movement
 unbind 'Left'
