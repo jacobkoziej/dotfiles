@@ -48,6 +48,7 @@
 #define TMUX_DOWN_STRING  "j"
 #define TMUX_UP_STRING    "k"
 #define TMUX_RIGHT_STRING "l"
+#define TMUX_LAST_STRING  "p"
 #define TMUX_NEXT_STRING  "n"
 #define TMUX_ZOOM_STRING  "z"
 
@@ -59,6 +60,7 @@ enum custom_keycodes {
 	TMXDOWN,
 	TMXUP,
 	TMXRGHT,
+	TMXLAST,
 	TMXZOOM,
 };
 
@@ -75,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[1] = LAYOUT(
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, TMXLAST, _______, _______, _______, _______,
 	_______, _______, _______, _______, _______, _______, TMXLEFT, TMXDOWN, TMXUP,   TMXRGHT, _______, _______, _______,          _______,
 	_______, TMXZOOM, _______, TMXNEWW, _______, _______, TMXNEXT, _______, _______, _______, _______, _______,          _______,
 	_______, _______, _______, _______,          _______, _______,          _______, _______, _______,          _______, _______, _______
@@ -136,6 +138,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
 			if (record->event.pressed) {
 				SEND_STRING(TMUX_PREFIX_STRING);
 				SEND_STRING(TMUX_RIGHT_STRING);
+			}
+			break;
+
+		case TMXLAST:
+			if (record->event.pressed) {
+				SEND_STRING(TMUX_PREFIX_STRING);
+				SEND_STRING(TMUX_LAST_STRING);
 			}
 			break;
 
