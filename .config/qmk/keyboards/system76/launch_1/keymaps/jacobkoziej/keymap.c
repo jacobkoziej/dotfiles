@@ -43,14 +43,22 @@
 
 
 #define TMUX_PREFIX_STRING SS_LCTL(" ")
-#define TMUX_NEWW_STRING "c"
-#define TMUX_NEXT_STRING "n"
-#define TMUX_ZOOM_STRING "z"
+#define TMUX_NEWW_STRING  "c"
+#define TMUX_LEFT_STRING  "h"
+#define TMUX_DOWN_STRING  "j"
+#define TMUX_UP_STRING    "k"
+#define TMUX_RIGHT_STRING "l"
+#define TMUX_NEXT_STRING  "n"
+#define TMUX_ZOOM_STRING  "z"
 
 
 enum custom_keycodes {
 	TMXNEWW = SAFE_RANGE,
 	TMXNEXT,
+	TMXLEFT,
+	TMXDOWN,
+	TMXUP,
+	TMXRGHT,
 	TMXZOOM,
 };
 
@@ -68,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
+	_______, _______, _______, _______, _______, _______, TMXLEFT, TMXDOWN, TMXUP,   TMXRGHT, _______, _______, _______,          _______,
 	_______, TMXZOOM, _______, TMXNEWW, _______, _______, TMXNEXT, _______, _______, _______, _______, _______,          _______,
 	_______, _______, _______, _______,          _______, _______,          _______, _______, _______,          _______, _______, _______
 	),
@@ -100,6 +108,34 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
 			if (record->event.pressed) {
 				SEND_STRING(TMUX_PREFIX_STRING);
 				SEND_STRING(TMUX_NEWW_STRING);
+			}
+			break;
+
+		case TMXLEFT:
+			if (record->event.pressed) {
+				SEND_STRING(TMUX_PREFIX_STRING);
+				SEND_STRING(TMUX_LEFT_STRING);
+			}
+			break;
+
+		case TMXDOWN:
+			if (record->event.pressed) {
+				SEND_STRING(TMUX_PREFIX_STRING);
+				SEND_STRING(TMUX_DOWN_STRING);
+			}
+			break;
+
+		case TMXUP:
+			if (record->event.pressed) {
+				SEND_STRING(TMUX_PREFIX_STRING);
+				SEND_STRING(TMUX_UP_STRING);
+			}
+			break;
+
+		case TMXRGHT:
+			if (record->event.pressed) {
+				SEND_STRING(TMUX_PREFIX_STRING);
+				SEND_STRING(TMUX_RIGHT_STRING);
 			}
 			break;
 
