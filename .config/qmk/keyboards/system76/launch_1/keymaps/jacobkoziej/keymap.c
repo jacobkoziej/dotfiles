@@ -61,8 +61,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
-	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
-	_______, _______, _______, _______,          _______, XXXXXXX,          _______, _______, _______,          _______, _______, _______
+	KC_LSFT, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_RSFT,          _______,
+	KC_LCTL, KC_LGUI, KC_LALT, XXXXXXX,          _______, XXXXXXX,          KC_RALT, KC_RCTL, XXXXXXX,          _______, _______, _______
 	),
 
 	[2] = LAYOUT(
@@ -88,13 +88,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 bool process_record_user(uint16_t keycode, keyrecord_t *record)
 {
 	static action_t action;
+	static uint8_t  mods;
 	
 	if (IS_LAYER_ON(TMUX_LAYER)) {
 		action = action_for_key(TMUX_LAYER, record->event.key);
 
 		if (action.code == ACTION_TRANSPARENT) {
 			if (record->event.pressed) {
+				// we want to only send the prefix so
+				// we'll need to clear and restore
+				// the held modifier keys
+				mods = get_mods();
+				clear_mods();
 				SEND_STRING(TMUX_PREFIX_STRING);
+				set_mods(mods);
 			}
 		}
 	}
