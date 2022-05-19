@@ -45,6 +45,9 @@
 #define TMUX_LAYER         1
 #define TMUX_PREFIX_STRING SS_LCTL(" ")
 
+#define VIM_WINDOW_LAYER         2
+#define VIM_WINDOW_PREFIX_STRING SS_LCTL("w")
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[0] = LAYOUT(
@@ -70,8 +73,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_VOLU,
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_VOLD,
 	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          KC_MUTE,
-	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          KC_MFFD,
-	_______, _______, _______, _______,          _______, _______,          _______, _______, _______,          KC_MPRV, KC_MRWD, KC_MNXT
+	KC_LSFT, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_RSFT,          KC_MFFD,
+	KC_LCTL, KC_LGUI, KC_LALT, XXXXXXX,          _______, XXXXXXX,          KC_RALT, KC_RCTL, XXXXXXX,          KC_MPRV, KC_MRWD, KC_MNXT
 	),
 
 	[3] = LAYOUT(
@@ -101,6 +104,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
 				mods = get_mods();
 				clear_mods();
 				SEND_STRING(TMUX_PREFIX_STRING);
+				set_mods(mods);
+			}
+		}
+	}
+
+	if (IS_LAYER_ON(VIM_WINDOW_LAYER)) {
+		action = action_for_key(VIM_WINDOW_LAYER, record->event.key);
+
+		if (action.code == ACTION_TRANSPARENT) {
+			if (record->event.pressed) {
+				// we want to only send the window
+				// prefix so we'll need to clear and
+				// restore the held modifier keys
+				mods = get_mods();
+				clear_mods();
+				SEND_STRING(VIM_WINDOW_PREFIX_STRING);
 				set_mods(mods);
 			}
 		}
