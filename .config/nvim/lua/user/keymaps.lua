@@ -6,8 +6,8 @@ local opts = {
 }
 
 -- remap <leader> to space
-keymap("n", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
+keymap('n', '<Space>', '<Nop>', opts)
+vim.g.mapleader = ' '
 
 -- files
-keymap("n", "<leader>fe", ":NvimTreeToggle<CR>", opts)
+keymap('n', '<leader>fe', ':NvimTreeToggle<CR>', opts)

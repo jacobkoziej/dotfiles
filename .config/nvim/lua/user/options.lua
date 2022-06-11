@@ -1,6 +1,6 @@
 local options = {
-	colorcolumn    = "80",
-	guicursor      = "",
+	colorcolumn    = '80',
+	guicursor      = '',
 	number         = true,
 	relativenumber = true,
 	scrolloff      = 4,
@@ -10,7 +10,7 @@ local options = {
 	wrap           = false,
 }
 
-vim.cmd "colorscheme nord"
+vim.cmd 'colorscheme nord'
 
 for k, v in pairs(options) do
 	vim.opt[k] = v

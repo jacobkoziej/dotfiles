@@ -1,4 +1,4 @@
-local tree = require("nvim-tree")
+local tree = require('nvim-tree')
 
 tree.setup {
 	view = {
