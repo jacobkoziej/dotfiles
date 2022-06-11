@@ -1,7 +1,4 @@
-require 'user.gitsigns'
 require 'user.keymaps'
 require 'user.options'
 require 'user.plugins'
 require 'user.style'
-require 'user.tree'
-require 'user.treesitter'

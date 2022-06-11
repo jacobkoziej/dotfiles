@@ -12,6 +12,12 @@ if vim.fn.empty(vim.fn.glob(packer_path)) > 0 then
 	vim.cmd 'packadd packer.nvim'
 end
 
+if not packer_bootstrap then
+	require 'user.plugins.gitsigns'
+	require 'user.plugins.tree'
+	require 'user.plugins.treesitter'
+end
+
 local packer = require 'packer'
 
 return packer.startup(
