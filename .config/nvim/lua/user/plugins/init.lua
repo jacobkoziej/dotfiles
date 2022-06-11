@@ -14,8 +14,8 @@ end
 
 if not packer_bootstrap then
 	require 'user.plugins.gitsigns'
-	require 'user.plugins.tree'
-	require 'user.plugins.treesitter'
+	require 'user.plugins.nvim-tree'
+	require 'user.plugins.nvim-treesitter'
 end
 
 local packer = require 'packer'
