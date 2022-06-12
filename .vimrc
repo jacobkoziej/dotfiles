@@ -1,75 +1,42 @@
-"      ________ ++     ________
-"     /VVVVVVVV\++++  /VVVVVVVV\
-"     \VVVVVVVV/++++++\VVVVVVVV/
-"      |VVVVVV|++++++++/VVVVV/'
-"      |VVVVVV|++++++/VVVVV/'
-"     +|VVVVVV|++++/VVVVV/'+
-"   +++|VVVVVV|++/VVVVV/'+++++
-" +++++|VVVVVV|/VVVVV/'+++++++++
-"   +++|VVVVVVVVVVV/'+++++++++
-"     +|VVVVVVVVV/'+++++++++
-"      |VVVVVVV/'+++++++++
-"      |VVVVV/'+++++++++
-"      |VVV/'+++++++++
-"      'V/'   ++++++
-"               ++
-""""""""""""""""""""""""""""""""
+filetype on
 
-" Plugins
-""""""""""""""""""""""""""""""""
-source $HOME/.vim/plug-config/plugins.vim
+set autoindent
+set autoread
+set backspace=indent,eol,start
+set belloff=all
+set colorcolumn=80
+set complete-=i
+set cscopeverbose
+set display=lastline
+set encoding=utf-8
+set fsync
+set guicursor=
+set hidden
+set history=10000
+set hlsearch
+set incsearch
+set langnoremap
+set laststatus=2
+set nrformats=bin,hex
+set number
+set relativenumber
+set ruler
+set scrolloff=4
+set showcmd
+set sidescroll=1
+set smartcase
+set smarttab
+set switchbuf=uselast
+set ttimeoutlen=50
+set ttyfast
+set updatetime=100
+set wildmenu
+set wildoptions=pum,tagfile
 
-" General Settings
-""""""""""""""""""""""""""""""""
-source $HOME/.vim/general/settings.vim
+set nocompatible
+set nojoinspaces
+set nolangremap
+set nostartofline
+set nowrap
 
-" Theme Related
-""""""""""""""""
-source $HOME/.vim/themes/nord.vim
-
-" Status/Tabline
-""""""""""""""""
-set noshowmode " disable default mode indicator
-let g:airline_powerline_fonts = 1 " enable powerline fonts
-let g:airline_theme='nord' " set bar theme to nord
-let g:airline_left_sep = '' " no left separator
-let g:airline_left_alt_sep = '|'
-let g:airline_right_sep = '' " no right separator
-let g:airline_right_alt_sep = '|'
-let g:airline_section_x = '%{PencilMode()}' " show pencil mode
-
-" Plugin Settings
-""""""""""""""""""""""""""""""""
-" Pencil
-""""""""""""""""
-source $HOME/.vim/plug-config/vim-pencil.vim
-" NERDTree
-""""""""""""""""
-source $HOME/.vim/plug-config/nerdtree.vim
-
-" Undotree
-""""""""""""""""
-let g:undotree_WindowLayout = 2 " open in layout 2
-let g:undotree_SetFocusWhenToggle = 1 " focus window upon opening
-
-" Keybinds
-""""""""""""""""""""""""""""""""
-" Leader Key
-""""""""""""""""
-noremap <space> <nop>
-let mapleader = " "
-
-" Split Movement
-""""""""""""""""
-nnoremap <silent> <leader>h :wincmd h<CR>
-nnoremap <silent> <leader>j :wincmd j<CR>
-nnoremap <silent> <leader>k :wincmd k<CR>
-nnoremap <silent> <leader>l :wincmd l<CR>
-
-" Undotree Toggle
-""""""""""""""""
-nnoremap <silent> <leader>u :UndotreeToggle<CR>
-
-" Search Highlight Toggle
-""""""""""""""""
-nnoremap <silent> <leader>/ :set invhlsearch<CR>
+syntax enable
