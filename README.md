@@ -16,6 +16,7 @@ Configuration is included for:
 * [Neofetch] - command-line system information tool
 * [Neovim] - Vim-fork focused on extensibility and usability
 * [Polybar] - fast and easy-to-use status bar
+* [QMK Firmware] - Open-source keyboard firmware for Atmel AVR and Arm USB families
 * [sxhkd] - simple X hotkey daemon
 * [tmux] - terminal multiplexer
 * [Vim] - the ubiquitous text editor
@@ -37,6 +38,7 @@ Distributed under the [GPLv3] or later.
 [Neofetch]: https://github.com/dylanaraps/neofetch
 [Neovim]: https://neovim.io/
 [Polybar]: https://polybar.github.io/
+[QMK Firmware]: https://qmk.fm/
 [sxhkd]: https://github.com/baskerville/sxhkd
 [tmux]: https://tmux.github.io/
 [Vim]: https://www.vim.org/
