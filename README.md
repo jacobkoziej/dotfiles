@@ -1,6 +1,7 @@
 # dotfiles
 
-This is a personal repository for my configuration files found under `$HOME`
+This is a personal repository for my configuration files found under
+`$HOME`
 
 I use my own [dotfile-manager] to manage/deploy my dotfiles.
 
@@ -8,7 +9,8 @@ Configuration is included for:
 
 * [Alacritty] - cross-platform, GPU-accelerated terminal emulator
 * [bat] - a cat(1) clone with wings
-* [browsh] - a fully-modern text-based browser, rendering to TTY and browsers
+* [browsh] - a fully-modern text-based browser, rendering to TTY and
+  browsers
 * [bspwm] - tiling window manager based on binary space partitioning
 * [GDB] - The GNU Project Debugger
 * [Git] - fast, scalable, distributed revision control system
@@ -16,7 +18,8 @@ Configuration is included for:
 * [Neofetch] - command-line system information tool
 * [Neovim] - Vim-fork focused on extensibility and usability
 * [Polybar] - fast and easy-to-use status bar
-* [QMK Firmware] - Open-source keyboard firmware for Atmel AVR and Arm USB families
+* [QMK Firmware] - Open-source keyboard firmware for Atmel AVR and Arm
+  USB families
 * [sxhkd] - simple X hotkey daemon
 * [tmux] - terminal multiplexer
 * [Vim] - the ubiquitous text editor
