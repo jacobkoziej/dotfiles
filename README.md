@@ -14,6 +14,7 @@ Configuration is included for:
 * [Git] - fast, scalable, distributed revision control system
 * [makepkg] - script to automate the building of pacman packages
 * [Neofetch] - command-line system information tool
+* [Neovim] - Vim-fork focused on extensibility and usability
 * [Polybar] - fast and easy-to-use status bar
 * [sxhkd] - simple X hotkey daemon
 * [tmux] - terminal multiplexer
@@ -34,6 +35,7 @@ Distributed under the [GPLv3] or later.
 [Git]: https://git-scm.com/
 [makepkg]: https://git.archlinux.org/pacman.git/tree/scripts/makepkg.sh.in
 [Neofetch]: https://github.com/dylanaraps/neofetch
+[Neovim]: https://neovim.io/
 [Polybar]: https://polybar.github.io/
 [sxhkd]: https://github.com/baskerville/sxhkd
 [tmux]: https://tmux.github.io/
