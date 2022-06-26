@@ -1,2 +1,0 @@
-@reboot rm -f "$HOME/.ssh/ssh_auth_sock"; ssh-agent -a "$HOME/.ssh/ssh_auth_sock"
-@reboot syncthing -no-browser &>> "$HOME/.local/var/log/syncthing/syncthing.log"
