@@ -26,5 +26,8 @@ set -o INTERACTIVE_COMMENTS
 # job control
 set -o LONG_LIST_JOBS
 
+# prompting
+set -o PROMPT_SUBST
+
 # zle
 set +o BEEP
