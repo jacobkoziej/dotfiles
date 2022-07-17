@@ -15,6 +15,7 @@ export GOPRIVATE="git.jacobkoziej.xyz/*"
 
 export PYTHONSTARTUP="$HOME/.pythonrc.py"
 export PYTHONVENV="$HOME/.local/python/venv"
+export VIRTUAL_ENV_DISABLE_PROMPT=true
 
 export BROWSER="chromium"
 export EDITOR="nvim"
