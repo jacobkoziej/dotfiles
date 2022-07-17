@@ -1,6 +1,8 @@
+source "$HOME/.zsh/prompt.d/git.zsh"
+
 prompt::ps1()
 {
-	echo "%B%F{cyan}%~%f"
+	echo "%B%F{cyan}%~%f$(prompt::section::git)"
 	echo -n "[ZSH] %F{magenta}%(!.#.>)%f%b "
 }
 
