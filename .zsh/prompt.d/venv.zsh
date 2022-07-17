@@ -18,5 +18,5 @@ prompt::section::venv()
 		name="$VIRTUAL_ENV:t"
 	fi
 
-	echo -n " %F{yellow}$name%f"
+	echo -n " py %F{yellow}$name%f"
 }
