@@ -32,7 +32,7 @@ prompt::section::git()
 		changes="$changes$GIT_UNTRACKED_SYMBOL"
 	fi
 
-	[[ -n "$branch" ]] && GIT_PROMPT="$GIT_PROMPT on %F{green}$branch%f"
+	[[ -n "$branch" ]] && GIT_PROMPT="${GIT_PROMPT}on %F{green}$branch%f"
 	[[ -n "$changes" ]] && GIT_PROMPT="$GIT_PROMPT %F{red}[$changes]%f"
 	echo -n "$GIT_PROMPT"
 }

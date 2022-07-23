@@ -4,7 +4,7 @@ source "$HOME/.zsh/prompt.d/venv.zsh"
 
 prompt::ps1()
 {
-	echo "%B$(prompt::section::dir)$(prompt::section::git)$(prompt::section::venv)"
+	echo "%B$(prompt::section::dir) $(prompt::section::git) $(prompt::section::venv)"
 	echo -n "[ZSH] %F{magenta}%(!.#.>)%f%b "
 }
 
