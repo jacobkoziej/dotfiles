@@ -1,3 +1,9 @@
 local telescope = require('telescope')
 
-telescope.setup()
+telescope.setup {
+	pickers = {
+		find_files = {
+			hidden = true,
+		},
+	},
+}
