@@ -11,3 +11,4 @@ vim.g.mapleader = ' '
 
 -- files
 keymap('n', '<leader>fe', ':NvimTreeToggle<CR>', opts)
+keymap('n', '<leader>ff', ':Telescope find_files<CR>', opts)
