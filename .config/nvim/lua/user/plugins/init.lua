@@ -16,6 +16,7 @@ if not packer_bootstrap then
 	require 'user.plugins.gitsigns'
 	require 'user.plugins.nvim-tree'
 	require 'user.plugins.nvim-treesitter'
+	require 'user.plugins.telescope'
 end
 
 local packer = require 'packer'
@@ -28,6 +29,7 @@ function(use)
 	use 'kyazdani42/nvim-web-devicons'
 	use 'lewis6991/gitsigns.nvim'
 	use 'nvim-lua/plenary.nvim'
+	use 'nvim-telescope/telescope.nvim'
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		run = vim.cmd [[
