@@ -1,6 +1,6 @@
 vim.cmd [[
-try
-	colorscheme nord
-catch /.*/
-endtry
+	try
+		colorscheme nord
+	catch /.*/
+	endtry
 ]]
