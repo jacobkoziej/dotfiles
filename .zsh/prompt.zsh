@@ -4,7 +4,13 @@ source "$HOME/.zsh/prompt.d/venv.zsh"
 
 prompt::ps1()
 {
-	echo "%B$(prompt::section::dir) $(prompt::section::git) $(prompt::section::venv)"
+	local section_git="$(prompt::section::git)"
+	local section_venv="$(prompt::section::venv)"
+
+	[[ -n "$section_git" ]] && section_git=" $section_git"
+	[[ -n "$section_venv" ]] && section_venv=" $section_venv"
+
+	echo "%B$(prompt::section::dir)$section_git$section_venv"
 	echo -n "[ZSH] %F{magenta}%(!.#.>)%f%b "
 }
 
