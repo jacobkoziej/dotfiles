@@ -1,6 +1,6 @@
 prompt::section::dir()
 {
-	local RO_SYMBOL="ro"
+	local RO_SYMBOL='ro'
 
 	local dir
 

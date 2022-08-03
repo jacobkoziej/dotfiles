@@ -1,8 +1,8 @@
 prompt::section::git()
 {
-	local GIT_STASHED_SYMBOL="$"
-	local GIT_MODIFIED_SYMBOL="+"
-	local GIT_UNTRACKED_SYMBOL="?"
+	local GIT_STASHED_SYMBOL='$'
+	local GIT_MODIFIED_SYMBOL='+'
+	local GIT_UNTRACKED_SYMBOL='?'
 
 	local branch changes git_status
 
