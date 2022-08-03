@@ -1,11 +1,11 @@
-VENV_GENERIC_NAMES=(
-	'.venv'
-	'venv'
-	'virtualenv'
-)
-
 prompt::section::venv()
 {
+	local VENV_GENERIC_NAMES=(
+		'.venv'
+		'venv'
+		'virtualenv'
+	)
+
 	[[ -n "$VIRTUAL_ENV" ]] || return
 
 	local name

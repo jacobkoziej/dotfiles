@@ -1,7 +1,7 @@
-RO_SYMBOL="ro"
-
 prompt::section::dir()
 {
+	local RO_SYMBOL="ro"
+
 	local dir
 
 	dir="${dir}%F{cyan}%~%f"
