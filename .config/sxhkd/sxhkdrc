@@ -30,6 +30,10 @@ super + p
 super + F1
 	xsecurelock
 
+# screenkey toggle
+super + F11
+	pgrep screenkey && pkill -f screenkey || screenkey
+
 # Reload sxhkd ###
 super + Escape
 	pkill -USR1 -x sxhkd
