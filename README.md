@@ -20,6 +20,8 @@ Configuration is included for:
 * [Polybar] - fast and easy-to-use status bar
 * [QMK Firmware] - Open-source keyboard firmware for Atmel AVR and Arm
   USB families
+* [screenkey] - A screencast tool to display your keys inspired by
+  Screenflick
 * [sxhkd] - simple X hotkey daemon
 * [tmux] - terminal multiplexer
 * [Vim] - the ubiquitous text editor
@@ -42,6 +44,7 @@ Distributed under the [GPLv3] or later.
 [Neovim]: https://neovim.io/
 [Polybar]: https://polybar.github.io/
 [QMK Firmware]: https://qmk.fm/
+[screenkey]: https://www.thregr.org/~wavexx/software/screenkey/
 [sxhkd]: https://github.com/baskerville/sxhkd
 [tmux]: https://tmux.github.io/
 [Vim]: https://www.vim.org/
