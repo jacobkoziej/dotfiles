@@ -17,6 +17,8 @@ Configuration is included for:
 * [makepkg] - script to automate the building of pacman packages
 * [Neofetch] - command-line system information tool
 * [Neovim] - Vim-fork focused on extensibility and usability
+* [OpenSSH] -  the premier connectivity tool for remote login with the SSH
+  protocol
 * [Polybar] - fast and easy-to-use status bar
 * [QMK Firmware] - Open-source keyboard firmware for Atmel AVR and Arm
   USB families
@@ -42,6 +44,7 @@ Distributed under the [GPLv3] or later.
 [makepkg]: https://git.archlinux.org/pacman.git/tree/scripts/makepkg.sh.in
 [Neofetch]: https://github.com/dylanaraps/neofetch
 [Neovim]: https://neovim.io/
+[OpenSSH]: https://www.openssh.com/
 [Polybar]: https://polybar.github.io/
 [QMK Firmware]: https://qmk.fm/
 [screenkey]: https://www.thregr.org/~wavexx/software/screenkey/
