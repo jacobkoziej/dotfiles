@@ -12,7 +12,7 @@ set -g @status-right-format ''
 if '$HOME/.scripts/battery-check.sh' {
 	set -ag @status-right-format '#[bg=cyan] #($HOME/.scripts/battery.sh) #[bg=default] '
 }
-set -ag @status-right-format '#[bg=green] %F | %T #[bg=default] #[bg=blue] #H '
+set -ag @status-right-format '#[bg=green] %F | %T #[bg=default] #[bg=blue] #h '
 set -g status-right-length '64'
 set -g status-right-style 'fg=black,bold'
 set -g status-right '#{E:@status-right-format}'
