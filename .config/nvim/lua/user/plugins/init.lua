@@ -21,8 +21,7 @@ end
 
 local packer = require 'packer'
 
-return packer.startup(
-function(use)
+return packer.startup(function(use)
 	use 'arcticicestudio/nord-vim'
 	use 'editorconfig/editorconfig-vim'
 	use 'kyazdani42/nvim-tree.lua'
@@ -44,5 +43,4 @@ function(use)
 	if packer_bootstrap then
 		packer.sync()
 	end
-end
-)
+end)
