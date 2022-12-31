@@ -1,4 +1,5 @@
-local tree = require('nvim-tree')
+local ok, tree = pcall(require, 'nvim-tree')
+if not ok then return end
 
 tree.setup {
 	view = {
