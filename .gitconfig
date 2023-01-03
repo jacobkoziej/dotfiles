@@ -25,6 +25,9 @@
 	ff     = true
 	rebase = false
 
+[push]
+	autoSetupRemote = true
+
 [color]
 	ui = auto
 
