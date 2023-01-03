@@ -18,7 +18,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
-require('user.xrandr')
+require 'user.xrandr'
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
