@@ -19,6 +19,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.hotkeys_popup.keys")
 
 require 'user.keybinds'
+require 'user.programs'
 require 'user.xrandr'
 
 -- {{{ Error handling
