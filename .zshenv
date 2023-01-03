@@ -13,6 +13,7 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh_auth_sock"
 export GOPATH="$HOME/.local/go"
 export GOPRIVATE="git.jacobkoziej.xyz/*"
 
+export PIP_REQUIRE_VIRTUALENV=true
 export PYTHONSTARTUP="$HOME/.pythonrc.py"
 export PYTHONVENV="$HOME/.local/python/venv"
 export VIRTUAL_ENV_DISABLE_PROMPT=true
