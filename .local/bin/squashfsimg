@@ -1,0 +1,11 @@
+#!/bin/sh
+
+TMP_DIR=$(mktemp -d)
+
+trap 'rmdir '"$TMP_DIR"'; exit 1' HUP INT TERM
+
+mksquashfs "$TMP_DIR" "$2.squashfs" -comp zstd -p "$2"' f 444 root root cat '"$1"
+MKSQUASHFS_RETURN=$?
+
+rmdir "$TMP_DIR"
+exit $MKSQUASHFS_RETURN
