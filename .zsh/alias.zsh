@@ -1,5 +1,7 @@
 alias g='git'
 
+alias ipy='ipython3'
+
 alias l='exa \
 	--all \
 	--binary \
