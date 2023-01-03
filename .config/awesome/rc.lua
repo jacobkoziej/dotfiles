@@ -18,6 +18,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+require 'user.keybinds'
 require 'user.xrandr'
 
 -- {{{ Error handling
