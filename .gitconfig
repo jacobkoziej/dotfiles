@@ -8,15 +8,27 @@
 	c = commit
 	p = push
 
-[core]
-	editor = nvim
-
 [checkout]
 	workers = 8
+
+[color]
+	ui = auto
 
 [commit]
 	gpgsign = true
 	verbose = true
+
+[core]
+	editor = nvim
+
+[filter "lfs"]
+	clean    = git-lfs clean  -- %f
+	smudge   = git-lfs smudge -- %f
+	process  = git-lfs filter-process
+	required = true
+
+[init]
+	defaultBranch = master
 
 [merge]
 	ff = false
@@ -27,15 +39,3 @@
 
 [push]
 	autoSetupRemote = true
-
-[color]
-	ui = auto
-
-[init]
-	defaultBranch = master
-
-[filter "lfs"]
-	clean    = git-lfs clean  -- %f
-	smudge   = git-lfs smudge -- %f
-	process  = git-lfs filter-process
-	required = true
