@@ -1,6 +1,7 @@
 local options = {
 	colorcolumn    = '80',
 	guicursor      = '',
+	mouse          = '',
 	number         = true,
 	relativenumber = true,
 	scrolloff      = 4,
