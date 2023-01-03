@@ -18,7 +18,7 @@ set -g status-right-style 'fg=black,bold'
 set -g status-right '#{E:@status-right-format}'
 
 # we do not want a space when the window name is an emptry string
-set -g @window-status-format ' #[bold]#I#{?#{==:#W,},, #[none]#W} '
+set -g @window-status-format ' #[bold]#I#{?window_zoomed_flag,*,}#{?#{==:#W,},, #[none]#W} '
 set -g window-status-current-style 'bg=cyan,fg=black'
 set -g window-status-current-format '#{E:@window-status-format}'
 set -g window-status-style 'bg=black,fg=white'
