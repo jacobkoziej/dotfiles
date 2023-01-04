@@ -17,6 +17,13 @@ vim.keymap.set('n', 'n',     'nzz',     opts)
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", opts)
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", opts)
 
+-- yanking & putting convenience
+vim.keymap.set('n',        '<leader>P', '"+P',  opts)
+vim.keymap.set('n',        '<leader>Y', '"+Y',  opts)
+vim.keymap.set('v',        '<leader>P', '"_dP', opts)
+vim.keymap.set({'n', 'v'}, '<leader>p', '"+p',  opts)
+vim.keymap.set({'n', 'v'}, '<leader>y', '"+y',  opts)
+
 -- files
 vim.keymap.set('n', '<leader>fe', ':NvimTreeToggle<CR>', opts)
 vim.keymap.set('n', '<leader>ff', ':Telescope find_files<CR>', opts)
