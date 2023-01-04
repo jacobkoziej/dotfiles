@@ -1,5 +1,5 @@
 local opts = {
-	silent  = true,
+	silent = true,
 }
 
 -- remap <leader> to space
