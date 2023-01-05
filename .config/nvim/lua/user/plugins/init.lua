@@ -17,6 +17,7 @@ if not packer_bootstrap then
 	require 'user.plugins.nvim-tree'
 	require 'user.plugins.nvim-treesitter'
 	require 'user.plugins.telescope'
+	require 'user.plugins.undotree'
 end
 
 local packer = require 'packer'
