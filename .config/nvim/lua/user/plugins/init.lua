@@ -27,6 +27,7 @@ return packer.startup(function(use)
 	use 'kyazdani42/nvim-tree.lua'
 	use 'kyazdani42/nvim-web-devicons'
 	use 'lewis6991/gitsigns.nvim'
+	use 'mbbill/undotree'
 	use 'nvim-lua/plenary.nvim'
 	use 'nvim-telescope/telescope.nvim'
 	use {
