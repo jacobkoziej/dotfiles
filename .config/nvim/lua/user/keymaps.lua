@@ -27,3 +27,6 @@ vim.keymap.set({'n', 'v'}, '<leader>y', '"+y',  opts)
 -- files
 vim.keymap.set('n', '<leader>fe', ':NvimTreeToggle<CR>', opts)
 vim.keymap.set('n', '<leader>ff', ':Telescope find_files<CR>', opts)
+
+-- history
+vim.keymap.set('n', '<leader>u', ':UndotreeToggle<CR>', opts)
