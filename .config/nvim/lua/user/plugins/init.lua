@@ -40,6 +40,7 @@ return packer.startup(function(use)
 			endtry
 		]],
 	}
+	use 'tpope/vim-surround'
 	use 'wbthomason/packer.nvim'
 
 	if packer_bootstrap then
