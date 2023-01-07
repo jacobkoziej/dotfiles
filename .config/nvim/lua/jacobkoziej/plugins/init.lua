@@ -13,11 +13,11 @@ if vim.fn.empty(vim.fn.glob(packer_path)) > 0 then
 end
 
 if not packer_bootstrap then
-	require 'user.plugins.gitsigns'
-	require 'user.plugins.nvim-tree'
-	require 'user.plugins.nvim-treesitter'
-	require 'user.plugins.telescope'
-	require 'user.plugins.undotree'
+	require 'jacobkoziej.plugins.gitsigns'
+	require 'jacobkoziej.plugins.nvim-tree'
+	require 'jacobkoziej.plugins.nvim-treesitter'
+	require 'jacobkoziej.plugins.telescope'
+	require 'jacobkoziej.plugins.undotree'
 end
 
 local packer = require 'packer'
