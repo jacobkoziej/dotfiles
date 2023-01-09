@@ -45,6 +45,7 @@ return packer.startup(function(use)
 	use 'tpope/vim-surround'
 	use 'wbthomason/packer.nvim'
 	use 'williamboman/mason.nvim'
+	use 'williamboman/mason-lspconfig.nvim'
 
 	if packer_bootstrap then
 		packer.sync()
