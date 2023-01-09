@@ -15,6 +15,7 @@ end
 if not packer_bootstrap then
 	require 'jacobkoziej.plugins.gitsigns'
 	require 'jacobkoziej.plugins.mason'
+	require 'jacobkoziej.plugins.mason-lspconfig'
 	require 'jacobkoziej.plugins.nvim-tree'
 	require 'jacobkoziej.plugins.nvim-treesitter'
 	require 'jacobkoziej.plugins.telescope'
