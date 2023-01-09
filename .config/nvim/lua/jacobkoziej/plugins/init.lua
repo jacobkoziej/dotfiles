@@ -43,6 +43,7 @@ return packer.startup(function(use)
 	use 'tpope/vim-fugitive'
 	use 'tpope/vim-surround'
 	use 'wbthomason/packer.nvim'
+	use 'williamboman/mason.nvim'
 
 	if packer_bootstrap then
 		packer.sync()
