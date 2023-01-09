@@ -25,7 +25,6 @@ local packer = require 'packer'
 return packer.startup(function(use)
 	use 'arcticicestudio/nord-vim'
 	use 'editorconfig/editorconfig-vim'
-	use 'kyazdani42/nvim-tree.lua'
 	use 'kyazdani42/nvim-web-devicons'
 	use 'lewis6991/gitsigns.nvim'
 	use 'mbbill/undotree'
@@ -40,6 +39,7 @@ return packer.startup(function(use)
 			endtry
 		]],
 	}
+	use 'nvim-tree/nvim-tree.lua'
 	use 'tpope/vim-fugitive'
 	use 'tpope/vim-surround'
 	use 'wbthomason/packer.nvim'
