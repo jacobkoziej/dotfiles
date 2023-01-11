@@ -26,6 +26,7 @@ local packer = require 'packer'
 
 return packer.startup(function(use)
 	use 'arcticicestudio/nord-vim'
+	use 'direnv/direnv.vim'
 	use 'editorconfig/editorconfig-vim'
 	use 'lewis6991/gitsigns.nvim'
 	use 'mbbill/undotree'
