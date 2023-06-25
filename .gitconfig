@@ -9,6 +9,7 @@
 	co = checkout
 	l  = log
 	p  = push
+	r  = rebase
 
 [checkout]
 	workers = 8
