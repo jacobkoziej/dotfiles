@@ -4,10 +4,11 @@
 	signingkey = 4C133A84E6469228
 
 [alias]
-	a = add
-	c = commit
-	l = log
-	p = push
+	a  = add
+	c  = commit
+	co = checkout
+	l  = log
+	p  = push
 
 [checkout]
 	workers = 8
