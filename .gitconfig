@@ -12,6 +12,7 @@
 	l  = log
 	p  = push
 	r  = rebase
+	s  = status
 
 [checkout]
 	workers = 8
