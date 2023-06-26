@@ -9,7 +9,7 @@ export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-$HOME/.local/run}"
 
 export HOSTALIASES="$HOME/.hosts"
 
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh_auth_sock"
+export SSH_AUTH_SOCK="${SSH_AUTH_SOCK:-$XDG_RUNTIME_DIR/ssh_auth_sock}"
 
 export GOPATH="$HOME/.local/go"
 export GOPRIVATE="git.jacobkoziej.xyz/*"
