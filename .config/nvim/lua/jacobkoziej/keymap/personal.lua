@@ -13,6 +13,9 @@ vim.keymap.set('n', 'J',     'mzJ`z',   opts)
 vim.keymap.set('n', 'N',     'Nzz',     opts)
 vim.keymap.set('n', 'n',     'nzz',     opts)
 
+-- search
+vim.keymap.set('n', '<leader>/', function() vim.opt.hlsearch = not vim.opt.hlsearch:get() end, opts)
+
 -- move line(s) in visual mode with auto indentation
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", opts)
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", opts)
