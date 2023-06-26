@@ -1,4 +1,6 @@
 require 'jacobkoziej.plugins'
-require 'jacobkoziej.options'
+
+require 'jacobkoziej.autocmd'
 require 'jacobkoziej.keymap'
+require 'jacobkoziej.options'
 require 'jacobkoziej.style'
