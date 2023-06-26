@@ -1,0 +1,7 @@
+set-option -ga update-environment 'DIRENV_DIFF'
+set-option -ga update-environment 'DIRENV_DIR'
+set-option -ga update-environment 'DIRENV_WATCHES'
+set-environment -gu 'DIRENV_DIFF'
+set-environment -gu 'DIRENV_DIR'
+set-environment -gu 'DIRENV_LAYOUT'
+set-environment -gu 'DIRENV_WATCHES'
