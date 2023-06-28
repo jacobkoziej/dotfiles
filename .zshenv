@@ -23,6 +23,3 @@ export BROWSER="librewolf"
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export THEME="nord"
-
-export PATH="$GOPATH/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
