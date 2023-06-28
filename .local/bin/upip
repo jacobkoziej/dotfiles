@@ -1,6 +1,0 @@
-#!/bin/sh
-
-export PIP_USER=true
-unset PIP_REQUIRE_VIRTUALENV
-
-exec pip "$@"
