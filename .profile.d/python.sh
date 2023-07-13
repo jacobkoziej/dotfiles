@@ -1,0 +1,5 @@
+export PIP_REQUIRE_VIRTUALENV=true
+
+export PYTHONSTARTUP="$HOME/.pythonrc.py"
+
+export VIRTUAL_ENV_DISABLE_PROMPT=true

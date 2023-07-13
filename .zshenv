@@ -11,10 +11,6 @@ export HOSTALIASES="$HOME/.hosts"
 
 export SSH_AUTH_SOCK="${SSH_AUTH_SOCK:-$XDG_RUNTIME_DIR/ssh_auth_sock}"
 
-export PIP_REQUIRE_VIRTUALENV=true
-export PYTHONSTARTUP="$HOME/.pythonrc.py"
-export VIRTUAL_ENV_DISABLE_PROMPT=true
-
 export BROWSER="librewolf"
 export EDITOR="nvim"
 export TERMINAL="alacritty"
