@@ -1,4 +1,4 @@
-for sh in "$HOME/.profile.d/*.sh"; do
+for sh in $HOME/.profile.d/*.sh; do
 	[[ -r "$sh" ]] && source "$sh"
 done
 
