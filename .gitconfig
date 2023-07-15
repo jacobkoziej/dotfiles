@@ -5,6 +5,7 @@
 
 [alias]
 	a  = add
+	b  = blame
 	c  = commit
 	co = checkout
 	d  = diff
