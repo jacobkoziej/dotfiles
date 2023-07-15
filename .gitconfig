@@ -18,6 +18,7 @@
 	r  = reset
 	re = rebase
 	s  = status
+	st = stash
 
 [checkout]
 	workers = 8
