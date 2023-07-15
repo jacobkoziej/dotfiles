@@ -6,6 +6,7 @@
 [alias]
 	a  = add
 	b  = blame
+	br = branch
 	c  = commit
 	co = checkout
 	d  = diff
