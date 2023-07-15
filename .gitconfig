@@ -15,6 +15,7 @@
 	l  = log
 	p  = push
 	pu = pull
+	r  = reset
 	re = rebase
 	s  = status
 
