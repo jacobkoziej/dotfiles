@@ -15,7 +15,7 @@
 	l  = log
 	p  = push
 	pu = pull
-	r  = rebase
+	re = rebase
 	s  = status
 
 [checkout]
