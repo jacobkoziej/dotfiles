@@ -8,6 +8,7 @@
 	b  = blame
 	br = branch
 	c  = commit
+	cl = clean
 	co = checkout
 	d  = diff
 	f  = fetch
