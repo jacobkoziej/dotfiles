@@ -2,7 +2,7 @@ alias g='git'
 
 alias ipy='ipython3'
 
-alias l='exa \
+alias l='eza \
 	--all \
 	--binary \
 	--classify \
