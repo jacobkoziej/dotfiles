@@ -12,7 +12,6 @@ test -n "${NO_DEFAULT_OPTIONS:-}" && DEFAULT_OPTIONS=''
 podman run \
 	--env "DISPLAY=$DISPLAY" \
 	--env "HOME=$HOME" \
-	--hostname "$(hostname)" \
 	--interactive \
 	--network=host \
 	--rm \
