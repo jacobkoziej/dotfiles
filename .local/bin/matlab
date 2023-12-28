@@ -1,0 +1,27 @@
+#!/bin/sh
+
+RELEASE='r2023a'
+
+DEFAULT_OPTIONS='-softwareopengl'
+if [ -t 0 ]; then
+	DEFAULT_OPTIONS="$DEFAULT_OPTIONS -nodesktop -nosplash"
+fi
+
+test -n "${NO_DEFAULT_OPTIONS:-}" && DEFAULT_OPTIONS=''
+
+podman run \
+	--env "DISPLAY=$DISPLAY" \
+	--env "HOME=$HOME" \
+	--hostname "$(hostname)" \
+	--interactive \
+	--network=host \
+	--rm \
+	--tty \
+	--userns='keep-id' \
+	--volume "$HOME:$HOME" \
+	--volume /tmp/.X11-unix:/tmp/.X11-unix:ro \
+	--workdir "$PWD" \
+	"docker.io/mathworks/matlab-deps:$RELEASE" \
+	"$HOME/.local/opt/matlab/$RELEASE/bin/matlab" \
+	"$@" \
+	"$DEFAULT_OPTIONS"
