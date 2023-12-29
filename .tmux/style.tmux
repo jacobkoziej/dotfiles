@@ -3,26 +3,26 @@ set -g status-position top
 
 set -g status-style 'bg=default'
 
-set -g @status-left-format '#[bg=blue] #S #[bg=default] '
+set -g @status-left-format '[#S] '
 set -g status-left-length '32'
-set -g status-left-style 'fg=black,bold'
+set -g status-left-style 'fg=blue,bold'
 set -g status-left '#{E:@status-left-format}'
 
-set -g @status-right-format ''
+set -g @status-right-format '['
 if '$HOME/.scripts/battery-check.sh' {
-	set -ag @status-right-format '#[bg=cyan] #($HOME/.scripts/battery.sh) #[bg=default] '
+	set -ag @status-right-format '#($HOME/.scripts/battery.sh) | '
 }
-set -ag @status-right-format '#[bg=green] %F | %T #[bg=default] #[bg=blue] #h '
+set -ag @status-right-format '%F | %T | #h'
+set -ag @status-right-format ']'
 set -g status-right-length '64'
-set -g status-right-style 'fg=black,bold'
-set -g status-right '#{E:@status-right-format}'
+set -g status-right-style 'fg=blue,bold'
+set -g status-right '#{?#{e|>=:#{client_width},80},#{E:@status-right-format},}'
 
-# we do not want a space when the window name is an emptry string
-set -g @window-status-format ' #[bold]#I#{?window_zoomed_flag,*,}#{?#{==:#W,},, #[none]#W} '
-set -g window-status-current-style 'bg=cyan,fg=black'
+set -g @window-status-format '#I#{?#{==:#W,},,:#W}#{?window_zoomed_flag,*,}#{?window_last_flag,!,}'
+set -g window-status-current-style 'fg=white,bold'
 set -g window-status-current-format '#{E:@window-status-format}'
-set -g window-status-style 'bg=black,fg=white'
-set -g window-status-last-style 'bg=black,fg=cyan'
-set -g window-status-activity-style 'bg=green,fg=black'
-set -g window-status-bell-style 'bg=white,fg=black'
+set -g window-status-style 'fg=grey,bold'
+set -g window-status-last-style 'fg=grey,bold'
+set -g window-status-activity-style 'fg=green,bold'
+set -g window-status-bell-style 'fg=red,bold'
 set -g window-status-format '#{E:@window-status-format}'
