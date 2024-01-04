@@ -12,6 +12,7 @@ test -n "${NO_DEFAULT_OPTIONS:-}" && DEFAULT_OPTIONS=''
 podman run \
 	--env "DISPLAY=$DISPLAY" \
 	--env "HOME=$HOME" \
+	--env "MATLABPATH=$MATLABPATH" \
 	--interactive \
 	--network=host \
 	--rm \
