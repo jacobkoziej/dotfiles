@@ -1,0 +1,1 @@
+export MATLABPATH="$XDG_CONFIG_HOME/matlab"
