@@ -6,6 +6,12 @@
 
 #include QMK_KEYBOARD_H
 
+enum layers {
+    BASE,
+    SYMBOLS,
+    LAYERS,
+};
+
 #define MT_A MT(MOD_LALT, KC_A)
 #define MT_R MT(MOD_LGUI, KC_R)
 #define MT_S MT(MOD_LSFT, KC_S)
@@ -15,10 +21,7 @@
 #define MT_I MT(MOD_RGUI, KC_I)
 #define MT_O MT(MOD_RALT, KC_O)
 
-enum layers {
-    BASE,
-    LAYERS,
-};
+#define LT_BSPC LT(SYMBOLS, KC_BSPC)
 
 // clang-format off
 const uint16_t PROGMEM keymaps[LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
@@ -28,7 +31,15 @@ const uint16_t PROGMEM keymaps[LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
 	_______, MT_A   , MT_R   , MT_S   , MT_T   , KC_G   , _______,          _______, KC_M   , MT_N   , MT_E   , MT_I   , MT_O   , _______,
 	_______, KC_Z   , KC_X   , KC_C   , KC_D   , KC_V   ,                            KC_K   , KC_H   , KC_COMM, KC_DOT , KC_SLSH, _______,
 	QK_BOOT, _______, _______, _______, KC_ESC ,          _______,          _______,          _______, _______, _______, _______, _______,
-	                                    KC_SPC , KC_TAB , _______,          _______, KC_ENT , KC_BSPC
+	                                    KC_SPC , KC_TAB , _______,          _______, KC_ENT , LT_BSPC
+	),
+	[SYMBOLS] = LAYOUT(
+	_______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
+	_______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
+	_______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
+	_______, _______, _______, _______, _______, _______,                            _______, _______, _______, _______, _______, _______,
+	_______, _______, _______, _______, _______,          _______,          _______,          _______, _______, _______, _______, _______,
+	                                    _______, _______, _______,          _______, _______, _______
 	),
 };
 // clang-format on
