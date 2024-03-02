@@ -9,6 +9,7 @@
 enum layers {
 	BASE,
 	SYMBOLS,
+	MOVEMENT,
 	LAYERS,
 };
 
@@ -21,7 +22,8 @@ enum layers {
 #define MT_I MT(MOD_RGUI, KC_I)
 #define MT_O MT(MOD_RALT, KC_O)
 
-#define LT_BSPC LT(SYMBOLS, KC_BSPC)
+#define LT_BSPC LT(SYMBOLS,  KC_BSPC)
+#define LT_SPC  LT(MOVEMENT, KC_SPC )
 
 // clang-format off
 const uint16_t PROGMEM keymaps[LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
@@ -31,7 +33,7 @@ const uint16_t PROGMEM keymaps[LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
 	KC_ESC , MT_A   , MT_R   , MT_S   , MT_T   , KC_G   , _______,          _______, KC_M   , MT_N   , MT_E   , MT_I   , MT_O   , _______,
 	_______, KC_Z   , KC_X   , KC_C   , KC_D   , KC_V   ,                            KC_K   , KC_H   , KC_COMM, KC_DOT , KC_QUES, _______,
 	QK_BOOT, _______, _______, _______, _______,          _______,          KC_CAPS,          _______, _______, _______, _______, _______,
-	                                    KC_SPC , KC_TAB , _______,          _______, KC_ENT , LT_BSPC
+	                                    LT_SPC , KC_TAB , _______,          _______, KC_ENT , LT_BSPC
 	),
 	[SYMBOLS] = LAYOUT(
 	_______, KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_F5  , _______,          _______, KC_F6  , KC_F7  , KC_F8  , KC_F9  , KC_F10 , KC_F11 ,
@@ -40,6 +42,14 @@ const uint16_t PROGMEM keymaps[LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
 	_______, _______, _______, KC_AT  , KC_LCBR, KC_SLSH,                            KC_BSLS, KC_RCBR, KC_HASH, _______, _______, _______,
 	_______, _______, _______, _______, KC_LCTL,          _______,          _______,          KC_RGUI, _______, _______, _______, _______,
 	                                    KC_UNDS, _______, _______,          _______, _______, _______
+	),
+	[MOVEMENT] = LAYOUT(
+	_______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
+	_______, _______, _______, _______, _______, _______, _______,          _______, KC_UP  , KC_RGHT, _______, _______, _______, _______,
+	_______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
+	_______, _______, _______, _______, _______, _______,                            KC_DOWN, KC_LEFT, _______, _______, _______, _______,
+	_______, _______, _______, _______, _______,          _______,          _______,          _______, _______, _______, _______, _______,
+	                                    _______, _______, _______,          _______, _______, _______
 	),
 };
 // clang-format on
