@@ -40,8 +40,8 @@ const uint16_t PROGMEM keymaps[LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
 	_______, KC_TILD, KC_COLN, KC_SCLN, KC_LBRC, KC_CIRC, _______,          _______, KC_DLR , KC_RBRC, KC_PERC, KC_PIPE, KC_GRV , KC_F12 ,
 	_______, KC_EXLM, KC_MINS, KC_LT  , KC_LPRN, KC_AMPR, _______,          _______, KC_ASTR, KC_RPRN, KC_GT  , KC_PLUS, KC_EQL , _______,
 	_______, _______, _______, KC_AT  , KC_LCBR, KC_SLSH,                            KC_BSLS, KC_RCBR, KC_HASH, _______, _______, _______,
-	_______, _______, _______, _______, KC_LCTL,          _______,          _______,          KC_RGUI, _______, _______, _______, _______,
-	                                    KC_UNDS, _______, _______,          _______, _______, _______
+	_______, _______, _______, _______, KC_LCTL,          _______,          _______,          _______, _______, _______, _______, _______,
+	                                    KC_UNDS, KC_LGUI, _______,          _______, _______, _______
 	),
 	[MOVEMENT] = LAYOUT(
 	_______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
