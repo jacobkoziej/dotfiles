@@ -34,8 +34,8 @@ const uint16_t PROGMEM keymaps[LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
 	                                    KC_SPC , KC_TAB , _______,          _______, KC_ENT , LT_BSPC
 	),
 	[SYMBOLS] = LAYOUT(
-	_______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
-	_______, KC_TILD, KC_COLN, KC_SCLN, KC_LBRC, KC_CIRC, _______,          _______, KC_DLR , KC_RBRC, KC_PERC, KC_PIPE, KC_GRV , _______,
+	_______, KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_F5  , _______,          _______, KC_F6  , KC_F7  , KC_F8  , KC_F9  , KC_F10 , KC_F11 ,
+	_______, KC_TILD, KC_COLN, KC_SCLN, KC_LBRC, KC_CIRC, _______,          _______, KC_DLR , KC_RBRC, KC_PERC, KC_PIPE, KC_GRV , KC_F12 ,
 	_______, KC_EXLM, KC_MINS, KC_LT  , KC_LPRN, KC_AMPR, _______,          _______, KC_ASTR, KC_RPRN, KC_GT  , KC_PLUS, KC_EQL , _______,
 	_______, _______, _______, KC_AT  , KC_LCBR, KC_SLSH,                            KC_BSLS, KC_RCBR, KC_HASH, _______, _______, _______,
 	_______, _______, _______, _______, KC_LCTL,          _______,          _______,          KC_RGUI, _______, _______, _______, _______,
