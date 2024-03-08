@@ -7,7 +7,7 @@
 #include QMK_KEYBOARD_H
 
 enum layers {
-	BASE,
+	COLEMAK_DHM,
 	SYMBOLS,
 	MOVEMENT,
 	LAYERS,
@@ -27,7 +27,7 @@ enum layers {
 
 // clang-format off
 const uint16_t PROGMEM keymaps[LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
-	[BASE] = LAYOUT(
+	[COLEMAK_DHM] = LAYOUT(
 	_______, KC_1   , KC_2   , KC_3   , KC_4   , KC_5   , _______,          _______, KC_6   , KC_7   , KC_8   , KC_9   , KC_0   , _______,
 	_______, KC_Q   , KC_W   , KC_F   , KC_P   , KC_B   , _______,          _______, KC_J   , KC_L   , KC_U   , KC_Y   , KC_QUOT, _______,
 	_______, MT_A   , MT_R   , MT_S   , MT_T   , KC_G   , _______,          _______, KC_M   , MT_N   , MT_E   , MT_I   , MT_O   , _______,
