@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
 	_______, KC_Q   , KC_W   , KC_F   , KC_P   , KC_B   , _______,          _______, KC_J   , KC_L   , KC_U   , KC_Y   , KC_QUOT, _______,
 	_______, MT_A   , MT_R   , MT_S   , MT_T   , KC_G   , _______,          _______, KC_M   , MT_N   , MT_E   , MT_I   , MT_O   , _______,
 	_______, KC_Z   , KC_X   , KC_C   , KC_D   , KC_V   ,                            KC_K   , KC_H   , KC_COMM, KC_DOT , KC_SLSH, _______,
-	QK_BOOT, _______, _______, _______, KC_ESC ,          _______,          KC_CAPS,          _______, _______, _______, _______, _______,
+	QK_BOOT, _______, _______, _______, KC_ESC ,          _______,          KC_CAPS,          KC_SCLN, _______, _______, _______, _______,
 	                                    LT_SPC , KC_TAB , _______,          _______, KC_ENT , LT_BSPC
 	),
 	[SYMBOLS] = LAYOUT(
