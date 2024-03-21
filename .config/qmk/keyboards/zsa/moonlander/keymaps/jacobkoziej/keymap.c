@@ -13,6 +13,11 @@ enum layers {
 	LAYERS,
 };
 
+enum keys {
+	KC_NVIM = SAFE_RANGE,
+	KC_TMUX,
+};
+
 #define MT_A MT(MOD_LALT, KC_A)
 #define MT_R MT(MOD_LGUI, KC_R)
 #define MT_S MT(MOD_LSFT, KC_S)
@@ -25,6 +30,9 @@ enum layers {
 #define LT_BSPC LT(SYMBOLS,  KC_BSPC)
 #define LT_SPC  LT(MOVEMENT, KC_SPC )
 
+#define NVIM_PREFIX LCTL(KC_W    )
+#define TMUX_PREFIX LCTL(KC_SPACE)
+
 // clang-format off
 const uint16_t PROGMEM keymaps[LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
 	[COLEMAK_DHM] = LAYOUT(
@@ -32,8 +40,8 @@ const uint16_t PROGMEM keymaps[LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
 	_______, KC_Q   , KC_W   , KC_F   , KC_P   , KC_B   , _______,          _______, KC_J   , KC_L   , KC_U   , KC_Y   , KC_QUOT, _______,
 	_______, MT_A   , MT_R   , MT_S   , MT_T   , KC_G   , _______,          _______, KC_M   , MT_N   , MT_E   , MT_I   , MT_O   , _______,
 	_______, KC_Z   , KC_X   , KC_C   , KC_D   , KC_V   ,                            KC_K   , KC_H   , KC_COMM, KC_DOT , KC_SLSH, _______,
-	QK_BOOT, _______, _______, _______, KC_ESC ,          _______,          KC_CAPS,          KC_SCLN, _______, _______, _______, _______,
-	                                    LT_SPC , KC_TAB , _______,          _______, KC_ENT , LT_BSPC
+	QK_BOOT, _______, _______, _______, KC_NVIM,          _______,          _______,          KC_TMUX, _______, _______, _______, _______,
+	                                    LT_SPC , KC_TAB , KC_ESC ,          KC_CAPS, KC_ENT , LT_BSPC
 	),
 	[SYMBOLS] = LAYOUT(
 	_______, KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_F5  , _______,          _______, KC_F6  , KC_F7  , KC_F8  , KC_F9  , KC_F10 , KC_F11 ,
@@ -53,3 +61,32 @@ const uint16_t PROGMEM keymaps[LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
 	),
 };
 // clang-format on
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record)
+{
+	static bool nvim_prefix;
+	static bool tmux_prefix;
+
+	switch (keycode) {
+		case KC_NVIM:
+			nvim_prefix = record->event.pressed;
+			return false;
+
+		case KC_TMUX:
+			tmux_prefix = record->event.pressed;
+			return false;
+
+		default:
+			break;
+	}
+
+	if (record->event.pressed) {
+		if (nvim_prefix)
+			tap_code16(NVIM_PREFIX);
+
+		if (tmux_prefix)
+			tap_code16(TMUX_PREFIX);
+	}
+
+	return true;
+}
