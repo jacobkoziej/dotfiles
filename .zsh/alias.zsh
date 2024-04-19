@@ -1,5 +1,8 @@
 alias g='git'
 
+alias ip='ip \
+	--color=auto'
+
 alias ipy='ipython3'
 
 alias l='eza \
