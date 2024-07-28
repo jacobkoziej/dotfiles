@@ -1,4 +1,4 @@
 (defvar
-	tap-timeout  100
+	tap-timeout  200
 	hold-timeout 200
 )
