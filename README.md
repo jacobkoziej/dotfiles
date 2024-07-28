@@ -12,6 +12,7 @@ Configuration is included for:
 * [browsh] - a fully-modern text-based browser, rendering to TTY and
   browsers
 * [bspwm] - tiling window manager based on binary space partitioning
+* [direnv] - unclutter your `.profile`
 * [GDB] - The GNU Project Debugger
 * [Git] - fast, scalable, distributed revision control system
 * [kanata] - cross-platform software keyboard remapper
@@ -43,6 +44,7 @@ Distributed under the [GPLv3] or later.
 [bat]: https://github.com/sharkdp/bat
 [browsh]: https://www.brow.sh/
 [bspwm]: https://github.com/baskerville/bspwm
+[direnv]: https://direnv.net/
 [GDB]: https://www.gnu.org/software/gdb/
 [Git]: https://git-scm.com/
 [kanata]: https://github.com/jtroo/kanata
