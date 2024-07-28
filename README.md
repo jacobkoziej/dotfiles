@@ -19,6 +19,8 @@ Configuration is included for:
 * [MATLAB] - Numerical computing environment
 * [Neofetch] - command-line system information tool
 * [Neovim] - Vim-fork focused on extensibility and usability
+* [Nix] - a tool that takes a unique approach to package management and
+  system configuration
 * [OpenSSH] -  the premier connectivity tool for remote login with the SSH
   protocol
 * [Polybar] - fast and easy-to-use status bar
@@ -48,6 +50,7 @@ Distributed under the [GPLv3] or later.
 [MATLAB]: https://www.mathworks.com/products/matlab.html
 [Neofetch]: https://github.com/dylanaraps/neofetch
 [Neovim]: https://neovim.io/
+[Nix]: https://nixos.org/
 [OpenSSH]: https://www.openssh.com/
 [Polybar]: https://polybar.github.io/
 [QMK Firmware]: https://qmk.fm/
