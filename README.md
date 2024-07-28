@@ -15,6 +15,7 @@ Configuration is included for:
 * [direnv] - unclutter your `.profile`
 * [GDB] - The GNU Project Debugger
 * [Git] - fast, scalable, distributed revision control system
+* [IPython] - Advanced interactive shell for Python
 * [kanata] - cross-platform software keyboard remapper
 * [makepkg] - script to automate the building of pacman packages
 * [MATLAB] - Numerical computing environment
@@ -47,6 +48,7 @@ Distributed under the [GPLv3] or later.
 [direnv]: https://direnv.net/
 [GDB]: https://www.gnu.org/software/gdb/
 [Git]: https://git-scm.com/
+[IPython]: https://ipython.org/
 [kanata]: https://github.com/jtroo/kanata
 [makepkg]: https://git.archlinux.org/pacman.git/tree/scripts/makepkg.sh.in
 [MATLAB]: https://www.mathworks.com/products/matlab.html
