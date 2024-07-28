@@ -1,1 +1,2 @@
+export CMAKE_COLOR_DIAGNOSTICS='true'
 export CMAKE_GENERATOR="Ninja"
