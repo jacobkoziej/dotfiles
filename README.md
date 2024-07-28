@@ -29,7 +29,7 @@ Configuration is included for:
 * [Vim] - the ubiquitous text editor
 * [Zsh] - Z shell
 
-Copyright (C) 2020--2023  Jacob Koziej [`<jacobkoziej@gmail.com>`]
+Copyright (C) 2020--2024  Jacob Koziej [`<jacobkoziej@gmail.com>`]
 
 Distributed under the [GPLv3] or later.
 
