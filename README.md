@@ -14,6 +14,7 @@ Configuration is included for:
 * [bspwm] - tiling window manager based on binary space partitioning
 * [GDB] - The GNU Project Debugger
 * [Git] - fast, scalable, distributed revision control system
+* [kanata] - cross-platform software keyboard remapper
 * [makepkg] - script to automate the building of pacman packages
 * [Neofetch] - command-line system information tool
 * [Neovim] - Vim-fork focused on extensibility and usability
@@ -41,6 +42,7 @@ Distributed under the [GPLv3] or later.
 [bspwm]: https://github.com/baskerville/bspwm
 [GDB]: https://www.gnu.org/software/gdb/
 [Git]: https://git-scm.com/
+[kanata]: https://github.com/jtroo/kanata
 [makepkg]: https://git.archlinux.org/pacman.git/tree/scripts/makepkg.sh.in
 [Neofetch]: https://github.com/dylanaraps/neofetch
 [Neovim]: https://neovim.io/
