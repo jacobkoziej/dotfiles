@@ -1,3 +1,8 @@
 (defcfg
+	linux-dev-names-exclude (
+		"ZSA Technology Labs Moonlander Mark I Consumer Control"
+		"ZSA Technology Labs Moonlander Mark I Keyboard"
+		"ZSA Technology Labs Moonlander Mark I"
+	)
 	process-unmapped-keys yes
 )
