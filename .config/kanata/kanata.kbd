@@ -1,2 +1,3 @@
 (include defcfg.kbd)
 (include defsrc.kbd)
+(include defvar.kbd)
