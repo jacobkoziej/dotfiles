@@ -1,0 +1,7 @@
+{
+    "userspace_version": "1.1",
+    "build_targets": [
+        ["system76/launch_1", "jacobkoziej"],
+        ["zsa/moonlander", "jacobkoziej"]
+    ]
+}
