@@ -6,26 +6,14 @@
 
 #include QMK_KEYBOARD_H
 
+#include <shared/keycodes.h>
+
 enum layers {
 	COLEMAK_DHM,
 	SYMBOLS,
 	MOVEMENT,
 	LAYERS,
 };
-
-enum keys {
-	KC_NVIM = SAFE_RANGE,
-	KC_TMUX,
-};
-
-#define MT_A MT(MOD_LALT, KC_A)
-#define MT_R MT(MOD_LGUI, KC_R)
-#define MT_S MT(MOD_LSFT, KC_S)
-#define MT_T MT(MOD_LCTL, KC_T)
-#define MT_N MT(MOD_RCTL, KC_N)
-#define MT_E MT(MOD_RSFT, KC_E)
-#define MT_I MT(MOD_RGUI, KC_I)
-#define MT_O MT(MOD_RALT, KC_O)
 
 #define LT_BSPC LT(SYMBOLS,  KC_BSPC)
 #define LT_SPC  LT(MOVEMENT, KC_SPC )
