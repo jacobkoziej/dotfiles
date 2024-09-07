@@ -7,6 +7,7 @@
 #include QMK_KEYBOARD_H
 
 #include <shared/keycodes.h>
+#include <shared/keymap.h>
 
 enum layers {
 	COLEMAK_DHM,
@@ -17,9 +18,6 @@ enum layers {
 
 #define LT_BSPC LT(SYMBOLS,  KC_BSPC)
 #define LT_SPC  LT(MOVEMENT, KC_SPC )
-
-#define NVIM_PREFIX LCTL(KC_W    )
-#define TMUX_PREFIX LCTL(KC_SPACE)
 
 // clang-format off
 const uint16_t PROGMEM keymaps[LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
@@ -52,29 +50,5 @@ const uint16_t PROGMEM keymaps[LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record)
 {
-	static bool nvim_prefix;
-	static bool tmux_prefix;
-
-	switch (keycode) {
-		case KC_NVIM:
-			nvim_prefix = record->event.pressed;
-			return false;
-
-		case KC_TMUX:
-			tmux_prefix = record->event.pressed;
-			return false;
-
-		default:
-			break;
-	}
-
-	if (record->event.pressed) {
-		if (nvim_prefix)
-			tap_code16(NVIM_PREFIX);
-
-		if (tmux_prefix)
-			tap_code16(TMUX_PREFIX);
-	}
-
-	return true;
+	return process_shared_record_user(keycode, record);
 }
