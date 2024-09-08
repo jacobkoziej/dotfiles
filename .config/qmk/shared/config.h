@@ -6,4 +6,5 @@
 
 #pragma once
 
-#define TAPPING_TERM 150
+// tap-hold
+#define PERMISSIVE_HOLD
