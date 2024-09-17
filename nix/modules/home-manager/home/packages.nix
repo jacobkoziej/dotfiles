@@ -11,6 +11,7 @@
     git-lfs
     htop
     neovim
+    ripgrep
     tmux
   ];
 }
