@@ -1,6 +1,6 @@
 inputs: {
   imports = [
-    ./home.nix
+    ./home
   ];
 
   programs.home-manager.enable = true;
