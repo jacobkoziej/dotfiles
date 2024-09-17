@@ -12,6 +12,7 @@
     htop
     neovim
     ripgrep
+    rsync
     tmux
   ];
 }
