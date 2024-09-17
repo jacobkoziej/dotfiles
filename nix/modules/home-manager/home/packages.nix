@@ -6,6 +6,7 @@
     direnv
     eza
     fd
+    fzf
     git
     git-lfs
     neovim
