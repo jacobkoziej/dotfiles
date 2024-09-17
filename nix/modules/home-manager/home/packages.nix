@@ -9,6 +9,7 @@
     fzf
     git
     git-lfs
+    htop
     neovim
     tmux
   ];
