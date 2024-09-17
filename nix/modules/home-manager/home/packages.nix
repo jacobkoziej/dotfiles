@@ -5,6 +5,7 @@
     bat
     direnv
     eza
+    fd
     git
     git-lfs
     neovim
