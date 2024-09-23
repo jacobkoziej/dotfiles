@@ -11,6 +11,7 @@
     git-lfs
     htop
     neovim
+    procps
     ripgrep
     rsync
     tmux
