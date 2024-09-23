@@ -10,6 +10,7 @@
     git
     git-lfs
     htop
+    iproute2
     neovim
     procps
     ripgrep
