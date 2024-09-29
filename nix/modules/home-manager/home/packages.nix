@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     bat
+    daemonize
     direnv
     eza
     fd
