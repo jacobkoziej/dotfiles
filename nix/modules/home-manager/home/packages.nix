@@ -16,6 +16,7 @@
     procps
     ripgrep
     rsync
+    sd
     tmux
     zoxide
   ];
