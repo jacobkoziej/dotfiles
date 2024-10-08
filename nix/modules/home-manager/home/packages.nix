@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     bat
+    cachix
     daemonize
     direnv
     eza
