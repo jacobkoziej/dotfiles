@@ -19,20 +19,35 @@
       let
         pkgs = import inputs.nixpkgs { inherit system; };
 
+        homeManagerConfiguration = inputs.home-manager.lib.homeManagerConfiguration;
+        nixosSystem = inputs.nixpkgs.lib.nixosSystem;
+
       in
       {
         formatter = pkgs.nixfmt-rfc-style;
 
-        packages.homeConfigurations.jacobkoziej = inputs.home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+        packages = {
+          homeConfigurations.jacobkoziej = homeManagerConfiguration {
+            inherit pkgs;
 
-          extraSpecialArgs = {
-            inherit inputs;
+            extraSpecialArgs = {
+              inherit inputs;
+            };
+
+            modules = [
+              ./nix/modules/home-manager
+            ];
           };
 
-          modules = [
-            ./nix/modules/home-manager
-          ];
+          nixosConfigurations = {
+            "voyager-1" = nixosSystem {
+              specialArgs = { inherit inputs; };
+
+              modules = [
+                ./nix/hosts/voyager-1/configuration.nix
+              ];
+            };
+          };
         };
       }
     );
