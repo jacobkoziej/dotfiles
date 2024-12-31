@@ -20,7 +20,6 @@
         pkgs = import inputs.nixpkgs { inherit system; };
 
         homeManagerConfiguration = inputs.home-manager.lib.homeManagerConfiguration;
-        nixosSystem = inputs.nixpkgs.lib.nixosSystem;
 
       in
       {
@@ -39,15 +38,7 @@
             ];
           };
 
-          nixosConfigurations = {
-            "voyager-1" = nixosSystem {
-              specialArgs = { inherit inputs; };
-
-              modules = [
-                ./nix/hosts/voyager-1/configuration.nix
-              ];
-            };
-          };
+          nixosConfigurations = import ./nix/nixos-configurations.nix inputs;
         };
       }
     );
