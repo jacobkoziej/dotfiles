@@ -20,6 +20,7 @@ genAttrs systems (
     };
 
     modules = [
+      ./hosts/configuration.nix
       ./hosts/${system}/configuration.nix
     ];
   }
