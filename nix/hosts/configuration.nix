@@ -10,7 +10,7 @@
 
   networking = {
     domain = "host.jacobkoziej.xyz";
-    networkmanager.enable = true;
+    useDHCP = false;
   };
 
   nix.settings.experimental-features = [
