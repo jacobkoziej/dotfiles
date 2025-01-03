@@ -4,6 +4,8 @@
 
 {
   imports = [
+    ./services
+
     ./systemd.nix
   ];
 
