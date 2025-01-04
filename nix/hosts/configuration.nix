@@ -18,6 +18,8 @@
     "flakes"
   ];
 
+  nixpkgs.config.allowUnfree = true;
+
   time.timeZone = "America/New_York";
 
   users.users = {
