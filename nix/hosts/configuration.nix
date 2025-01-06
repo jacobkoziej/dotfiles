@@ -9,11 +9,6 @@
     ../modules/nixos
   ];
 
-  networking = {
-    domain = "host.jacobkoziej.xyz";
-    useDHCP = false;
-  };
-
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"

@@ -6,6 +6,7 @@
   imports = [
     ./services
 
+    ./networking.nix
     ./systemd.nix
   ];
 
