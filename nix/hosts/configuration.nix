@@ -5,6 +5,7 @@
 
 {
   imports = [
+    ../modules/jacobkoziej
     ../modules/nixos
   ];
 
