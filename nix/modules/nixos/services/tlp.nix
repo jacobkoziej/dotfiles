@@ -5,12 +5,14 @@
 }:
 
 let
-  cfg = config.services.tlp;
+  cfg = config.jacobkoziej.hardware.battery;
 
 in
 {
-  config = lib.mkIf cfg.enable {
-    services.tlp.settings = {
+  services.tlp = {
+    enable = cfg.enable;
+
+    settings = {
       TLP_DEFAULT_MODE = "BAT";
 
       CPU_SCALING_GOVERNOR_ON_AC = "performance";

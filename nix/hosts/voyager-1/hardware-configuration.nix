@@ -10,6 +10,8 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
+  jacobkoziej.hardware.battery.enable = true;
+
   boot = {
     initrd = {
       availableKernelModules = [
