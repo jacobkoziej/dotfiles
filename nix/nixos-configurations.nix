@@ -6,21 +6,22 @@ let
   genAttrs = lib.attrsets.genAttrs;
   nixosSystem = lib.nixosSystem;
 
-  systems = [
+  hosts = [
     "voyager-1"
   ];
 
 in
-genAttrs systems (
-  system:
+genAttrs hosts (
+  host:
 
   nixosSystem {
     specialArgs = {
+      inherit host;
       inherit inputs;
     };
 
     modules = [
-      ./hosts/${system}/configuration.nix
+      ./hosts/${host}/configuration.nix
       ./hosts/configuration.nix
       ./modules/home-manager
       inputs.home-manager.nixosModules.home-manager
