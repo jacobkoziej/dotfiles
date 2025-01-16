@@ -19,23 +19,14 @@
       let
         pkgs = import inputs.nixpkgs { inherit system; };
 
-        homeManagerConfiguration = inputs.home-manager.lib.homeManagerConfiguration;
-
       in
       {
         formatter = pkgs.nixfmt-rfc-style;
 
         packages = {
-          homeConfigurations.jacobkoziej = homeManagerConfiguration {
+          homeConfigurations = import ./nix/home-configurations.nix {
+            inherit inputs;
             inherit pkgs;
-
-            extraSpecialArgs = {
-              inherit inputs;
-            };
-
-            modules = [
-              ./nix/modules/home-manager/users/jacobkoziej
-            ];
           };
 
           nixosConfigurations = import ./nix/nixos-configurations.nix inputs;
