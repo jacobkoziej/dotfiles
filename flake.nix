@@ -34,7 +34,7 @@
             };
 
             modules = [
-              ./nix/modules/home-manager
+              ./nix/modules/home-manager/users/jacobkoziej
             ];
           };
 

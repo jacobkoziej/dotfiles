@@ -1,7 +1,16 @@
-inputs: {
+inputs:
+
+{
   imports = [
-    ./home
+    ./users
   ];
 
-  programs.home-manager.enable = true;
+  home-manager = {
+    extraSpecialArgs = {
+      inherit inputs;
+    };
+
+    useGlobalPkgs = true;
+    useUserPackages = true;
+  };
 }

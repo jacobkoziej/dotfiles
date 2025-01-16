@@ -20,8 +20,10 @@ genAttrs systems (
     };
 
     modules = [
-      ./hosts/configuration.nix
       ./hosts/${system}/configuration.nix
+      ./hosts/configuration.nix
+      ./modules/home-manager
+      inputs.home-manager.nixosModules.home-manager
     ];
   }
 )
