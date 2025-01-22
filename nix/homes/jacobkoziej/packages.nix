@@ -18,6 +18,7 @@
     iproute2
     mosh
     neovim
+    openssh
     procps
     ripgrep
     rsync
