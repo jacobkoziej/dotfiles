@@ -16,6 +16,7 @@
     git-lfs
     htop
     iproute2
+    killall
     mosh
     neovim
     openssh
