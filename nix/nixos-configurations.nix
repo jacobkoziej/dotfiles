@@ -1,10 +1,10 @@
 inputs:
 
 let
-  lib = inputs.nixpkgs.lib;
+  inherit (inputs.nixpkgs) lib;
 
-  genAttrs = lib.attrsets.genAttrs;
-  nixosSystem = lib.nixosSystem;
+  inherit (lib.attrsets) genAttrs;
+  inherit (lib) nixosSystem;
 
   hosts = [
     "voyager-1"

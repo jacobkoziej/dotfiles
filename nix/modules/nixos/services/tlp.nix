@@ -10,7 +10,7 @@ let
 in
 {
   services.tlp = {
-    enable = cfg.enable;
+    inherit (cfg) enable;
 
     settings = {
       TLP_DEFAULT_MODE = "BAT";
