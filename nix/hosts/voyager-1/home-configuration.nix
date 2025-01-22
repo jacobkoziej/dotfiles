@@ -1,5 +1,8 @@
 _:
 
 {
-  jacobkoziej.services.windowManager.enable = true;
+  jacobkoziej.services = {
+    messaging.enable = true;
+    windowManager.enable = true;
+  };
 }
