@@ -10,8 +10,6 @@ in
 {
   imports = [
     ../../modules/home-manager
-
-    ./packages.nix
   ];
 
   home = {
