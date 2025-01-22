@@ -25,6 +25,7 @@
     sd
     tmux
     tmuxp
+    unzip
     zip
     zoxide
   ];
