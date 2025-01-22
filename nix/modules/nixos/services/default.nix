@@ -6,5 +6,6 @@
 {
   imports = [
     ./tlp.nix
+    ./xserver.nix
   ];
 }
