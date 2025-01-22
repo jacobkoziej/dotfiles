@@ -3,5 +3,6 @@ _:
 {
   imports = [
     ./jacobkoziej
+    ./programs
   ];
 }
