@@ -21,6 +21,8 @@
 
       in
       {
+        devShells = import ./nix/dev-shells.nix pkgs;
+
         formatter = pkgs.nixfmt-rfc-style;
 
         packages = {
