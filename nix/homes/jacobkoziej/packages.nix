@@ -16,6 +16,7 @@
     git-lfs
     htop
     iproute2
+    mosh
     neovim
     procps
     ripgrep
