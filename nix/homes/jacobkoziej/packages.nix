@@ -24,6 +24,7 @@
     rsync
     sd
     tmux
+    tmuxp
     zoxide
   ];
 }
