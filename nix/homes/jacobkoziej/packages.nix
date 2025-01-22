@@ -25,6 +25,7 @@
     sd
     tmux
     tmuxp
+    zip
     zoxide
   ];
 }
