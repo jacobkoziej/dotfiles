@@ -11,6 +11,10 @@ in
 
     in
     {
+      packages = with pkgs; [
+        treefmt2
+      ];
+
       shellHook = ''
         ${pre-commit-bin} install --allow-missing-config > /dev/null
       '';

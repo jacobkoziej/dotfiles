@@ -1,0 +1,16 @@
+[formatter.nix]
+command = "nix"
+options = [
+  "fmt",
+]
+includes = [
+  "*.nix",
+]
+
+[global]
+excludes = [
+  "*.gitignore",
+  "*.lock",
+  ".editorconfig",
+  "LICENSE.md",
+]
