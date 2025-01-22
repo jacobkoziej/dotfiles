@@ -25,7 +25,7 @@ genAttrs users (
     };
 
     modules = [
-      ./modules/home-manager/users/${user}
+      ./homes/${user}
     ];
   }
 )
