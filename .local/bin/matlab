@@ -1,6 +1,6 @@
 #!/bin/sh
 
-RELEASE='r2023a'
+RELEASE='r2024b'
 
 DEFAULT_OPTIONS='-softwareopengl'
 if [ -t 0 ]; then
