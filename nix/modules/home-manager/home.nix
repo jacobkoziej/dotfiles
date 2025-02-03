@@ -10,6 +10,7 @@ let
     ps: with ps; [
       ipython
       numpy
+      scipy
     ]
   );
 
