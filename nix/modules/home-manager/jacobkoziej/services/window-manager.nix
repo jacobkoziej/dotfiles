@@ -18,6 +18,7 @@ in
     home.packages = with pkgs; [
       bspwm
       sxhkd
+      wmname
     ];
   };
 }
