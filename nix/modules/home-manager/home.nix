@@ -3,6 +3,16 @@
   ...
 }:
 
+let
+  inherit (pkgs) python3;
+
+  python3-pkgs = python3.withPackages (
+    ps: with ps; [
+      ipython
+    ]
+  );
+
+in
 {
   home.packages = with pkgs; [
     bat
@@ -22,6 +32,7 @@
     neovim
     openssh
     procps
+    python3-pkgs
     ripgrep
     rsync
     sd
