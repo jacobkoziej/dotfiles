@@ -18,6 +18,7 @@
     iproute2
     killall
     mosh
+    ncdu
     neovim
     openssh
     procps
