@@ -23,7 +23,6 @@ genAttrs hosts (
     modules = [
       ./hosts/${host}/configuration.nix
       ./hosts/configuration.nix
-      inputs.home-manager.nixosModules.home-manager
     ];
   }
 )

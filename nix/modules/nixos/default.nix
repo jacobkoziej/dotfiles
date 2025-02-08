@@ -7,7 +7,6 @@
     ./jacobkoziej
     ./services
 
-    ./home-manager.nix
     ./networking.nix
     ./systemd.nix
   ];
