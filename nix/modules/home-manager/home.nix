@@ -42,6 +42,7 @@ in
     tmux
     tmuxp
     unzip
+    wget
     zip
     zoxide
   ];
