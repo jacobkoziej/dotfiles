@@ -21,6 +21,7 @@ in
     cachix
     daemonize
     direnv
+    duf
     eza
     fd
     fzf
