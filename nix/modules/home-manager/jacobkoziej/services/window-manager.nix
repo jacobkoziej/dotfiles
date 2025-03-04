@@ -20,5 +20,9 @@ in
       sxhkd
       wmname
     ];
+
+    services = {
+      unclutter.enable = true;
+    };
   };
 }
