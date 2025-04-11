@@ -13,7 +13,7 @@ in
     {
       packages = with pkgs; [
         statix
-        treefmt2
+        treefmt
       ];
 
       shellHook = ''
