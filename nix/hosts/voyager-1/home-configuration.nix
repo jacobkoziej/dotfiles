@@ -3,6 +3,7 @@ _:
 {
   jacobkoziej = {
     programs = {
+      development-tools.enable = true;
       document-viewers.enable = true;
     };
 
