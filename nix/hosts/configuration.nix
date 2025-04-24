@@ -24,7 +24,9 @@
     ];
   };
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config.allowUnfree = true;
+  };
 
   time.timeZone = "America/New_York";
 
