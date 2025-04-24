@@ -25,13 +25,23 @@
 
   time.timeZone = "America/New_York";
 
-  users.users = {
-    "jacobkoziej" = {
-      extraGroups = [
-        "wheel"
-      ];
-      isNormalUser = true;
-      shell = pkgs.zsh;
+  users = {
+    extraGroups = {
+      "plugdev" = { };
+    };
+    users = {
+      "jacobkoziej" = {
+        extraGroups = [
+          "audio"
+          "input"
+          "plugdev"
+          "video"
+          "wheel"
+        ];
+        isNormalUser = true;
+        shell = pkgs.zsh;
+        home = "/home/jacobkoziej";
+      };
     };
   };
 
