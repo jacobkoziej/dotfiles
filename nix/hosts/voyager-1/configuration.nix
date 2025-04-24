@@ -1,5 +1,6 @@
 {
   config,
+  pkgs,
   ...
 }:
 
@@ -12,7 +13,12 @@
 
   networking.hostName = "voyager-1";
 
-  services.xserver.enable = true;
+  services = {
+    udev.packages = with pkgs; [
+      openocd
+    ];
+    xserver.enable = true;
+  };
 
   system.stateVersion = "24.11";
 }
