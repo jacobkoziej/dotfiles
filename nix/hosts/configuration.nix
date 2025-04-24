@@ -33,6 +33,7 @@
       "jacobkoziej" = {
         extraGroups = [
           "audio"
+          "dialout"
           "input"
           "plugdev"
           "video"
