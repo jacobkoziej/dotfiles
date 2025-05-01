@@ -6,6 +6,6 @@
 {
   services.gpg-agent = {
     enable = true;
-    pinentryPackage = pkgs.pinentry-rofi;
+    pinentry.package = pkgs.pinentry-rofi;
   };
 }
