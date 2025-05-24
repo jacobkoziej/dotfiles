@@ -34,6 +34,7 @@ in
     ncdu
     neovim
     openssh
+    pciutils
     procps
     python3-pkgs
     ripgrep
