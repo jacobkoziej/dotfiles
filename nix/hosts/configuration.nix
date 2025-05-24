@@ -33,6 +33,7 @@
   users = {
     extraGroups = {
       "plugdev" = { };
+      "ssh" = { };
     };
     users = {
       "jacobkoziej" = {
@@ -41,6 +42,7 @@
           "dialout"
           "input"
           "plugdev"
+          "ssh"
           "video"
           "wheel"
         ];
