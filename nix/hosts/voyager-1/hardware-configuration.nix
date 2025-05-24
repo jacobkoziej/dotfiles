@@ -22,6 +22,10 @@
       ];
 
       luks.devices."root".device = "/dev/disk/by-label/luks-root";
+
+      network = {
+        enable = false;
+      };
     };
 
     kernelModules = [
