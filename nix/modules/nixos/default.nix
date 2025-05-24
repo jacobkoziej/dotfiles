@@ -7,9 +7,8 @@
     ./jacobkoziej
     ./services
 
+    ./boot.nix
     ./networking.nix
     ./systemd.nix
   ];
-
-  boot = import ./boot.nix;
 }
