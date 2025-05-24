@@ -18,6 +18,7 @@ let
   ];
 
   hosts = [
+    "iceroth"
     "voyager-1"
   ];
 

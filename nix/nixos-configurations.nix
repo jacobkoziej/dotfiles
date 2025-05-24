@@ -7,6 +7,7 @@ let
   inherit (lib) nixosSystem;
 
   hosts = [
+    "iceroth"
     "voyager-1"
   ];
 
