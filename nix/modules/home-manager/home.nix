@@ -39,6 +39,7 @@ in
     ripgrep
     rsync
     sd
+    tinyxxd
     tmux
     tmuxp
     unzip
