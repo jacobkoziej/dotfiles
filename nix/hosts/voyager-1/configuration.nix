@@ -16,6 +16,7 @@
   services = {
     udev.packages = with pkgs; [
       openocd
+      yubikey-personalization
     ];
     xserver.enable = true;
   };
