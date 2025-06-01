@@ -10,5 +10,6 @@
     ./boot.nix
     ./networking.nix
     ./systemd.nix
+    ./users.nix
   ];
 }
