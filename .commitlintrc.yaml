@@ -1,0 +1,22 @@
+---
+
+rules:
+  description-empty:
+    level: error
+
+  subject-empty:
+    level: error
+
+  type:
+    level: error
+    options:
+      - chore
+      - docs
+      - feat
+      - fix
+      - refactor
+      - revert
+      - style
+
+  type-empty:
+    level: error
