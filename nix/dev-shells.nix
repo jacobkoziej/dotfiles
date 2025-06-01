@@ -12,6 +12,7 @@ in
     in
     {
       packages = with pkgs; [
+        commitlint-rs
         statix
         treefmt
       ];
