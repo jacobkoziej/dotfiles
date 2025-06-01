@@ -14,6 +14,7 @@
   networking.hostName = "voyager-1";
 
   services = {
+    automatic-timezoned.enable = true;
     udev.packages = with pkgs; [
       openocd
       yubikey-personalization

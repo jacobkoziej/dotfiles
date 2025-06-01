@@ -1,4 +1,5 @@
 {
+  lib,
   ...
 }:
 
@@ -27,7 +28,7 @@
     config.allowUnfree = true;
   };
 
-  time.timeZone = "America/New_York";
+  time.timeZone = lib.mkDefault "America/New_York";
 
   programs = {
     gnupg.agent.enable = true;
