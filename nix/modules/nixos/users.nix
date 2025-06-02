@@ -19,6 +19,8 @@ in
       "ssh" = { };
     };
 
+    mutableUsers = false;
+
     users = {
       "jacobkoziej" = {
         extraGroups = [
