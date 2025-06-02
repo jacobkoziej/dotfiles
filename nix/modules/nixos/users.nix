@@ -1,9 +1,18 @@
 {
+  config,
   pkgs,
   ...
 }:
 
+let
+  secrets = config.sops.secrets;
+
+in
 {
+  sops.secrets = {
+    "users/jacobkoziej/password-hash".neededForUsers = true;
+  };
+
   users = {
     extraGroups = {
       "plugdev" = { };
@@ -23,6 +32,7 @@
         ];
         isNormalUser = true;
         shell = pkgs.zsh;
+        hashedPasswordFile = secrets."users/jacobkoziej/password-hash".path;
         home = "/home/jacobkoziej";
       };
     };
