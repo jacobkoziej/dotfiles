@@ -24,6 +24,9 @@ in
 
     users = {
       "jacobkoziej" = {
+        isNormalUser = true;
+        hashedPasswordFile = secrets."users/jacobkoziej/password-hash".path;
+
         extraGroups = [
           "audio"
           "dialout"
@@ -33,20 +36,19 @@ in
           "video"
           "wheel"
         ];
-        isNormalUser = true;
+
         linger = true;
         shell = pkgs.zsh;
-        hashedPasswordFile = secrets."users/jacobkoziej/password-hash".path;
-        home = "/home/jacobkoziej";
       };
 
       "root" = {
-        uid = 0;
-
-        group = "root";
-        hashedPasswordFile = secrets."users/root/password-hash".path;
-        home = "/root";
         isSystemUser = true;
+        hashedPasswordFile = secrets."users/root/password-hash".path;
+
+        uid = 0;
+        group = "root";
+
+        home = "/root";
         shell = pkgs.bash;
       };
     };
