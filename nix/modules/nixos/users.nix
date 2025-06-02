@@ -11,6 +11,7 @@ in
 {
   sops.secrets = {
     "users/jacobkoziej/password-hash".neededForUsers = true;
+    "users/root/password-hash".neededForUsers = true;
   };
 
   users = {
@@ -37,6 +38,16 @@ in
         shell = pkgs.zsh;
         hashedPasswordFile = secrets."users/jacobkoziej/password-hash".path;
         home = "/home/jacobkoziej";
+      };
+
+      "root" = {
+        uid = 0;
+
+        group = "root";
+        hashedPasswordFile = secrets."users/root/password-hash".path;
+        home = "/root";
+        isSystemUser = true;
+        shell = pkgs.bash;
       };
     };
   };
