@@ -33,6 +33,7 @@ in
           "wheel"
         ];
         isNormalUser = true;
+        linger = true;
         shell = pkgs.zsh;
         hashedPasswordFile = secrets."users/jacobkoziej/password-hash".path;
         home = "/home/jacobkoziej";
