@@ -2,6 +2,7 @@ inputs:
 
 let
   inherit (inputs.nixpkgs) lib;
+  inherit (inputs) sops-nix;
 
   inherit (lib.attrsets) genAttrs;
   inherit (lib) nixosSystem;
@@ -24,6 +25,7 @@ genAttrs hosts (
     modules = [
       ./hosts/${host}/configuration.nix
       ./hosts/configuration.nix
+      sops-nix.nixosModules.sops
     ];
   }
 )
