@@ -41,6 +41,7 @@ in
     ripgrep
     rsync
     sd
+    sshfs
     tinyxxd
     tmux
     tmuxp
