@@ -28,6 +28,7 @@ in
     git
     git-lfs
     htop
+    inetutils
     iproute2
     killall
     mosh
