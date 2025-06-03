@@ -5,6 +5,7 @@
 {
   imports = [
     ./jacobkoziej
+    ./programs
     ./services
 
     ./boot.nix
