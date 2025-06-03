@@ -19,6 +19,7 @@ let
 
   hosts = [
     "iceroth"
+    "sockciety"
     "voyager-1"
   ];
 
