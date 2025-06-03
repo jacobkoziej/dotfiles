@@ -45,6 +45,7 @@
 
     systemPackages = with pkgs; [
       mergerfs
+      mergerfs-tools
     ];
   };
 
