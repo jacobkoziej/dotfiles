@@ -8,6 +8,7 @@
     enable = lib.mkDefault true;
     settings = {
       AllowGroups = [
+        "root"
         "ssh"
       ];
       PasswordAuthentication = false;
