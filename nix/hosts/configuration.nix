@@ -29,9 +29,4 @@
   };
 
   time.timeZone = lib.mkDefault "America/New_York";
-
-  programs = {
-    neovim.enable = true;
-    zsh.enable = true;
-  };
 }
