@@ -31,7 +31,6 @@
   time.timeZone = lib.mkDefault "America/New_York";
 
   programs = {
-    gnupg.agent.enable = true;
     neovim.enable = true;
     zsh.enable = true;
   };
