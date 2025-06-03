@@ -2,6 +2,7 @@
   config,
   lib,
   modulesPath,
+  pkgs,
   ...
 }:
 
@@ -27,6 +28,23 @@
 
     kernelModules = [
       "kvm-amd"
+    ];
+  };
+
+  environment = {
+    etc = {
+      crypttab = {
+        mode = "0600";
+        text = ''
+          big-chungus:disk0   /dev/disk/by-label/luks:big-chungus:disk0   /root/keyfiles/big-chungus/disk0   luks,nofail
+          big-chungus:disk1   /dev/disk/by-label/luks:big-chungus:disk1   /root/keyfiles/big-chungus/disk1   luks,nofail
+          big-chungus:parity0 /dev/disk/by-label/luks:big-chungus:parity0 /root/keyfiles/big-chungus/parity0 luks,nofail
+        '';
+      };
+    };
+
+    systemPackages = with pkgs; [
+      mergerfs
     ];
   };
 
@@ -56,6 +74,30 @@
         "compress=zstd"
         "subvol=subvolumes/home"
       ];
+    };
+
+    "/mnt/big-chungus" = {
+      device = "/mnt/big-chungus.d/disk*";
+      fsType = "fuse.mergerfs";
+      depends = [
+        "/mnt/big-chungus.d/disk0"
+        "/mnt/big-chungus.d/disk1"
+      ];
+    };
+
+    "/mnt/big-chungus.d/disk0" = {
+      device = "/dev/mapper/big-chungus:disk0";
+      fsType = "ext4";
+    };
+
+    "/mnt/big-chungus.d/disk1" = {
+      device = "/dev/mapper/big-chungus:disk1";
+      fsType = "ext4";
+    };
+
+    "/mnt/big-chungus.d/parity0" = {
+      device = "/dev/mapper/big-chungus:parity0";
+      fsType = "ext4";
     };
 
     "/root" = {
