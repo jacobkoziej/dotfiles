@@ -7,7 +7,9 @@
   services.openssh = {
     enable = lib.mkDefault true;
     settings = {
-      AllowGroups = [ "ssh" ];
+      AllowGroups = [
+        "ssh"
+      ];
       PasswordAuthentication = false;
       PermitRootLogin = "prohibit-password";
       StreamLocalBindUnlink = true;
