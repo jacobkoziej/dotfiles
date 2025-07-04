@@ -1,6 +1,10 @@
 _:
 
 {
+  home = {
+    stateVersion = "24.05";
+  };
+
   jacobkoziej = {
     programs = {
       development-tools.enable = true;

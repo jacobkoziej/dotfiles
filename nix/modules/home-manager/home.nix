@@ -1,54 +1,20 @@
 {
+  config,
+  lib,
   pkgs,
   ...
 }:
 
 let
-  inherit (pkgs) python3;
+  inherit (config.home) username;
 
-  python3-pkgs = python3.withPackages (
-    ps: with ps; [
-      ipython
-      numpy
-      scipy
-    ]
-  );
+  inherit (lib) mkDefault;
 
 in
 {
-  home.packages = with pkgs; [
-    bat
-    cachix
-    daemonize
-    direnv
-    duf
-    eza
-    fd
-    fzf
-    git
-    git-lfs
-    htop
-    inetutils
-    iproute2
-    killall
-    mosh
-    ncdu
-    neovim
-    openssh
-    pciutils
-    procps
-    python3-pkgs
-    riffdiff
-    ripgrep
-    rsync
-    sd
-    sshfs
-    tinyxxd
-    tmux
-    tmuxp
-    unzip
-    wget
-    zip
-    zoxide
-  ];
+  home = {
+    homeDirectory = mkDefault "/home/${config.home.username}";
+
+    stateVersion = mkDefault "24.05";
+  };
 }
