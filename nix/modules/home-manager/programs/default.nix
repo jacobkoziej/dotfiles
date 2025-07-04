@@ -2,6 +2,7 @@ _:
 
 {
   imports = [
+    ./direnv.nix
     ./gpg.nix
     ./nh.nix
   ];
