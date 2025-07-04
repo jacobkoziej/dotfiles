@@ -38,6 +38,7 @@ in
     pciutils
     procps
     python3-pkgs
+    riffdiff
     ripgrep
     rsync
     sd
