@@ -1,9 +1,13 @@
 {
   config,
-  pkgs,
+  inputs,
   ...
 }:
 
+let
+  secrets = inputs.secrets.hosts.sockciety;
+
+in
 {
   imports = [
     ./hardware-configuration.nix
@@ -32,6 +36,18 @@
       parityFiles = [
         "/mnt/big-chungus.d/parity0/big-chungus.parity"
       ];
+    };
+  };
+
+  systemd.network.networks = with secrets.network; {
+    "10-en" = {
+      matchConfig = {
+        PermanentMACAddress = MACAddress;
+      };
+      networkConfig = {
+        Address = address.v4 + "/" + subnet.v4;
+        Gateway = gateway.v4;
+      };
     };
   };
 
