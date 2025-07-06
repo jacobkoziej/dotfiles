@@ -22,7 +22,10 @@
         "xhci_pci"
       ];
 
-      luks.devices."root".device = "/dev/disk/by-label/luks-root";
+      luks.devices = {
+        "root".device = "/dev/disk/by-label/luks-root";
+        "scratch".device = "/dev/disk/by-label/luks:scratch";
+      };
     };
 
     kernelModules = [
@@ -55,6 +58,15 @@
       options = [
         "compress=zstd"
         "subvol=subvolumes/home"
+      ];
+    };
+
+    "/nix/store" = {
+      device = "/dev/disk/by-label/scratch";
+      fsType = "btrfs";
+      options = [
+        "compress=zstd"
+        "subvol=subvolumes/nix-store"
       ];
     };
 
