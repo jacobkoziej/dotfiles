@@ -43,11 +43,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1751729568,
-        "narHash": "sha256-ay7O1jjalUxkL23QWLv9C2s8rdVGs3hUOPZClIbUHKs=",
+        "lastModified": 1751824240,
+        "narHash": "sha256-aDDC0CHTlL7QDKWWhdbEgVPK6KwWt+ca0QkmHYZxMzI=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "f117b383dd591fd579bce5ee7bac07a3fdc1d050",
+        "rev": "fd9e55f5fac45a26f6169310afca64d56b681935",
         "type": "github"
       },
       "original": {
@@ -58,11 +58,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1751625545,
-        "narHash": "sha256-4E7wWftF1ExK5ZEDzj41+9mVgxtuRV3wWCId7QAYMAU=",
+        "lastModified": 1751786137,
+        "narHash": "sha256-lIlUKVGCGsh0Q2EA7/6xRtKUZjaQ/ur8uUyY+MynHXQ=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "c860cf0b3a0829f0f6cf344ca8de83a2bbfab428",
+        "rev": "ceb24d94c6feaa4e8737a8e2bd3cf71c3a7eaaa0",
         "type": "github"
       },
       "original": {
@@ -89,11 +89,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1751736257,
-        "narHash": "sha256-8EjtVEM0p+FxA271OuUbnkU7hEeNtoFnLTq22+e+/xI=",
+        "lastModified": 1751827967,
+        "narHash": "sha256-BKC66WBFRbwttd62Icax4o9jCsrWB59aK+/0GnuBR+E=",
         "ref": "refs/heads/master",
-        "rev": "6b1821287e329ec1ae67cd458f78fffd90d27704",
-        "revCount": 17,
+        "rev": "8f92a37a1a79af856091561d8bc61f1e1b8f5f34",
+        "revCount": 19,
         "type": "git",
         "url": "ssh://git.jacobkoziej.xyz/secrets.git"
       },
