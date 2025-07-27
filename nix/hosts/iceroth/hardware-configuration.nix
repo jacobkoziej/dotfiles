@@ -61,6 +61,15 @@
       ];
     };
 
+    "/mnt/scratch" = {
+      device = "/dev/disk/by-label/scratch";
+      fsType = "btrfs";
+      options = [
+        "compress=zstd"
+        "subvol=subvolumes/scratch"
+      ];
+    };
+
     "/nix/store" = {
       device = "/dev/disk/by-label/scratch";
       fsType = "btrfs";
