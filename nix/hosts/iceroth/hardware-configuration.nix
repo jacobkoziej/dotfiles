@@ -23,7 +23,7 @@
       ];
 
       luks.devices = {
-        "root".device = "/dev/disk/by-label/luks-root";
+        "root".device = "/dev/disk/by-label/luks:root";
         "scratch".device = "/dev/disk/by-label/luks:scratch";
       };
     };

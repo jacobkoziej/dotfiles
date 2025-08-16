@@ -23,7 +23,7 @@
         "xhci_pci"
       ];
 
-      luks.devices."root".device = "/dev/disk/by-label/luks-root";
+      luks.devices."root".device = "/dev/disk/by-label/luks:root";
     };
 
     kernelModules = [
