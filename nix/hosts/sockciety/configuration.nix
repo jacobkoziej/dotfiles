@@ -14,6 +14,7 @@ in
   ];
 
   services = {
+    headscale.enable = true;
     lldap.enable = true;
     nginx.enable = true;
 
