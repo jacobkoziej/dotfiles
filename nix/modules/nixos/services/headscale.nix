@@ -54,6 +54,11 @@ in
               type = "A";
               value = sockciety.network.tailnet.v4;
             }
+            {
+              name = "voyager-1.host.${base-domain}";
+              type = "A";
+              value = voyager-1.network.tailnet.v4;
+            }
           ];
 
           nameservers.global = [
