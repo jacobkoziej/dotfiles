@@ -14,6 +14,7 @@ in
   ];
 
   services = {
+    lldap.enable = true;
     nginx.enable = true;
 
     snapraid = {
