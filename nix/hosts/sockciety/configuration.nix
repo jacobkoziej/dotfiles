@@ -14,6 +14,8 @@ in
   ];
 
   services = {
+    nginx.enable = true;
+
     snapraid = {
       enable = true;
 
