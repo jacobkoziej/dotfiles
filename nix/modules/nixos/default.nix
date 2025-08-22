@@ -6,6 +6,7 @@
   imports = [
     ./jacobkoziej
     ./programs
+    ./security
     ./services
 
     ./boot.nix
