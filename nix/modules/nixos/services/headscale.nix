@@ -45,6 +45,11 @@ in
 
           extra_records = with secrets.hosts; [
             {
+              name = "iceroth.host.${base-domain}";
+              type = "A";
+              value = iceroth.network.tailnet.v4;
+            }
+            {
               name = "sockciety.host.${base-domain}";
               type = "A";
               value = sockciety.network.tailnet.v4;
