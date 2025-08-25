@@ -21,6 +21,11 @@ in
       deny all;
     '';
 
+    defaultListenAddresses = [
+      "127.0.0.1"
+      "[::1]"
+    ];
+
     virtualHosts = {
       "_" = {
         default = true;
