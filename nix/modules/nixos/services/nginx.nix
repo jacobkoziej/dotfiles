@@ -15,6 +15,12 @@ in
     recommendedProxySettings = true;
     recommendedTlsSettings = true;
 
+    commonHttpConfig = ''
+      allow 127.0.0.1;
+      allow ::1;
+      deny all;
+    '';
+
     virtualHosts = {
       "_" = {
         default = true;

@@ -1,11 +1,15 @@
 {
   config,
   inputs,
+  lib,
   ...
 }:
 
 let
-  secrets = inputs.secrets.hosts.sockciety;
+  inherit (inputs) secrets;
+  inherit (lib) mkBefore;
+
+  sockciety-secrets = secrets.hosts.sockciety;
 
 in
 {
@@ -16,7 +20,17 @@ in
   services = {
     headscale.enable = true;
     lldap.enable = true;
-    nginx.enable = true;
+
+    nginx = {
+      enable = true;
+
+      commonHttpConfig = mkBefore (
+        with secrets.services.headscale;
+        ''
+          allow ${address.v4}/${subnet.v4};
+        ''
+      );
+    };
 
     snapraid = {
       enable = true;
@@ -43,7 +57,7 @@ in
     };
   };
 
-  systemd.network.networks = with secrets.network; {
+  systemd.network.networks = with sockciety-secrets.network; {
     "10-en" = {
       matchConfig = {
         PermanentMACAddress = MACAddress;
