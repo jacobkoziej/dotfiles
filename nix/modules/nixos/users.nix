@@ -29,6 +29,7 @@ in
 
         extraGroups = [
           "audio"
+          "cdrom"
           "dialout"
           "input"
           "plugdev"
