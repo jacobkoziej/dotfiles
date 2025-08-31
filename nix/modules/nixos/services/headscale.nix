@@ -45,6 +45,11 @@ in
 
           extra_records = with secrets.hosts; [
             {
+              name = "nanokvm.nyc.cdn.${base-domain}";
+              type = "A";
+              value = secrets.cdns.nyc.nanokvm.tailnet.v4;
+            }
+            {
               name = "iceroth.host.${base-domain}";
               type = "A";
               value = iceroth.network.tailnet.v4;
