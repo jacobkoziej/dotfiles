@@ -9,10 +9,20 @@ let
 
   cfg = config.services.openssh;
 
+  cfg-tailscale = config.services.tailscale;
+
+  tailscaleEnabled = cfg-tailscale.enable;
+  tailscaleIface = cfg-tailscale.interfaceName;
+
+  openFirewall = cfg.enable && tailscaleEnabled;
+
 in
 {
   services.openssh = {
     enable = lib.mkDefault true;
+
+    openFirewall = false;
+
     settings = {
       AllowGroups = [
         "root"
@@ -33,4 +43,8 @@ in
       "network-online.target"
     ];
   };
+
+  networking.firewall.interfaces.${tailscaleIface}.allowedTCPPorts = mkIf openFirewall [
+    22
+  ];
 }
