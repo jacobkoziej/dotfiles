@@ -73,7 +73,7 @@ in
   systemd.network.networks = with sockciety-secrets.network; {
     "10-en" = {
       matchConfig = {
-        PermanentMACAddress = MACAddress;
+        Name = "en0";
       };
       networkConfig = {
         Address = address.v4 + "/" + subnet.v4;

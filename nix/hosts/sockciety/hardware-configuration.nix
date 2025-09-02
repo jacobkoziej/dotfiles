@@ -1,11 +1,16 @@
 {
   config,
+  inputs,
   lib,
   modulesPath,
   pkgs,
   ...
 }:
 
+let
+  secrets = inputs.secrets.hosts.sockciety;
+
+in
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
@@ -113,6 +118,17 @@
         "compress=zstd"
         "subvol=subvolumes/root"
       ];
+    };
+  };
+
+  systemd.network.links = with secrets.network; {
+    "10-en" = {
+      matchConfig = {
+        PermanentMACAddress = MACAddress;
+      };
+      linkConfig = {
+        Name = "en0";
+      };
     };
   };
 
