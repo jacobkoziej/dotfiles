@@ -11,11 +11,15 @@ let
 
   sockciety-secrets = secrets.hosts.sockciety;
 
+  cdn-ssh-port = secrets.cdns.nyc.ssh.ports.sockciety;
+
 in
 {
   imports = [
     ./hardware-configuration.nix
   ];
+
+  boot.initrd.network.ssh.port = cdn-ssh-port;
 
   services = {
     headscale.enable = true;
@@ -45,6 +49,18 @@ in
       };
     };
 
+    openssh = with sockciety-secrets.network; {
+      listenAddresses = [
+        {
+          addr = tailnet.v4;
+        }
+        {
+          addr = address.v4;
+          port = cdn-ssh-port;
+        }
+      ];
+    };
+
     snapraid = {
       enable = true;
 
@@ -68,6 +84,12 @@ in
         "/mnt/big-chungus.d/parity0/big-chungus.parity"
       ];
     };
+  };
+
+  networking.firewall.interfaces.en0 = {
+    allowedTCPPorts = [
+      cdn-ssh-port
+    ];
   };
 
   systemd.network.networks = with sockciety-secrets.network; {
