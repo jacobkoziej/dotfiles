@@ -10,6 +10,7 @@ let
   domain = "headscale.${base-domain}";
 
   inherit (builtins) toString;
+  inherit (lib) mkForce;
   inherit (lib) mkIf;
   inherit (inputs) secrets;
 
@@ -94,5 +95,14 @@ in
         allow all;
       '';
     };
+  };
+
+  systemd.services.headscale = mkIf cfg.enable {
+    wants = mkForce [
+      "network.target"
+    ];
+    after = mkForce [
+      "network.target"
+    ];
   };
 }
