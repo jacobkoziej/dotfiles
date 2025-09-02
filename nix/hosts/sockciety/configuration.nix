@@ -84,6 +84,10 @@ in
         "/mnt/big-chungus.d/parity0/big-chungus.parity"
       ];
     };
+
+    tailscale = {
+      useRoutingFeatures = "both";
+    };
   };
 
   networking.firewall.interfaces.en0 = {
