@@ -1,10 +1,15 @@
 {
   config,
+  inputs,
   lib,
   modulesPath,
   ...
 }:
 
+let
+  secrets = inputs.secrets.hosts.iceroth;
+
+in
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
@@ -102,6 +107,17 @@
     nvidia = {
       nvidiaSettings = true;
       open = false;
+    };
+  };
+
+  systemd.network.links = with secrets.network; {
+    "10-en" = {
+      matchConfig = {
+        PermanentMACAddress = MACAddress;
+      };
+      linkConfig = {
+        Name = "en0";
+      };
     };
   };
 

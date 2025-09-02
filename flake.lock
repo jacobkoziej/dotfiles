@@ -89,11 +89,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1756790748,
-        "narHash": "sha256-qDmBxJZW4vlZnAPfiFzmwJb8I6Ihxvu/u7qGX+BcW+c=",
+        "lastModified": 1756829996,
+        "narHash": "sha256-K0+yYEiew6fRCe/I//wQlVuUwF+UXx8zhaS85V6T2h4=",
         "ref": "refs/heads/master",
-        "rev": "f66c589a08532dce2355a12d808d146ad0a29d26",
-        "revCount": 31,
+        "rev": "e15a1356484d7a17975c31b36140f88065edceba",
+        "revCount": 33,
         "type": "git",
         "url": "ssh://git.jacobkoziej.xyz/secrets.git"
       },
