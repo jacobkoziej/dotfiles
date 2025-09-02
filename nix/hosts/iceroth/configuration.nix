@@ -10,17 +10,39 @@ let
 
   secrets-iceroth = secrets.hosts.iceroth;
 
+  cdn-ssh-port = secrets.cdns.nyc.ssh.ports.iceroth;
+
 in
 {
   imports = [
     ./hardware-configuration.nix
   ];
 
+  boot.initrd.network.ssh.port = cdn-ssh-port;
+
   services = {
+    openssh = with secrets-iceroth.network; {
+      listenAddresses = [
+        {
+          addr = tailnet.v4;
+        }
+        {
+          addr = address.v4;
+          port = cdn-ssh-port;
+        }
+      ];
+    };
+
     udev.packages = with pkgs; [
       openocd
     ];
     xserver.enable = true;
+  };
+
+  networking.firewall.interfaces.en0 = {
+    allowedTCPPorts = [
+      cdn-ssh-port
+    ];
   };
 
   systemd.network.networks = with secrets-iceroth.network; {
