@@ -18,8 +18,6 @@ in
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  jacobkoziej.hardware.battery.enable = true;
-
   boot = {
     initrd = {
       availableKernelModules = [
@@ -114,7 +112,7 @@ in
       HandlePowerKey = "hibernate";
     };
 
-    tlp.enable = true;
+    auto-cpufreq.enable = true;
   };
 
   swapDevices = [
