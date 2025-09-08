@@ -11,6 +11,9 @@
   nix = {
     optimise = {
       automatic = true;
+      dates = [
+        "daily"
+      ];
       persistent = true;
     };
     settings = {
