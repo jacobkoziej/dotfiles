@@ -13,6 +13,10 @@
 
   networking.hostName = "voyager-1";
 
+  programs = {
+    steam.enable = true;
+  };
+
   services = {
     automatic-timezoned.enable = true;
     udev.packages = with pkgs; [

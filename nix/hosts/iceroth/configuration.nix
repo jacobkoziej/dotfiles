@@ -20,6 +20,10 @@ in
 
   boot.initrd.network.ssh.port = cdn-ssh-port;
 
+  programs = {
+    steam.enable = true;
+  };
+
   services = {
     openssh = with secrets-iceroth.network; {
       listenAddresses = [

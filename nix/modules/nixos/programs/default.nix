@@ -7,6 +7,7 @@
   imports = [
     ./mosh.nix
     ./nh.nix
+    ./steam.nix
   ];
 
   programs = {
