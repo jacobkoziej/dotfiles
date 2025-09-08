@@ -34,6 +34,7 @@ in
     };
 
     kernelModules = [
+      "btusb"
       "kvm-intel"
     ];
   };
@@ -103,6 +104,12 @@ in
   };
 
   hardware = {
+    bluetooth = {
+      enable = true;
+
+      powerOnBoot = true;
+    };
+
     ckb-next.enable = true;
 
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

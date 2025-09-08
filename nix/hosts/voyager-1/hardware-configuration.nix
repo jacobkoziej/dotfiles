@@ -5,6 +5,10 @@
   ...
 }:
 
+let
+  inherit (lib) mkDefault;
+
+in
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
@@ -31,6 +35,16 @@
     kernelModules = [
       "kvm-intel"
     ];
+  };
+
+  hardware = {
+    cpu.intel.updateMicrocode = mkDefault config.hardware.enableRedistributableFirmware;
+
+    bluetooth = {
+      enable = true;
+
+      powerOnBoot = true;
+    };
   };
 
   fileSystems = {
@@ -80,8 +94,6 @@
   };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   services.tlp.enable = true;
 

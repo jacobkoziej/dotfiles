@@ -10,6 +10,7 @@
     ./services
 
     ./boot.nix
+    ./environment.nix
     ./networking.nix
     ./sops.nix
     ./systemd.nix

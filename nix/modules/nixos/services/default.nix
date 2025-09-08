@@ -1,4 +1,7 @@
-_:
+{
+  config,
+  ...
+}:
 
 {
   imports = [
@@ -11,4 +14,8 @@ _:
     ./tlp.nix
     ./xserver.nix
   ];
+
+  services = {
+    blueman.enable = config.hardware.bluetooth.enable;
+  };
 }
