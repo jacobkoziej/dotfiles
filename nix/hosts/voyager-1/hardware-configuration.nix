@@ -113,6 +113,7 @@ in
     };
 
     auto-cpufreq.enable = true;
+    thermald.enable = true;
   };
 
   swapDevices = [
