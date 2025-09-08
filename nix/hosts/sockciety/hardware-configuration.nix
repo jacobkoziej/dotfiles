@@ -106,6 +106,14 @@ in
       fsType = "ext4";
     };
 
+    "/mnt/swap" = {
+      device = "/dev/disk/by-label/root";
+      fsType = "btrfs";
+      options = [
+        "subvol=swap"
+      ];
+    };
+
     "/root" = {
       device = "/dev/disk/by-label/root";
       fsType = "btrfs";
@@ -115,6 +123,12 @@ in
       ];
     };
   };
+
+  swapDevices = [
+    {
+      device = "/mnt/swap/file";
+    }
+  ];
 
   systemd.network.links = with secrets.network; {
     "10-en" = {

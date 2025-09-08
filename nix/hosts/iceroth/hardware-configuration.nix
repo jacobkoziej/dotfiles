@@ -75,6 +75,14 @@ in
       ];
     };
 
+    "/mnt/swap" = {
+      device = "/dev/disk/by-label/root";
+      fsType = "btrfs";
+      options = [
+        "subvol=swap"
+      ];
+    };
+
     "/nix/store" = {
       device = "/dev/disk/by-label/scratch";
       fsType = "btrfs";
@@ -109,6 +117,12 @@ in
       open = false;
     };
   };
+
+  swapDevices = [
+    {
+      device = "/mnt/swap/file";
+    }
+  ];
 
   systemd.network.links = with secrets.network; {
     "10-en" = {

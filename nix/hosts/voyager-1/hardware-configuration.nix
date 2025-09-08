@@ -61,6 +61,14 @@
       ];
     };
 
+    "/mnt/swap" = {
+      device = "/dev/disk/by-label/root";
+      fsType = "btrfs";
+      options = [
+        "subvol=swap"
+      ];
+    };
+
     "/root" = {
       device = "/dev/disk/by-label/root";
       fsType = "btrfs";
@@ -76,4 +84,10 @@
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   services.tlp.enable = true;
+
+  swapDevices = [
+    {
+      device = "/mnt/swap/file";
+    }
+  ];
 }
