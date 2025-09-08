@@ -1,12 +1,16 @@
 {
   config,
+  inputs,
   lib,
   modulesPath,
   ...
 }:
 
 let
+  inherit (builtins) toString;
   inherit (lib) mkDefault;
+
+  secrets = inputs.secrets.hosts.voyager-1;
 
 in
 {
@@ -35,6 +39,12 @@ in
     kernelModules = [
       "kvm-intel"
     ];
+
+    kernelParams = [
+      "resume_offset=${toString secrets.boot.resumeOffset}"
+    ];
+
+    resumeDevice = "/dev/disk/by-label/root";
   };
 
   hardware = {
@@ -95,11 +105,25 @@ in
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
-  services.tlp.enable = true;
+  powerManagement.enable = true;
+
+  services = {
+    logind.settings.Login = {
+      HandleLidSwitch = "suspend-then-hibernate";
+      HandleLidSwitchDocked = "ignore";
+      HandlePowerKey = "hibernate";
+    };
+
+    tlp.enable = true;
+  };
 
   swapDevices = [
     {
       device = "/mnt/swap/file";
     }
   ];
+
+  systemd.sleep.extraConfig = ''
+    HibernateDelaySec=1h
+  '';
 }
