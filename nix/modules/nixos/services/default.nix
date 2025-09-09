@@ -6,6 +6,7 @@
 {
   imports = [
     ./auto-cpufreq.nix
+    ./btrfs.nix
     ./headscale.nix
     ./kanata.nix
     ./lldap.nix
