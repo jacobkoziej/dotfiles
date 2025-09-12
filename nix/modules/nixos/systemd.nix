@@ -18,8 +18,8 @@ in
           matchConfig.Name = "en*";
           networkConfig.DHCP = "yes";
         };
-        "10-wlan" = mkDefault {
-          matchConfig.Name = "wlan*";
+        "10-wl" = mkDefault {
+          matchConfig.Name = "wl*";
           networkConfig.DHCP = "yes";
         };
       };
