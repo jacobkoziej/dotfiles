@@ -7,6 +7,7 @@
   imports = [
     ./auto-cpufreq.nix
     ./btrfs.nix
+    ./btrbk.nix
     ./headscale.nix
     ./kanata.nix
     ./lldap.nix

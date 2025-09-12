@@ -67,6 +67,14 @@ in
       ];
     };
 
+    "/mnt/root" = {
+      device = "/dev/disk/by-label/root";
+      fsType = "btrfs";
+      options = [
+        "compress=zstd"
+      ];
+    };
+
     "/mnt/scratch" = {
       device = "/dev/disk/by-label/scratch";
       fsType = "btrfs";

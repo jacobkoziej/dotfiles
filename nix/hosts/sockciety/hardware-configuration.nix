@@ -106,6 +106,14 @@ in
       fsType = "ext4";
     };
 
+    "/mnt/root" = {
+      device = "/dev/disk/by-label/root";
+      fsType = "btrfs";
+      options = [
+        "compress=zstd"
+      ];
+    };
+
     "/mnt/swap" = {
       device = "/dev/disk/by-label/root";
       fsType = "btrfs";
