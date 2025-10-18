@@ -72,6 +72,7 @@ in
       fsType = "btrfs";
       options = [
         "compress=zstd"
+        "subvolid=5"
       ];
     };
 
