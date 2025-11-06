@@ -2,6 +2,9 @@ _:
 
 {
   programs.gpg = {
+    scdaemonSettings = {
+      disable-ccid = true;
+    };
     settings = {
       default-key = "0x4C133A84E6469228";
       cert-digest-algo = "SHA512";
