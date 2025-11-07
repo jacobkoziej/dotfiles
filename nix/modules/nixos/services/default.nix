@@ -6,13 +6,14 @@
 {
   imports = [
     ./auto-cpufreq.nix
-    ./btrfs.nix
     ./btrbk.nix
+    ./btrfs.nix
     ./headscale.nix
     ./kanata.nix
     ./lldap.nix
     ./nginx.nix
     ./openssh.nix
+    ./pcscd.nix
     ./tailscale.nix
     ./xserver.nix
   ];
