@@ -3,7 +3,7 @@ _:
 {
   services.auto-cpufreq.settings = {
     battery = {
-      governor = "powersave";
+      governor = "performance";
       energy_performance_preference = "power";
       energy_perf_bias = "balance_power";
       platform_profile = "low-power";
