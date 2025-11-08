@@ -17,4 +17,8 @@ _:
       windowManager.enable = true;
     };
   };
+
+  xresources.properties = {
+    "Xft.dpi" = 128;
+  };
 }
