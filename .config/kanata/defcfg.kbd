@@ -8,5 +8,10 @@
 		"ZSA Technology Labs Moonlander Mark I Keyboard"
 		"ZSA Technology Labs Moonlander Mark I"
 	)
+	macos-dev-names-exclude (
+		"Launch Configurable Keyboard (launch_1)"
+		"Moonlander Mark I"
+		"YubiKey OTP+FIDO+CCID"
+	)
 	process-unmapped-keys yes
 )
