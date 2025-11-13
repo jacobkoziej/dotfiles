@@ -10,6 +10,7 @@ let
   hosts = [
     "iceroth"
     "sockciety"
+    "uhh"
     "voyager-1"
   ];
 

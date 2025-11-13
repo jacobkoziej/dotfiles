@@ -20,6 +20,7 @@ let
   hosts = [
     "iceroth"
     "sockciety"
+    "uhh"
     "voyager-1"
   ];
 
@@ -35,7 +36,8 @@ let
 
       modules = [
         ./homes/${user}
-      ] ++ optional (stringLength host > 0) ./hosts/${host}/home-configuration.nix;
+      ]
+      ++ optional (stringLength host > 0) ./hosts/${host}/home-configuration.nix;
     });
 
   userConfigs = mapCartesianProduct (
