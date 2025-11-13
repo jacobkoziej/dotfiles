@@ -3,6 +3,7 @@ _:
 {
   imports = [
     ./direnv.nix
+    ./discord.nix
     ./gpg.nix
     ./nh.nix
   ];
