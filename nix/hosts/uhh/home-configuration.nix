@@ -18,6 +18,10 @@ _:
     };
   };
 
+  programs = {
+    alacritty.settings.font.size = 16;
+  };
+
   xresources.properties = {
     "Xft.dpi" = 160;
   };

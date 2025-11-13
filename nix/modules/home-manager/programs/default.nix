@@ -2,6 +2,7 @@ _:
 
 {
   imports = [
+    ./alacritty.nix
     ./direnv.nix
     ./discord.nix
     ./gpg.nix
