@@ -6,6 +6,7 @@ _:
     ./programs
     ./services
 
+    ./fonts.nix
     ./home.nix
   ];
 }
