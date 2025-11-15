@@ -5,13 +5,15 @@
 }:
 
 let
+  inherit (lib) mkDefault;
+
   cfg = config.jacobkoziej.networking;
 
 in
 {
   networking = {
-    domain = "host.jacobkoziej.xyz";
-    useDHCP = lib.mkDefault false;
+    domain = mkDefault "host.jacobkoziej.xyz";
+    useDHCP = mkDefault false;
 
     wireless.iwd.enable = cfg.wireless.enable;
   };
