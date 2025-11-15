@@ -108,6 +108,4 @@ in
       device = "/mnt/swap/file";
     }
   ];
-
-  nixpkgs.hostPlatform = mkDefault "x86_64-linux";
 }

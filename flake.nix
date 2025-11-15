@@ -2,7 +2,7 @@
   description = "Jacob Koziej's dotfiles";
 
   inputs = {
-    flake-utils.url = "github:numtide/flake-utils";
+    flake-parts.url = "github:hercules-ci/flake-parts";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,30 +21,34 @@
   outputs =
     inputs:
 
-    inputs.flake-utils.lib.eachDefaultSystem (
-      system:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [
+        "aarch64-darwin"
+        "aarch64-linux"
+        "x86_64-linux"
+      ];
 
-      let
-        pkgs = import inputs.nixpkgs {
-          inherit system;
+      imports = [
+        ./nix
+      ];
 
-          config.allowUnfree = true;
-        };
+      perSystem =
+        {
+          pkgs,
+          system,
+          ...
+        }:
 
-      in
-      {
-        devShells = import ./nix/dev-shells.nix pkgs;
+        {
+          _module.args.pkgs = import inputs.nixpkgs {
+            inherit system;
 
-        formatter = pkgs.nixfmt-rfc-style;
-
-        packages = {
-          homeConfigurations = import ./nix/home-configurations.nix {
-            inherit inputs;
-            inherit pkgs;
+            config = {
+              allowUnfree = true;
+            };
           };
 
-          nixosConfigurations = import ./nix/nixos-configurations.nix inputs;
+          formatter = pkgs.nixfmt-rfc-style;
         };
-      }
-    );
+    };
 }

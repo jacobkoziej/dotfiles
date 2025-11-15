@@ -1,25 +1,28 @@
-pkgs:
-
-let
-  inherit (pkgs) lib;
-
-in
 {
-  default = pkgs.mkShellNoCC (
-    let
-      pre-commit-bin = "${lib.getBin pkgs.pre-commit}/bin/pre-commit";
-
-    in
+  perSystem =
     {
-      packages = with pkgs; [
-        commitlint-rs
-        statix
-        treefmt
-      ];
+      lib,
+      pkgs,
+      ...
+    }:
 
-      shellHook = ''
-        ${pre-commit-bin} install --allow-missing-config > /dev/null
-      '';
-    }
-  );
+    {
+      devShells.default = pkgs.mkShellNoCC (
+        let
+          pre-commit-bin = "${lib.getBin pkgs.pre-commit}/bin/pre-commit";
+
+        in
+        {
+          packages = with pkgs; [
+            commitlint-rs
+            statix
+            treefmt
+          ];
+
+          shellHook = ''
+            ${pre-commit-bin} install --allow-missing-config > /dev/null
+          '';
+        }
+      );
+    };
 }
