@@ -1,16 +1,13 @@
 {
-  inputs,
   lib,
   ...
 }:
 
 let
-  inherit (builtins) to String;
-
-  self = builtins.toString inputs.self;
-  config = self + "/.config/kanata/kanata.kbd";
-
+  inherit (builtins) toString;
   inherit (lib) mkDefault;
+
+  config = toString ../../../../.config/kanata/kanata.kbd;
 
 in
 {

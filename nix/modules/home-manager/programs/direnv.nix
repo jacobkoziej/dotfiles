@@ -1,14 +1,13 @@
 {
-  inputs,
   lib,
   ...
 }:
 
 let
-  self = builtins.toString inputs.self;
-  config = self + "/.config/direnv/direnv.toml";
-
+  inherit (builtins) toString;
   inherit (lib) importTOML;
+
+  config = toString ../../../../.config/direnv/direnv.toml;
 
 in
 {
