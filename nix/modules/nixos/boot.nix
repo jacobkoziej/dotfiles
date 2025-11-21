@@ -1,4 +1,5 @@
 {
+  config,
   lib,
   ...
 }:
@@ -30,7 +31,7 @@
     };
 
     kernelParams = [
-      "ip=dhcp"
+      "ip=::::${config.networking.hostName}::dhcp"
     ];
   };
 }
