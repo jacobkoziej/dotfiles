@@ -18,7 +18,6 @@ in
     commonHttpConfig = ''
       allow 127.0.0.1;
       allow ::1;
-      deny all;
     '';
 
     defaultListenAddresses = [
