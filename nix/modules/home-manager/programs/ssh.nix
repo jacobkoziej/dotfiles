@@ -25,6 +25,14 @@ in
     enable = mkDefault true;
 
     enableDefaultConfig = false;
+
+    extraOptionOverrides = {
+      AddKeysToAgent = "yes";
+    };
+
+    includes = [
+      "config.d/*"
+    ];
   };
 
   home.file.".ssh/authorized_keys" = {
