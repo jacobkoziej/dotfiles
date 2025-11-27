@@ -17,7 +17,5 @@ in
 {
   home = {
     homeDirectory = mkDefault "${homeDirectoryRoot}/${username}";
-
-    stateVersion = mkDefault "24.05";
   };
 }
