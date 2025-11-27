@@ -1,12 +1,19 @@
-_:
+{
+  lib,
+  ...
+}:
 
+let
+  inherit (lib) mkDefault;
+
+in
 {
   programs.gpg = {
     scdaemonSettings = {
       disable-ccid = true;
     };
     settings = {
-      default-key = "0x4C133A84E6469228";
+      default-key = mkDefault "1BF98D10E0D00B41572358364C133A84E6469228";
       cert-digest-algo = "SHA512";
       charset = "utf-8";
       default-preference-list = "SHA512 SHA384 SHA256 AES256 AES192 AES ZLIB BZIP2 ZIP Uncompressed";
