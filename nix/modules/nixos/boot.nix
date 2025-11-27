@@ -4,6 +4,12 @@
   ...
 }:
 
+let
+  inherit (lib) mkDefault;
+
+  inherit (config.jacobkoziej.ssh) authorizedKeys;
+
+in
 {
   boot = {
     loader = {
@@ -18,10 +24,7 @@
         ssh = {
           enable = true;
 
-          authorizedKeys = [
-            "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINQeA0J16znzRrtqvh5xM014+CcIEetO8uu4dobmcMta jacobkoziej@iceroth.host.jacobkoziej.xyz"
-            "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKEYZmYvejeN8+3cw33v7U5dp4aOKbVqfhQ+aZRheMII jacobkoziej@voyager-1.host.jacobkoziej.xyz"
-          ];
+          authorizedKeys = mkDefault authorizedKeys;
           hostKeys = [
             "/etc/ssh/ssh_host_ed25519_key"
             "/etc/ssh/ssh_host_rsa_key"

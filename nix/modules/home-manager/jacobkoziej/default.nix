@@ -1,7 +1,7 @@
-_:
-
 {
   imports = [
+    ../../shared/jacobkoziej
+
     ./programs
     ./services
   ];

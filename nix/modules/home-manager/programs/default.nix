@@ -8,6 +8,7 @@ _:
     ./git.nix
     ./gpg.nix
     ./nh.nix
+    ./ssh.nix
   ];
 
   programs = {
