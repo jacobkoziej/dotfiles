@@ -1,4 +1,5 @@
 {
+  config,
   lib,
   ...
 }:
@@ -77,7 +78,7 @@ in
 
     signing = {
       format = "openpgp";
-      key = "1BF98D10E0D00B41572358364C133A84E6469228";
+      key = config.programs.gpg.settings.default-key;
       signByDefault = true;
     };
   };
