@@ -7,7 +7,12 @@
 let
   inherit (lib) mkDefault;
 
-  inherit (config.jacobkoziej.ssh) authorizedKeys;
+  authorizedKeys =
+    let
+      inherit (builtins) attrValues;
+
+    in
+    attrValues config.jacobkoziej.ssh.authorizedKeys;
 
 in
 {
