@@ -1,12 +1,14 @@
 {
   lib,
+  pkgs,
   ...
 }:
 
 let
   inherit (lib) mkDefault;
+  inherit (pkgs.stdenv) isLinux;
 
-  fontFamily = "Fira Code Nerd Font";
+  fontFamily = if isLinux then "Fira Code Nerd Font" else "FiraCode Nerd Font";
 
 in
 {
