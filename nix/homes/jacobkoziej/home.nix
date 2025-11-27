@@ -30,8 +30,6 @@ in
       eza
       fd
       fzf
-      git
-      git-lfs
       htop
       inetutils
       iproute2

@@ -5,6 +5,7 @@ _:
     ./alacritty.nix
     ./direnv.nix
     ./discord.nix
+    ./git.nix
     ./gpg.nix
     ./nh.nix
   ];
