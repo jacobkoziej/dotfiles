@@ -28,6 +28,7 @@ in
       with pkgs;
       [
         bat
+        boring
         cachix
         daemonize
         duf
