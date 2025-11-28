@@ -31,6 +31,7 @@ in
           "audio"
           "cdrom"
           "dialout"
+          "docker"
           "input"
           "plugdev"
           "ssh"
