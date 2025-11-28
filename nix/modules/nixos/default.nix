@@ -15,6 +15,7 @@
     ./sops.nix
     ./systemd.nix
     ./users.nix
+    ./virtualisation.nix
     ./zram-swap.nix
   ];
 }
