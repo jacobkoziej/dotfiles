@@ -68,7 +68,7 @@ in
       };
 
       push = {
-        autoSetupRemode = true;
+        autoSetupRemote = true;
       };
 
       submodule = {
