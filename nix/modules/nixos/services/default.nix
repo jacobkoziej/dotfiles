@@ -1,8 +1,13 @@
 {
   config,
+  lib,
   ...
 }:
 
+let
+  inherit (lib) mkDefault;
+
+in
 {
   imports = [
     ./auto-cpufreq.nix
@@ -20,5 +25,6 @@
 
   services = {
     blueman.enable = config.hardware.bluetooth.enable;
+    fwupd.enable = mkDefault true;
   };
 }
