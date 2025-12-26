@@ -1,4 +1,5 @@
 {
+  inputs,
   lib,
   ...
 }:
@@ -35,6 +36,10 @@
 
   nixpkgs = {
     config.allowUnfree = true;
+
+    overlays = [
+      inputs.nur-packages.overlays.default
+    ];
   };
 
   time.timeZone = lib.mkDefault "America/New_York";

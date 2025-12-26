@@ -8,6 +8,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nur-packages = {
+      url = "github:jacobkoziej/nur-packages";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     secrets = {
       url = "git+ssh://git.jacobkoziej.xyz/secrets.git";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -46,6 +50,10 @@
             config = {
               allowUnfree = true;
             };
+
+            overlays = [
+              inputs.nur-packages.overlays.default
+            ];
           };
 
           formatter = pkgs.nixfmt-rfc-style;
