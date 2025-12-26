@@ -20,7 +20,7 @@
   services = {
     automatic-timezoned.enable = true;
     udev.packages = with pkgs; [
-      openocd
+      openocd-nightly
       yubikey-personalization
     ];
     xserver.enable = true;

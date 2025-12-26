@@ -14,7 +14,7 @@
 
   services = {
     udev.packages = with pkgs; [
-      openocd
+      openocd-nightly
     ];
     xserver.enable = true;
   };
