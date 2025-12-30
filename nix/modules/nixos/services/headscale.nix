@@ -66,6 +66,11 @@ in
               value = sockciety.nanokvm.tailnet.v4;
             }
             {
+              name = "uhh.host.${base-domain}";
+              type = "A";
+              value = uhh.network.tailnet.v4;
+            }
+            {
               name = "voyager-1.host.${base-domain}";
               type = "A";
               value = voyager-1.network.tailnet.v4;
