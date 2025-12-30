@@ -15,6 +15,7 @@
         {
           packages = with pkgs; [
             commitlint-rs
+            shellcheck
             shfmt
             statix
             treefmt
