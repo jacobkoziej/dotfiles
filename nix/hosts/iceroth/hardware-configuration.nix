@@ -27,10 +27,7 @@ in
         "xhci_pci"
       ];
 
-      luks.devices = {
-        "root".device = "/dev/disk/by-label/luks:root";
-        "scratch".device = "/dev/disk/by-label/luks:scratch";
-      };
+      luks.devices."root".device = "/dev/disk/by-label/luks:root";
     };
 
     kernelModules = [
@@ -76,29 +73,11 @@ in
       ];
     };
 
-    "/mnt/scratch" = {
-      device = "/dev/disk/by-label/scratch";
-      fsType = "btrfs";
-      options = [
-        "compress=zstd"
-        "subvol=subvolumes/scratch"
-      ];
-    };
-
     "/mnt/swap" = {
       device = "/dev/disk/by-label/root";
       fsType = "btrfs";
       options = [
         "subvol=swap"
-      ];
-    };
-
-    "/nix/store" = {
-      device = "/dev/disk/by-label/scratch";
-      fsType = "btrfs";
-      options = [
-        "compress=zstd"
-        "subvol=subvolumes/nix-store"
       ];
     };
 
