@@ -100,18 +100,11 @@ in
 
     ckb-next.enable = true;
 
-    nvidia-container-toolkit.enable = true;
-
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
     graphics = {
       enable = true;
       enable32Bit = true;
-    };
-
-    nvidia = {
-      nvidiaSettings = true;
-      open = false;
     };
   };
 
@@ -131,8 +124,4 @@ in
       };
     };
   };
-
-  services.xserver.videoDrivers = [
-    "nvidia"
-  ];
 }
