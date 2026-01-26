@@ -20,6 +20,7 @@ in
         "ahci"
         "nvme"
         "sd_mod"
+        "r8169"
         "thunderbolt"
         "usb_storage"
         "usbhid"
