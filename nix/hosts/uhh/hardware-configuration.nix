@@ -96,13 +96,24 @@ in
       powerOnBoot = true;
     };
 
+    nvidia-container-toolkit.enable = true;
+
     cpu.amd.updateMicrocode = mkDefault config.hardware.enableRedistributableFirmware;
 
     graphics = {
       enable = true;
       enable32Bit = true;
     };
+
+    nvidia = {
+      nvidiaSettings = true;
+      open = false;
+    };
   };
+
+  services.xserver.videoDrivers = [
+    "nvidia"
+  ];
 
   swapDevices = [
     {
