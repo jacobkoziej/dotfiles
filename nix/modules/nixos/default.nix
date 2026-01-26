@@ -11,6 +11,7 @@
 
     ./boot.nix
     ./environment.nix
+    ./hardware.nix
     ./networking.nix
     ./sops.nix
     ./systemd.nix
