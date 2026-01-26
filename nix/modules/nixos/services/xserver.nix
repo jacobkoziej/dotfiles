@@ -5,14 +5,21 @@
 }:
 
 let
+  inherit (lib) mkForce;
+  inherit (lib) mkIf;
+
   cfg = config.services.xserver;
 
 in
 {
-  config = lib.mkIf cfg.enable {
-    services.xserver = {
-      autorun = false;
-      displayManager.startx.enable = true;
+  config = mkIf cfg.enable {
+    services = {
+      displayManager.enable = mkForce false;
+
+      xserver = {
+        autorun = false;
+        displayManager.startx.enable = true;
+      };
     };
   };
 }
