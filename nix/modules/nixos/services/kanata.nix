@@ -4,15 +4,20 @@
 }:
 
 let
-  inherit (builtins) toString;
   inherit (lib) mkDefault;
+  inherit (lib) fileset;
 
-  config = toString ../../../../.config/kanata/kanata.kbd;
+  path = ../../../../.config/kanata;
+
+  config = fileset.toSource {
+    root = path;
+    fileset = path;
+  };
 
 in
 {
   services.kanata = {
     enable = mkDefault true;
-    keyboards.default.configFile = config;
+    keyboards.default.configFile = "${config}/kanata.kbd";
   };
 }
