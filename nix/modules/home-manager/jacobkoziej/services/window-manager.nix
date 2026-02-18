@@ -21,7 +21,7 @@ in
       scrot
       sxhkd
       wmname
-      xorg.xrdb
+      xrdb
     ];
 
     services = {
