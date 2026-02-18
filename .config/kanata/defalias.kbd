@@ -9,3 +9,15 @@
 	l (tap-hold-release $tap-timeout $hold-timeout l lmet)
 	; (tap-hold-release $tap-timeout $hold-timeout ; ralt)
 )
+
+(environment (KANATA_MACOS_FN "")
+	(defalias
+		fn fn
+	)
+)
+
+(environment (KANATA_MACOS_FN true)
+	(defalias
+		fn (tap-hold $tap-timeout $hold-timeout fn (layer-toggle macos-fn))
+	)
+)

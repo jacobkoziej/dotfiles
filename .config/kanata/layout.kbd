@@ -3,6 +3,15 @@
 	grv   1     2     3     4     5     6     7     8     9     0     -     =     bspc
 	XX    q     w     e     r     t     y     u     i     o     p     [     ]     \
 	XX    @a    @s    @d    @f    g     h     @j    @k    @l    @;    '     ret
-	XX    z     x     c     v     b     n     m     ,     .     /     XX  
-	XX    XX    tab               spc               esc   XX    XX  
+	XX    z     x     c     v     b     n     m     ,     .     /     XX
+	@fn   XX    XX    tab               spc               esc   XX    XX
+)
+
+(deflayer macos-fn
+	XX    brdn  brup  mctl  sls   dtn   dnd   prev  pp    next  mute  vold  volu
+	XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
+	XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
+	XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
+	XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
+	XX    XX    XX    XX                XX                XX    XX    XX
 )
