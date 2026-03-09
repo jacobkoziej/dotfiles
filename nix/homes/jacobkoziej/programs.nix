@@ -11,6 +11,7 @@ in
   programs = {
     direnv.enable = mkDefault true;
     gpg.enable = mkDefault true;
+    jq.enable = mkDefault true;
     nh.enable = mkDefault true;
   };
 }
