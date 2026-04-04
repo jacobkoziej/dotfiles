@@ -1,19 +1,4 @@
 {
-  config,
-  lib,
-  modulesPath,
-  ...
-}:
-
-let
-  inherit (lib) mkDefault;
-
-in
-{
-  imports = [
-    (modulesPath + "/installer/scan/not-detected.nix")
-  ];
-
   boot = {
     initrd = {
       availableKernelModules = [
@@ -96,9 +81,9 @@ in
       powerOnBoot = true;
     };
 
-    nvidia-container-toolkit.enable = true;
+    cpu.amd.updateMicrocode = true;
 
-    cpu.amd.updateMicrocode = mkDefault config.hardware.enableRedistributableFirmware;
+    enableRedistributableFirmware = true;
 
     graphics = {
       enable = true;
@@ -109,6 +94,8 @@ in
       nvidiaSettings = true;
       open = false;
     };
+
+    nvidia-container-toolkit.enable = true;
   };
 
   services.xserver.videoDrivers = [

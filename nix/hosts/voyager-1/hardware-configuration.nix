@@ -1,23 +1,15 @@
 {
-  config,
   inputs,
-  lib,
-  modulesPath,
   ...
 }:
 
 let
   inherit (builtins) toString;
-  inherit (lib) mkDefault;
 
   secrets = inputs.secrets.hosts.voyager-1;
 
 in
 {
-  imports = [
-    (modulesPath + "/installer/scan/not-detected.nix")
-  ];
-
   boot = {
     initrd = {
       availableKernelModules = [
@@ -46,13 +38,14 @@ in
   };
 
   hardware = {
-    cpu.intel.updateMicrocode = mkDefault config.hardware.enableRedistributableFirmware;
-
     bluetooth = {
       enable = true;
-
       powerOnBoot = true;
     };
+
+    cpu.intel.updateMicrocode = true;
+
+    enableRedistributableFirmware = true;
   };
 
   fileSystems = {

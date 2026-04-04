@@ -1,8 +1,5 @@
 {
-  config,
   inputs,
-  lib,
-  modulesPath,
   ...
 }:
 
@@ -11,10 +8,6 @@ let
 
 in
 {
-  imports = [
-    (modulesPath + "/installer/scan/not-detected.nix")
-  ];
-
   boot = {
     initrd = {
       availableKernelModules = [
@@ -100,7 +93,9 @@ in
 
     ckb-next.enable = true;
 
-    cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+    cpu.intel.updateMicrocode = true;
+
+    enableRedistributableFirmware = true;
 
     graphics = {
       enable = true;

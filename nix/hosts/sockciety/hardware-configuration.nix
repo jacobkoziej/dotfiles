@@ -1,8 +1,5 @@
 {
-  config,
   inputs,
-  lib,
-  modulesPath,
   pkgs,
   ...
 }:
@@ -12,10 +9,6 @@ let
 
 in
 {
-  imports = [
-    (modulesPath + "/installer/scan/not-detected.nix")
-  ];
-
   boot = {
     initrd = {
       availableKernelModules = [
@@ -133,6 +126,12 @@ in
     };
   };
 
+  hardware = {
+    cpu.intel.updateMicrocode = true;
+
+    enableRedistributableFirmware = true;
+  };
+
   swapDevices = [
     {
       device = "/mnt/swap/file";
@@ -149,6 +148,4 @@ in
       };
     };
   };
-
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
