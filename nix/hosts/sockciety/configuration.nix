@@ -21,6 +21,8 @@ in
 
   boot.initrd.network.ssh.port = cdn-ssh-port;
 
+  programs.nh.clean.enable = true;
+
   services = {
     headscale.enable = true;
     lldap.enable = true;
