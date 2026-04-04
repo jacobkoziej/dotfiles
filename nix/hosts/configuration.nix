@@ -4,6 +4,10 @@
   ...
 }:
 
+let
+  inherit (lib) mkDefault;
+
+in
 {
   imports = [
     ../modules/nixos
@@ -42,5 +46,5 @@
     ];
   };
 
-  time.timeZone = lib.mkDefault "America/New_York";
+  time.timeZone = mkDefault "America/New_York";
 }
