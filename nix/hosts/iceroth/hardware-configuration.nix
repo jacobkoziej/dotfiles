@@ -95,8 +95,6 @@ in
 
     cpu.intel.updateMicrocode = true;
 
-    enableRedistributableFirmware = true;
-
     graphics = {
       enable = true;
       enable32Bit = true;

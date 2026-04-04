@@ -9,6 +9,6 @@ let
 in
 {
   hardware = {
-    enableAllFirmware = mkDefault true;
+    enableRedistributableFirmware = mkDefault true;
   };
 }

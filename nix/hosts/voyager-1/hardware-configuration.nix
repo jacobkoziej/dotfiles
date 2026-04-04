@@ -46,8 +46,6 @@ in
     };
 
     cpu.intel.updateMicrocode = true;
-
-    enableRedistributableFirmware = true;
   };
 
   fileSystems = {

@@ -128,8 +128,6 @@ in
 
   hardware = {
     cpu.intel.updateMicrocode = true;
-
-    enableRedistributableFirmware = true;
   };
 
   swapDevices = [
