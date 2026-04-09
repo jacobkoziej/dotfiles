@@ -1,4 +1,9 @@
 {
+  config,
+  ...
+}:
+
+{
   boot = {
     initrd = {
       availableKernelModules = [
@@ -91,6 +96,7 @@
     nvidia = {
       nvidiaSettings = true;
       open = false;
+      package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
     };
 
     nvidia-container-toolkit.enable = true;
