@@ -54,6 +54,7 @@ in
         tmux
         tmuxp
         unzip
+        usbutils
         wget
         zip
         zoxide
