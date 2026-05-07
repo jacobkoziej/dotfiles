@@ -55,6 +55,7 @@ in
       options = [
         "compress=zstd"
         "subvol=subvolumes/nixos"
+        "x-systemd.device-timeout=0"
       ];
     };
 
