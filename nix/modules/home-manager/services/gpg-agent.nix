@@ -1,9 +1,11 @@
 {
+  lib,
   pkgs,
   ...
 }:
 
 let
+  inherit (lib) mkForce;
   inherit (pkgs.stdenv) isDarwin;
 
   pinentryPackage = with pkgs; if isDarwin then pinentry_mac else pinentry-rofi;
@@ -15,4 +17,6 @@ in
     enableSshSupport = true;
     pinentry.package = pinentryPackage;
   };
+
+  sshAuthSock.initialization = mkForce null;
 }
