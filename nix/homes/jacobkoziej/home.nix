@@ -49,6 +49,7 @@ in
         ripgrep
         rsync
         sd
+        smartmontools
         sshfs
         tinyxxd
         tmux
