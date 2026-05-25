@@ -29,6 +29,7 @@ in
       [
         bat
         boring
+        btop
         cachix
         daemonize
         duf
