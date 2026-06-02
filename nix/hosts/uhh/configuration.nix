@@ -19,6 +19,8 @@
     xserver.enable = true;
   };
 
+  users.users."remote-nixbld".enable = true;
+
   time.timeZone = "America/Los_Angeles";
 
   networking.hostName = "uhh";

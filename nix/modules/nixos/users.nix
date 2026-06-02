@@ -1,11 +1,13 @@
 {
   config,
+  lib,
   pkgs,
   ...
 }:
 
 let
   inherit (config.sops) secrets;
+  inherit (lib) mkDefault;
 
 in
 {
@@ -15,8 +17,9 @@ in
   };
 
   users = {
-    extraGroups = {
+    groups = {
       "plugdev" = { };
+      "remote-nixbld" = { };
       "ssh" = { };
     };
 
@@ -41,6 +44,16 @@ in
 
         linger = true;
         shell = pkgs.zsh;
+      };
+
+      "remote-nixbld" = {
+        enable = mkDefault false;
+
+        isSystemUser = true;
+
+        group = "remote-nixbld";
+
+        shell = pkgs.bash;
       };
 
       "root" = {
