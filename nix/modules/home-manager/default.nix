@@ -1,5 +1,3 @@
-_:
-
 {
   imports = [
     ./jacobkoziej
@@ -8,5 +6,6 @@ _:
 
     ./fonts.nix
     ./home.nix
+    ./nix.nix
   ];
 }
