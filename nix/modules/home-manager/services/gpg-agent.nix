@@ -18,5 +18,5 @@ in
     pinentry.package = pinentryPackage;
   };
 
-  sshAuthSock.initialization = mkForce null;
+  sshAuthSock.enable = mkForce false;
 }
