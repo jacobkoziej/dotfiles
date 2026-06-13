@@ -30,6 +30,7 @@ in
         bat
         boring
         btop
+        bubblewrap
         cachix
         daemonize
         duf
