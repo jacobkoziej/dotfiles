@@ -25,6 +25,13 @@
     ];
   };
 
+  environment.etc.crypttab = {
+    mode = "0600";
+    text = ''
+      scratch /dev/disk/by-label/luks:scratch /root/keyfiles/scratch luks,nofail
+    '';
+  };
+
   fileSystems = {
     "/" = {
       device = "/dev/disk/by-label/root";
@@ -60,6 +67,15 @@
       options = [
         "compress=zstd"
         "subvolid=5"
+      ];
+    };
+
+    "/mnt/scratch" = {
+      device = "/dev/disk/by-label/scratch";
+      fsType = "btrfs";
+      options = [
+        "compress=zstd"
+        "subvol=subvolumes/scratch"
       ];
     };
 
