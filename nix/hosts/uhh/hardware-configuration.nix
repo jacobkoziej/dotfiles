@@ -28,6 +28,8 @@
   environment.etc.crypttab = {
     mode = "0600";
     text = ''
+      chris   /dev/disk/by-label/luks:chris   /root/keyfiles/chris   luks,nofail
+      patrick /dev/disk/by-label/luks:patrick /root/keyfiles/patrick luks,nofail
       scratch /dev/disk/by-label/luks:scratch /root/keyfiles/scratch luks,nofail
     '';
   };
@@ -84,6 +86,14 @@
       fsType = "btrfs";
       options = [
         "subvol=swap"
+      ];
+    };
+
+    "/mnt/voros" = {
+      device = "/dev/disk/by-label/voros";
+      fsType = "btrfs";
+      options = [
+        "compress=zstd"
       ];
     };
 
