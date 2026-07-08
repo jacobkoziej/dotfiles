@@ -28,6 +28,10 @@ let
       system = "x86_64-linux";
     }
     {
+      hostname = "slop";
+      system = "x86_64-linux";
+    }
+    {
       hostname = "sockciety";
       system = "x86_64-linux";
     }
