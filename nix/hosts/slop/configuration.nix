@@ -29,13 +29,14 @@ in
     openssh = with slop-secrets.network; {
       listenAddresses = [
         {
+          addr = tailnet.v4;
+        }
+        {
           addr = address.v4;
           port = cdn-ssh-port;
         }
       ];
     };
-
-    tailscale.enable = false;
   };
 
   networking.firewall.interfaces.en0 = {
