@@ -21,6 +21,12 @@
 
   users.users."remote-nixbld".enable = true;
 
+  services = {
+    tailscale = {
+      useRoutingFeatures = "both";
+    };
+  };
+
   time.timeZone = "America/Los_Angeles";
 
   networking.hostName = "uhh";
