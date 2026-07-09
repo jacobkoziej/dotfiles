@@ -56,6 +56,11 @@ in
               value = iceroth.network.tailnet.v4;
             }
             {
+              name = "slop.host.${base-domain}";
+              type = "A";
+              value = slop.network.tailnet.v4;
+            }
+            {
               name = "sockciety.host.${base-domain}";
               type = "A";
               value = sockciety.network.tailnet.v4;
