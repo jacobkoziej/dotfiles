@@ -62,6 +62,10 @@ in
         }
       ];
     };
+
+    tailscale = {
+      useRoutingFeatures = "both";
+    };
   };
 
   networking.firewall.interfaces.en0 = {
