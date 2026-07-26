@@ -35,6 +35,10 @@ in
     ];
 
     resumeDevice = "/dev/disk/by-label/root";
+
+    supportedFilesystems = [
+      "ntfs"
+    ];
   };
 
   hardware = {
