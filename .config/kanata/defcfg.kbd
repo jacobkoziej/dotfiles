@@ -1,5 +1,6 @@
 (defcfg
 	linux-dev-names-exclude (
+		"Parallels Virtual Keyboard"
 		"System76 Launch Configurable Keyboard (launch_1) Consumer Control"
 		"System76 Launch Configurable Keyboard (launch_1) Keyboard"
 		"System76 Launch Configurable Keyboard (launch_1)"
