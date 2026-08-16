@@ -1,5 +1,6 @@
 {
   inputs,
+  pkgs,
   ...
 }:
 
@@ -127,7 +128,29 @@ in
     }
   ];
 
-  systemd.sleep.settings.Sleep = {
-    HibernateDelaySec = "1h";
+  systemd = {
+    services.restart-iwd-after-hibernate = {
+      description = "Restart iwd after hibernation";
+      after = [
+        "hibernate.target"
+        "hybrid-sleep.target"
+        "suspend-then-hibernate.target"
+      ];
+      wantedBy = [
+        "hibernate.target"
+        "hybrid-sleep.target"
+        "suspend-then-hibernate.target"
+      ];
+      serviceConfig = {
+        Type = "oneshot";
+        RemainAfterExit = true;
+        ExecStart = "${pkgs.coreutils}/bin/true";
+        ExecStop = "${pkgs.systemd}/bin/systemctl try-restart iwd.service";
+      };
+    };
+
+    sleep.settings.Sleep = {
+      HibernateDelaySec = "1h";
+    };
   };
 }
