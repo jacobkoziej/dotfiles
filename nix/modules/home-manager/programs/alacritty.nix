@@ -6,7 +6,7 @@
 
 let
   inherit (lib) mkDefault;
-  inherit (pkgs.stdenv) isLinux;
+  inherit (pkgs.stdenv.hostPlatform) isLinux;
 
   fontFamily = if isLinux then "Fira Code Nerd Font" else "FiraCode Nerd Font";
 

@@ -9,7 +9,7 @@ let
 
   inherit (lib) mkDefault;
   inherit (lib) optionals;
-  inherit (pkgs.stdenv) isLinux;
+  inherit (pkgs.stdenv.hostPlatform) isLinux;
 
   python3-pkgs = python3.withPackages (
     ps: with ps; [

@@ -9,7 +9,7 @@ let
   inherit (config.home) username;
 
   inherit (lib) mkDefault;
-  inherit (pkgs.stdenv) isDarwin;
+  inherit (pkgs.stdenv.hostPlatform) isDarwin;
 
   homeDirectoryRoot = if isDarwin then "/Users" else "/home";
 
