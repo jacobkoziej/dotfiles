@@ -36,6 +36,10 @@ let
       system = "x86_64-linux";
     }
     {
+      hostname = "twinkpad";
+      system = "x86_64-linux";
+    }
+    {
       hostname = "uhh";
       system = "x86_64-linux";
     }
