@@ -71,6 +71,11 @@ in
               value = sockciety.nanokvm.tailnet.v4;
             }
             {
+              name = "twinkpad.host.${base-domain}";
+              type = "A";
+              value = twinkpad.network.tailnet.v4;
+            }
+            {
               name = "uhh.host.${base-domain}";
               type = "A";
               value = uhh.network.tailnet.v4;
