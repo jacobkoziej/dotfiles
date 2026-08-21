@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 
@@ -37,6 +38,8 @@ in
         };
       };
     };
+
+    kernelPackages = mkDefault pkgs.linuxPackages_latest;
 
     kernelParams = [
       "ip=::::${config.networking.hostName}::dhcp"
