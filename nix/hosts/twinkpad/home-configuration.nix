@@ -17,6 +17,6 @@
   };
 
   xresources.properties = {
-    "Xft.dpi" = 128;
+    "Xft.dpi" = 160;
   };
 }
