@@ -1,5 +1,4 @@
 (include defcfg.kbd)
-(include defsrc.kbd)
 (include defvar.kbd)
 (include defalias.kbd)
 (include layout.kbd)
