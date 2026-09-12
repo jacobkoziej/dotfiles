@@ -1,4 +1,15 @@
 {
+  inputs,
+  ...
+}:
+
+let
+  inherit (builtins) toString;
+
+  secrets = inputs.secrets.hosts.twinkpad;
+
+in
+{
   boot = {
     initrd = {
       availableKernelModules = [
@@ -18,6 +29,12 @@
     kernelModules = [
       "kvm-intel"
     ];
+
+    kernelParams = [
+      "resume_offset=${toString secrets.boot.resumeOffset}"
+    ];
+
+    resumeDevice = "/dev/disk/by-label/root";
 
     supportedFilesystems = [
       "ntfs"
@@ -97,6 +114,12 @@
   powerManagement.enable = true;
 
   services = {
+    logind.settings.Login = {
+      HandleLidSwitch = "suspend-then-hibernate";
+      HandleLidSwitchDocked = "ignore";
+      HandlePowerKey = "hibernate";
+    };
+
     auto-cpufreq.enable = true;
     thermald.enable = true;
   };
@@ -106,4 +129,6 @@
       device = "/mnt/swap/file";
     }
   ];
+
+  systemd.sleep.settings.Sleep.HibernateDelaySec = "1h";
 }
