@@ -3,6 +3,10 @@
   ...
 }:
 
+let
+  inherit (lib) mkDefault;
+
+in
 {
   imports = [
     ./mosh.nix
@@ -11,6 +15,7 @@
   ];
 
   programs = {
+    fuse.enable = mkDefault true;
     neovim.enable = true;
     zsh.enable = true;
   };
