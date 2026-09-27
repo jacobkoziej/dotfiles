@@ -115,8 +115,6 @@ in
 
   services = {
     logind.settings.Login = {
-      HandleLidSwitch = "suspend-then-hibernate";
-      HandleLidSwitchDocked = "ignore";
       HandlePowerKey = "hibernate";
     };
 
@@ -129,6 +127,4 @@ in
       device = "/mnt/swap/file";
     }
   ];
-
-  systemd.sleep.settings.Sleep.HibernateDelaySec = "1h";
 }
