@@ -41,6 +41,7 @@ in
         inetutils
         killall
         mosh
+        multipath-tools
         ncdu
         neovim
         openssh
