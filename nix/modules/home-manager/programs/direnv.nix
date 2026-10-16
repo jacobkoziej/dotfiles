@@ -1,4 +1,5 @@
 {
+  config,
   lib,
   ...
 }:
@@ -7,11 +8,14 @@ let
   inherit (builtins) toString;
   inherit (lib) importTOML;
 
-  config = toString ../../../../.config/direnv/direnv.toml;
+  cfg = config.programs.direnv;
+
+  direnvConfig = toString ../../../../.config/direnv/direnv.toml;
 
 in
 {
   programs.direnv = {
-    config = importTOML config;
+    config = importTOML direnvConfig;
+    nix-direnv.enable = cfg.enable;
   };
 }
