@@ -1,3 +1,9 @@
+[formatter.mdformat]
+command = "mdformat"
+includes = [
+  "*.md",
+]
+
 [formatter.nix]
 command = "nix"
 options = [
