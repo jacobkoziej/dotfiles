@@ -6,6 +6,7 @@
 
 let
   inherit (lib) mkDefault;
+  inherit (lib) mkForce;
   inherit (lib) mkIf;
 
   cfg = config.services.tailscale;
@@ -16,12 +17,24 @@ in
     enable = mkDefault true;
   };
 
+  systemd.services.tailscaled = mkIf cfg.enable {
+    wants = mkForce [
+      "network.target"
+    ];
+    after = mkForce [
+      "network.target"
+    ];
+  };
+
   systemd.services.tailscale-online = mkIf cfg.enable {
     wants = [
       "tailscaled.service"
     ];
     after = [
       "tailscaled.service"
+    ];
+    before = [
+      "network-online.target"
     ];
 
     wantedBy = [
@@ -41,7 +54,7 @@ in
       {
         ExecStart = "${systemd-networkd-wait-online} --interface=${cfg.interfaceName} -4 -6 --timeout=${timeout}";
         Type = "oneshot";
-        RemainsAfterExit = true;
+        RemainAfterExit = true;
       };
   };
 }
