@@ -8,6 +8,7 @@ set -g extended-keys on
 set -g focus-events on
 set -g mode-keys vi
 set -g monitor-activity on
+set -g mouse off
 set -g pane-base-index '1'
 set -g pane-border-lines simple
 set -s extended-keys-format csi-u
