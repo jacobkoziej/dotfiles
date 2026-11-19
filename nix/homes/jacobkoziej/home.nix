@@ -60,6 +60,7 @@ in
         unzip
         usbutils
         wget
+        yubikey-manager
         zip
         zoxide
       ]
